@@ -14,7 +14,7 @@ I come from [Bangalore, India][8] (which is pretty much the LA of India; minus H
 > If something happened where I couldn't write music anymore, it would kill me. It's not just a job. It's not just a hobby. It's why I get up in the morning.
 
 <br/>
-To reach me, tweet [@sathyamvellal][12]. Or email **sathyam AT vellals DOT com**. You can find my [resume here][13].
+To reach me, tweet [@sathyamvellal][12]. Or email **sathyam AT vellals DOT com**. You can find my [short resume here][13] and my [long resume here][14]
 
 <br/>
 Live Long and Prosper! 🖖
@@ -33,3 +33,4 @@ Live Long and Prosper! 🖖
 [11]: https://en.wikipedia.org/wiki/Hans_Zimmer
 [12]: https://twitter.com/sathyamvellal
 [13]: http://sathyam.me/resume
+[14]: http://sathyam.me/resume-long
