@@ -3,7 +3,6 @@ layout: post
 title: "0 A.D. Game"
 date: 2013-07-11 19:15
 comments: true
-categories: [tech, games, open-source, age-of-empires]
 ---
 
 I grew up in a time where Age of Empires was everything! You can’t find many people who haven’t played it. Many others followed suit; Empire Earth for example. But they were not like Age of Empires. Ensemble Studios (now Microsoft Studios) did revolutionize the real-time strategy genre of computer games.  

@@ -3,7 +3,6 @@ layout: post
 title: "Cool C Programming"
 date: 2013-09-09 20:33
 comments: true
-categories: [tech, c, tricks]
 ---
 
 This post contains the writeup of my talk on **Cool C Programming** as part of the **Tech Talk Tuesday** series by **[PES OpenSource](http://pesos.pes.edu)** at PES Institute of Technology.
@@ -21,7 +20,7 @@ The C Preprocessor is dumb! It does not know anything about a C program. It is m
 <!-- more -->
 If you want to see the output of the preprocessor, you can use the `-E` flag for the compiler; ie compile the program as `gcc -E file.c`. This dumps the preprocessed output of file.c onto your terminal.
 
-There are three standard input/output buffers 
+There are three standard input/output buffers
 
 * `stdin` The input buffer
 * `stdout` The default output buffer
@@ -39,7 +38,7 @@ The preprocessor directive `#ifdef` is used to define conditional groups of code
 
 In the above example, the body of `#ifdef` is included only if `SOME_MACRO` is defined. The `#define` directive is used to define MACROs.
 
-#### Example 
+#### Example
 
 Here's a sample program.
 
@@ -199,7 +198,7 @@ int main ()
 ###### Fig(1.7)
 
 Let this be a file, *debug.c* .
-What is this program trying to do? This program calls the function `foo()` with 2 arguments, `x` and `y`.; and foo wants perform the operation `(x + y) / (x - y)`. It also uses a function-like MACRO `CHECK` which expands to an assert statement (forget about the `do {...} while(0)` for now). `assert` is a library function declared in `assert.h` which aborts the program if the given assertion fails (in this example `(x - y) != 0`). 
+What is this program trying to do? This program calls the function `foo()` with 2 arguments, `x` and `y`.; and foo wants perform the operation `(x + y) / (x - y)`. It also uses a function-like MACRO `CHECK` which expands to an assert statement (forget about the `do {...} while(0)` for now). `assert` is a library function declared in `assert.h` which aborts the program if the given assertion fails (in this example `(x - y) != 0`).
 
 According to our expectations, The program and must execute the first `foo(4, 3)` function call and should fail when trying execute the second `foo(4, 4)` function call because of division by zero (Forget about the `__LINE__` in the printf). Now let me compile it without defining the `CHECK_ENABLED` MACRO. Compile with `gcc debug.c` and run `./a.out`; the following is the output.
 
@@ -210,7 +209,7 @@ Floating point exception (core dumped)
 ```
 ###### Fig(1.8)
 
-It worked as expected. The program printed "7" and failed when executing the second `foo(4, 4)` function call because of the division with zero. Let me now compile with also defining the `CHECK_ENABLED` MACRO. Compile with `gcc debug.c DCHECK_ENABLED` and run `./a.out` and here's the output. 
+It worked as expected. The program printed "7" and failed when executing the second `foo(4, 4)` function call because of the division with zero. Let me now compile with also defining the `CHECK_ENABLED` MACRO. Compile with `gcc debug.c DCHECK_ENABLED` and run `./a.out` and here's the output.
 
 ```
 Performing Assertion
@@ -232,7 +231,7 @@ In Fig(1.9), the program was compiled with the `CHECK_ENABLED` MACRO defined whi
 #define CHECK(X, Y) \
 do { printf("Performing Assertion\n"); assert((X - Y) != 0); printf("Assertion passed\n"); } while (0)
 ```
-###### Fig(1.10) 
+###### Fig(1.10)
 
 This defines a function-like MACRO `CHECK(X, Y)` to be `do { printf("Performing Assertion\n"); assert((X - Y) != 0); printf("Assertion passed\n"); } while (0)`. Hence this function-like MACRO `CHECK(X, Y);` expands to `do { printf("Performing Assertion\n"); assert((X - Y) != 0); printf("Assertion passed\n"); } while (0)`. With `foo(4, 3);` this assertion succeeds and prints "7"; with `foo(4, 4");` this assertion fails and the program aborts.
 
@@ -351,7 +350,7 @@ struct foo {
 ```
 ###### Fig(1.19)
 
-Now if your project contains a lot of files and you include this header file in many of them and compile, you'll encounter errors of redeclaration! And so header files begin with the following construct 
+Now if your project contains a lot of files and you include this header file in many of them and compile, you'll encounter errors of redeclaration! And so header files begin with the following construct
 
 ``` c
 #ifndef FILE_H
@@ -366,16 +365,16 @@ struct foo {
 ```
 ###### Fig(1.20)
 
-So what's the change now? When some .c file which includes this header is being compiled, it sees the directive `#ifndef FILE_H ... #endif`; which basically means include the controlled text if the MACRO `FILE_H` is not defined. But wait, what is this present in the controlled text? `#define FILE_H`. What I'm doing is defining the MACRO `FILE_H` and including the header contents if `FILE_H` was previously not declared. Now when another file is being compiled which includes the same header, the compiler sees that the MACRO `FILE_H`  is defined now and skips including the controlled text of the conditional group avoiding redeclaration of structures and other entities of a header file. 
+So what's the change now? When some .c file which includes this header is being compiled, it sees the directive `#ifndef FILE_H ... #endif`; which basically means include the controlled text if the MACRO `FILE_H` is not defined. But wait, what is this present in the controlled text? `#define FILE_H`. What I'm doing is defining the MACRO `FILE_H` and including the header contents if `FILE_H` was previously not declared. Now when another file is being compiled which includes the same header, the compiler sees that the MACRO `FILE_H`  is defined now and skips including the controlled text of the conditional group avoiding redeclaration of structures and other entities of a header file.
 
-**Feature/Trick 5** : This is the last preprocessor feature I'll be discussing! The C preprocessor gives two directives `#warning` and `#error`. I expect you might have guessed their uses. Consider the following code snippet - 
+**Feature/Trick 5** : This is the last preprocessor feature I'll be discussing! The C preprocessor gives two directives `#warning` and `#error`. I expect you might have guessed their uses. Consider the following code snippet -
 
 ``` c
 #ifdef USE_OLD_FOO
 #warning "Using old foo(). This is deprecated! You are getting this message because USE_OLD_FOO is defined"
 void foo()
 {
-    //This implementation is no longer recommended for use. 
+    //This implementation is no longer recommended for use.
     /*
     Some implementation
     */
@@ -408,7 +407,7 @@ a = a ^ b;
 ###### Fig(2.1)
 
 ---
-## Pointers in C 
+## Pointers in C
 
 ### Arrays and Pointers not entirely the same!
 
@@ -422,7 +421,7 @@ printf("%d\n%d\n", sizeof(a), sizeof(b));
 ```
 ###### Fig(3.1)
 
-And the output is (assuming size of int is 4 bytes and address size is 8 bytes) - 
+And the output is (assuming size of int is 4 bytes and address size is 8 bytes) -
 
 ```
 40
@@ -439,8 +438,8 @@ See what happens? At compile time, the compiler has information regarding the ar
 ---
 ## Standard I/O
 
-**Feature/Trick 9** :You are no doubt familiar with `scanf` and `printf` functions. You also be familiar with `fscanf` and `fprintf` if you have worked on file handling. 
-For example - 
+**Feature/Trick 9** :You are no doubt familiar with `scanf` and `printf` functions. You also be familiar with `fscanf` and `fprintf` if you have worked on file handling.
+For example -
 
 ``` c
 FILE *fptr = fopen("some_file.txt", "r");
@@ -455,7 +454,7 @@ fclose(fptr);
 
 The above snippet demonstrates reading from a file using `fscanf`.  
 How about this? You have a string containing two integers and you'd like to read from that. Its not a file name, its a character array. C provides reading and writing to character arrays (or C strings) with the use of `sscanf` and `sprintf`.  
-Let me demonstrate this - 
+Let me demonstrate this -
 
 ``` c
 char str[20] = "10 20";
@@ -471,7 +470,7 @@ In the above snippet, a string contains two numbers 10 and 20 (as characters of 
 
 **Feature/Trick 10** : `scanf` is probably one of the most magical function in C. To know more about the tricks in `scanf`, visit [my answer in quora](http://qr.ae/IHQTN) about the same.
 
-**Feature/Trick 11** : One of the many problems with C strings is reading them; C strings can easily overflow if a string longer than size of the character array is entered. `scanf` is useless and so is `gets`. The best function to use when reading strings is `fgets`. `fgets` takes the string, the length to be read and the file stream where the string is to be read from as arguments. If you want to read from the console, you can use `stdin` as your input file stream. The function call would then go like this - 
+**Feature/Trick 11** : One of the many problems with C strings is reading them; C strings can easily overflow if a string longer than size of the character array is entered. `scanf` is useless and so is `gets`. The best function to use when reading strings is `fgets`. `fgets` takes the string, the length to be read and the file stream where the string is to be read from as arguments. If you want to read from the console, you can use `stdin` as your input file stream. The function call would then go like this -
 
 ``` c
 int n; //some length; maybe known later.
@@ -525,7 +524,7 @@ int main()
 ```
 ###### Fig(5.2)
 
-**Feature/Trick 13** : C99 also provides a mechanism to initialize only certain indices of an array. 
+**Feature/Trick 13** : C99 also provides a mechanism to initialize only certain indices of an array.
 
 ``` c
 int a[100] = {1, [50] = 1}; //initializes a[0] and a[50] to 1 and the rest 0
@@ -533,7 +532,7 @@ printf("%d %d %d %d\n", a[0], a[1], a[50], a[51]);
 ```
 ###### Fig(5.3)
 
-**Feature/Trick 14** : Did you know about the `atexit` function? This function can be used to register functions that are to be called when the program finishes its execution! For example - 
+**Feature/Trick 14** : Did you know about the `atexit` function? This function can be used to register functions that are to be called when the program finishes its execution! For example -
 
 ``` c
 #include <stdio.h>
@@ -561,7 +560,7 @@ int main(int argc, wchar_t* argv[])
 
 Notice that `foo` and `bar` functions haven't been called but are registered to be called when the program exits. Such functions should not return anything nor accept any arguments. You can register upto 32 such functions. They'll be called in the LIFO order.
 
-**Feature/Trick 15** : I found this somewhere in stackoverflow. It seems that a game the developer had to initialize a huge two dimensional float array with lots of values. And he employed this to do so - 
+**Feature/Trick 15** : I found this somewhere in stackoverflow. It seems that a game the developer had to initialize a huge two dimensional float array with lots of values. And he employed this to do so -
 
 ``` c
 double array[SIZE][SIZE] = {

@@ -3,12 +3,11 @@ layout: post
 title: "0 A.D. Fundraiser: 3 weeks remain!"
 date: 2013-10-02 01:23
 comments: true
-categories: [tech, games, open-source, indiegogo]
 ---
 
 [0 A.D.][12] is a free and open source, historical RTS game. The concept of the game was designed in 2003 and was developed for around six years as a closed-source freeware project. In 2009 the game went open source under the GPL license and art content under CC-BY-SA. This steadily attracted a lot of contributors ranging from art designers to programmers to develop the game. Much of the development and contribution started after the project was open sourced.
 
-Less than a month ago, [0 A.D. launched a crowdfunding campaign in Indiegogo][11] to help hire two contributors full-time to get it to a release state much sooner and better than its current pace of development. 
+Less than a month ago, [0 A.D. launched a crowdfunding campaign in Indiegogo][11] to help hire two contributors full-time to get it to a release state much sooner and better than its current pace of development.
 
 <!-- more -->
 
@@ -22,7 +21,7 @@ Less than a month ago, [0 A.D. launched a crowdfunding campaign in Indiegogo][11
 </div>
 
 The previous and the current alpha versions have improved the game's performance and added many new features into the game. The stage is being set for the next alpha release which brings a host of new features including a featured Multiplayer Lobby! No wonder this project pushes the bar up for gaming in Linux open source games.  
-The [Indiegogo campaign][11] is flexibly funded with targets starting from $40,000 till $240,000 and goals ranging from improving the game performance till releasing the first version of the game within a couple of years. 
+The [Indiegogo campaign][11] is flexibly funded with targets starting from $40,000 till $240,000 and goals ranging from improving the game performance till releasing the first version of the game within a couple of years.
 
 The best part of this project being open source is the developer community! They're not just developers and contributors. They are a family. The modern ancient family. They are a constantly working group, who've volunteered to build this game.
 

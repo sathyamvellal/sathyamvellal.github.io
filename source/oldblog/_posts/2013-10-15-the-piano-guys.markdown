@@ -3,12 +3,11 @@ layout: post
 title: "The Piano Guys"
 date: 2013-10-15 17:26
 comments: true
-categories: [music, the-piano-guys]
 ---
 
-Its a typical day and I'm just looking at *Recommended Videos* in my YouTube, which are usually songs/music/mixes; that's what I listen to. So I'm there, listening to UK Piano's new video and I find a playlist recommended for me. In that playlist is a [Cello cover of Game of Thrones][1] by [BreakofReality][2]. YouTube then features [Misty Mountains Orchestral Cover][3] from [The Hobbit][4] by [sleightlymusical][5] in my *Recommended for You* list. Now it comes! Another video recommended for me from [ThePianoGuys][6]. And WOW! 
+Its a typical day and I'm just looking at *Recommended Videos* in my YouTube, which are usually songs/music/mixes; that's what I listen to. So I'm there, listening to UK Piano's new video and I find a playlist recommended for me. In that playlist is a [Cello cover of Game of Thrones][1] by [BreakofReality][2]. YouTube then features [Misty Mountains Orchestral Cover][3] from [The Hobbit][4] by [sleightlymusical][5] in my *Recommended for You* list. Now it comes! Another video recommended for me from [ThePianoGuys][6]. And WOW!
 
-<!-- more --> 
+<!-- more -->
 
 I just sat back, stopped my work and watched one video after the other. The first one that caught my eye was **Kung Fu Piano: Cello Ascends**, a play on **[Oogway Ascends][7]** from [Kung Fu Panda][8].
 
@@ -21,7 +20,7 @@ I just sat back, stopped my work and watched one video after the other. The firs
     </iframe>
 </div>
 
-Before you start thinking there was a green screen for the Great Wall of China, watch the [second video][102]. They actually got the piano on top of it! 
+Before you start thinking there was a green screen for the Great Wall of China, watch the [second video][102]. They actually got the piano on top of it!
 
 I didn't stop there! I then watched the video which YouTube originally recommended for me - A [Lord of the Rings cover][103]. And after that, I continued ...
 
@@ -31,7 +30,7 @@ I didn't stop there! I then watched the video which YouTube originally recommend
 </div>
 
 Music is not just about melody or harmony. Its about enjoying, feeling and extracting the emotions out of the listener and ThePianoGuys do just that. I've included some more of the many they've made, below. DON'T forget to visit [their YouTube channel][9]!
-Obviously I can't list all the [videos][10] here! 
+Obviously I can't list all the [videos][10] here!
 
 <div class="youtube">
     <iframe id="vid4" type="text/html" class="youtube" width="440" height="440" src="http://www.youtube.com/embed/9p0BqUcQ7i0" frameborder="0">

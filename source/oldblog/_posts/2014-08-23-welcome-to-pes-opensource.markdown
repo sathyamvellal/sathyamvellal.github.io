@@ -3,7 +3,6 @@ layout: post
 title: "Welcome to PES OpenSource"
 date: 2014-08-23 21:08
 comments: true
-categories:
 ---
 
 Heya there! This post is mainly targeted to the students of PES Institute of Technology/PES University, Bangalore. If you are not, and are new to the Open Source Movement, you can still find a lot of useful information here. You can also learn the ways of PES Open Source, and join our movement in making educational institutions a place of more knowledge and productivity.

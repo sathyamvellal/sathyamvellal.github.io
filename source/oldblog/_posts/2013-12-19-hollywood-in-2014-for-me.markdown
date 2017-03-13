@@ -3,7 +3,6 @@ layout: post
 title: "Hollywood in 2014 (for me)"
 date: 2013-12-19 15:51
 comments: true
-categories: [general, film, hollywood]
 ---
 
 2013 is almost closing and its time to take a peak at films of 2014. This list though, is my preference. You can check the [entire list in wikipedia][1]. Here, I've linked the films to a trailer and a rating of my expectations (arranged by rating and alphabetically).
@@ -24,7 +23,7 @@ Night at the Museum 3 ★★★½
 [Rio 2](http://www.youtube.com/watch?v=IkZM1Zc0mBU) ★★★½  
 [Pompeii](http://www.youtube.com/watch?v=t6TRwfxDICM) ★★★  
 
-### I can be interested in 
+### I can be interested in
 
 [300: Rise of An Empire](http://www.youtube.com/watch?v=2zqy21Z29ps) ★★★½  
 [Captain America: The Winter Soldier](http://www.youtube.com/watch?v=NLWsK1ZFunA) ★★★½  
