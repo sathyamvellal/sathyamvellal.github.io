@@ -28,7 +28,7 @@ github_username:  sathyamvellal
 
 subscribe_rss: /atom.xml
 
-permalink: /blog/:title/
+permalink: /:categories/:title/
 
 # Build settings
 markdown: kramdown
