@@ -1,0 +1,28 @@
+---
+layout: post
+title: 'March 2017'
+youtube: https://www.youtube.com/watch?v=wTEsnhhrWUo
+applemusic: https://itun.es/us/oq20hb?i=1205036198
+date: 2017-03-13 14:50
+---
+
+<div class="music-tracks">
+    {% for track in site.data.music.tracks-march-2017.tracks %}
+        <div class="music-track">
+            <div class="music-track-title"><p>
+                {% if track.from %}<span>{{track.from}} - </span>{% endif %}
+                <span> {{track.title}} </span>
+                {% if track.cover %}<span> ({{track.cover}}) </span>{% endif %}
+                <span> by {{track.by}}</span>
+            </p></div>
+            <div class="music-links">
+                {% if track.youtube %}
+                    <a class="music-link music-link-youtube" href="{{track.youtube}}"><strong><i class="fa fa-youtube-play" aria-hidden="true"></i> <span class="black">You</span>Tube</strong></a>
+                {% endif %}
+                {% if track.applemusic %}
+                    <a class="music-link music-link-applemusic" href="{{track.applemusic}}"><strong><i class="fa fa-apple" aria-hidden="true"></i> MUSIC</strong></a></br>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

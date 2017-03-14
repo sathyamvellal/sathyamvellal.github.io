@@ -1,25 +1,37 @@
-.music {
-	padding-bottom: 30px;
-	h1 {
-		font-size: 1.4em;
-		margin-bottom: 5px;
-	}
-	a {
-		padding: 5px;
-		padding-left: 10px;
-	}
+.music-link {
+    &.music-link-youtube {
+        color: red;
+
+        .black {
+            color: black;
+        }
+    }
+
+    &.music-link-applemusic {
+        color: black;
+    }
+
+    margin-right: 1em;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.music-tracks {
+    .music-track {
+        padding-bottom: 2em;
+
+        .music-track-title {
+            padding-bottom: 0.2em;
+        }
+    }
 }
 
 .music-stage {
     text-align: center;
-    padding-bottom: 3em;
+    padding-bottom: 2em;
 
     p.work-in-progress {
         color: #CCCCCC;
     }
-}
-
-iframe {
-    margin-bottom: 2em;
-    margin-top: 2em;
 }
