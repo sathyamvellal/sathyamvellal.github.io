@@ -1,6 +1,6 @@
 .music-link {
     &.music-link-youtube {
-        color: red;
+        color: #E5322E;
 
         .black {
             color: black;
@@ -9,6 +9,10 @@
 
     &.music-link-applemusic {
         color: black;
+    }
+
+    &.music-link-spotify {
+        color: #1ED760;
     }
 
     margin-right: 1em;
