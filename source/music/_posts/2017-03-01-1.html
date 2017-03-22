@@ -17,13 +17,13 @@ date: 2017-03-13 14:50
             </p></div>
             <div class="music-links">
                 {% if track.youtube %}
-                    <a class="music-link music-link-youtube" href="{{track.youtube}}"><strong><i class="fa fa-youtube-play" aria-hidden="true"></i> <span class="black">You</span>Tube</strong></a>
+                    <a class="music-link music-link-youtube" href="{{track.youtube}}" target="_blank"><strong><i class="fa fa-youtube-play" aria-hidden="true"></i> <span class="black">You</span>Tube</strong></a>
                 {% endif %}
                 {% if track.applemusic %}
-                    <a class="music-link music-link-applemusic" href="{{track.applemusic}}"><strong><i class="fa fa-apple" aria-hidden="true"></i> MUSIC</strong></a>
+                    <a class="music-link music-link-applemusic" href="{{track.applemusic}}" target="_blank"><strong><i class="fa fa-apple" aria-hidden="true"></i> MUSIC</strong></a>
                 {% endif %}
                 {% if track.spotify %}
-                    <a class="music-link music-link-spotify" href="{{track.spotify}}"><strong><i class="fa fa-spotify" aria-hidden="true"></i> Spotify</strong></a></br>
+                    <a class="music-link music-link-spotify" href="{{track.spotify}}" target="_blank"><strong><i class="fa fa-spotify" aria-hidden="true"></i> Spotify</strong></a></br>
                 {% endif %}
             </div>
         </div>
