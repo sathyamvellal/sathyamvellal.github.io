@@ -23,7 +23,10 @@ date: 2017-03-13 14:50
                     <a class="music-link music-link-applemusic" href="{{track.applemusic}}" target="_blank"><strong><i class="fa fa-apple" aria-hidden="true"></i> MUSIC</strong></a>
                 {% endif %}
                 {% if track.spotify %}
-                    <a class="music-link music-link-spotify" href="{{track.spotify}}" target="_blank"><strong><i class="fa fa-spotify" aria-hidden="true"></i> Spotify</strong></a></br>
+                    <a class="music-link music-link-spotify" href="{{track.spotify}}" target="_blank"><strong><i class="fa fa-spotify" aria-hidden="true"></i> Spotify</strong></a>
+                {% endif %}
+                {% if track.geniuslyrics %}
+                    <a class="music-link music-link-geniuslyrics" href="{{track.geniuslyrics}}" target="_blank"><strong><span aria-hidden="true"> G E N I U S </span></strong></a>
                 {% endif %}
             </div>
         </div>

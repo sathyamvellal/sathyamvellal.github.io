@@ -1,4 +1,6 @@
 .music-link {
+    font-size: 11pt;
+
     &.music-link-youtube {
         color: #E5322E;
 
@@ -13,6 +15,16 @@
 
     &.music-link-spotify {
         color: #1ED760;
+    }
+
+    &.music-link-geniuslyrics {
+        padding-left: 0.4em;
+        padding-right: 0.2em;
+        padding-bottom: 0.2em;
+        background-color: #FFFF64;
+        font-family: sans-serif;
+        color: #FFFF64;
+        text-shadow: -2px 2px 0px black;
     }
 
     margin-right: 1em;
