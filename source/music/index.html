@@ -3,21 +3,22 @@ layout: default
 title: 'Music I like - Sathyam Vellal'
 ---
 <div class="music">
-    <div class="music-stage" id="stage">
+    <div class="music-top" id="stage">
         <p>Music I like/listen to.</p>
         <p class="work-in-progress">This space is still a work in progress. currently showing recents.</p>
     </div>
 
-    <div class="blog">
-        <!-- <h1>Blog Posts:</h1> -->
+    <div class="music-posts">
         <ul>
             {% for post in site.categories.music %}
             <li>
-                <!-- <div class="top">
-                  <span class="url"><a href="{{ post.url }}">{{ post.title }}</a></span>
-                </div> -->
-                <div class="content">
-                    {{post.content}}
+                <div class="music-post">
+                    <div class="music-post-header">
+                      <span class="url"><a href="{{ post.url }}">{{ post.title }}</a></span>
+                    </div>
+                    <div class="music-post-content">
+                        {{post.content}}
+                    </div>
                 </div>
             </li>
             {% endfor %}
