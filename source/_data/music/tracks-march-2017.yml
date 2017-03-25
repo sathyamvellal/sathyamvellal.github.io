@@ -1,4 +1,19 @@
 tracks:
+    - title: "On Melancholy Hill"
+      from: "Plastic Beach"
+      by: "Gorillaz"
+      youtube: "https://www.youtube.com/watch?v=04mfKJWDSzI"
+      applemusic: "https://itun.es/us/KKv7Q?i=720198178"
+      spotify: "https://open.spotify.com/track/0q6LuUqGLUiCPP1cbdwFs3"
+      geniuslyrics: "https://genius.com/Gorillaz-on-melancholy-hill-lyrics"
+
+    - title: "Rhinestone Eyes"
+      by: "Gorillaz"
+      youtube: "https://www.youtube.com/watch?v=yYDmaexVHic"
+      applemusic: "https://itun.es/us/KKv7Q?i=720198093"
+      spotify: "https://open.spotify.com/track/1foMv2HQwfQ2vntFf9HFeG"
+      geniuslyrics: "https://genius.com/Gorillaz-rhinestone-eyes-lyrics"
+
     - title: "Xtatic Truth"
       by: "Crystal Fighters"
       youtube: "https://www.youtube.com/watch?v=EfVuVLis8wU"
