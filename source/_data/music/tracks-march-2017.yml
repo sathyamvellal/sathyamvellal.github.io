@@ -6,6 +6,32 @@ tracks:
       spotify: "https://play.spotify.com/track/133uDbk8HSSmtYj3eshOY6"
       geniuslyrics: "https://genius.com/Crystal-fighters-xtatic-truth-lyrics"
 
+    - title: "Symphony No. 7, II. Allegretto"
+      from: "Ludwig van Beethoven"
+      by: "Joshua Bell & Academy of St. Martin in the Fields"
+      youtube: "https://www.youtube.com/watch?v=6AtnngKU-7c"
+      spotify: "https://open.spotify.com/track/5f0XjqrPQfzKz7vYGw2RUD"
+      applemusic: "https://itun.es/us/2Cj6I?i=585668704"
+
+    - title: "I Wanna Go To Marz (feat. Midlake)"
+      by: "John Grant"
+      youtube: "https://www.youtube.com/watch?v=83iPcpY3TPg"
+      applemusic: "https://itun.es/us/hofSab?i=1085297546"
+      spotify: "https://open.spotify.com/track/5YxtCGHvn9oE43NM9Hh5VE"
+      geniuslyrics: "https://genius.com/John-grant-marz-lyrics"
+
+    - title: "Happy"
+      from: "Pharrell Williams"
+      cover: "live loop cover"
+      by: "Randler Music"
+      youtube: "https://www.youtube.com/watch?v=rIG8Po6-cqY"
+
+    - title: "The Sound of Silence"
+      from: "Simon & Garfunkel"
+      cover: "cover"
+      by: "Randler Music"
+      youtube: "https://www.youtube.com/watch?v=b18qH-xSeBU"
+
     - title: "The Sound of Silence"
       from: "Simon & Garfunkel"
       cover: "a cappella cover"
@@ -24,6 +50,7 @@ tracks:
       by: "Eddie van der Meer"
       youtube: "https://www.youtube.com/watch?v=jG1lbuvKVM0"
       applemusic: "https://itun.es/us/oq20hb?i=1205036198"
+      spotify: "https://open.spotify.com/track/5ZlAq2Z7GglWqlr1j8I4eB"
 
     - title: "The Last of Us"
       from: "Gustavo Santaolalla"
@@ -42,6 +69,8 @@ tracks:
       by: "The xx"
       youtube: "https://www.youtube.com/watch?v=Pib8eYDSFEI"
       applemusic: "https://itun.es/us/NV3Ot?i=329481203"
+      spotify: "https://open.spotify.com/track/1nmCmB3qdXrzxFhvLJuhuB"
+      geniuslyrics: "https://genius.com/The-xx-crystalised-lyrics"
 
     - title: "Light of the Seven"
       from: "The Game of Thrones Symphony"
@@ -55,6 +84,8 @@ tracks:
       by: "The xx"
       youtube: "https://www.youtube.com/watch?v=lGBn9_aEtB8"
       applemusic: "https://itun.es/us/C8gYfb?i=1170764262"
+      spotify: "https://open.spotify.com/track/044qU7kwVZaDwzWnRsmVVL"
+      geniuslyrics: "https://genius.com/The-xx-i-dare-you-lyrics"
 
     - title: "The Sound of Silence"
       from: "Simon & Garfunkel"
@@ -89,6 +120,7 @@ tracks:
       cover: "cover"
       by: "Disturbed"
       youtube: "https://www.youtube.com/watch?v=u9Dg-g7t2l4"
+      spotify: "https://open.spotify.com/track/0UYPJogBP1JDvfTSSbEvL0"
       applemusic: "https://itun.es/us/Ovkb8?i=1006937459"
 
     - title: "The Sound of Silence"
@@ -113,6 +145,8 @@ tracks:
       by: "Simon & Garfunkel"
       youtube: "https://www.youtube.com/watch?v=4fWyzwo1xg0"
       applemusic: "https://itun.es/us/aqqEl?i=192480260"
+      spotify: "https://open.spotify.com/track/2YplrdHMBoRdnHgMeHEwHm"
+      geniuslyrics: "https://genius.com/Simon-and-garfunkel-the-sound-of-silence-lyrics"
 
     - title: "Forbidden Friendship"
       from: "How to Train Your Dragon"
