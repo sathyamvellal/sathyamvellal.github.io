@@ -10,17 +10,28 @@ title: 'Music I like - Sathyam Vellal'
 
     <div class="music-posts">
         <ul>
-            {% for post in site.categories.music %}
-            <li>
-                <div class="music-post">
-                    <div class="music-post-header">
-                      <span class="url"><a href="{{ post.url }}">{{ post.title }}</a></span>
+                <li>
+                    <div class="music-post">
+                        <div class="music-post-header">
+                          <span class="url"><a href="/music/new">New Music This Week</a></span>
+                        </div>
+                        <div class="music-post-content">
+                            {% include newmusic.html %}
+                        </div>
                     </div>
-                    <div class="music-post-content">
-                        {{post.content}}
-                    </div>
+                </li>
+                <hr/>
+                <div class="music-archives">
+                    <h2 ><strong>Archives</strong></h2>
                 </div>
-            </li>
+            {% for post in site.categories.music %}
+                <li>
+                    <div class="music-post">
+                        <div class="music-post-header">
+                          <span class="url"><a href="{{ post.url }}">{{ post.title }}</a></span>
+                        </div>
+                    </div>
+                </li>
             {% endfor %}
         </ul>
     </div>
