@@ -17,7 +17,7 @@ I come from [Bangalore, India][8] (which is pretty much the LA of India; minus H
 To reach me, tweet [@sathyamvellal][12]. Or email **sathyam AT vellals DOT com**. You can find my [short resume here][13] and my [long resume here][14]
 
 <br/>
-Live Long and Prosper! 🖖
+Live Long and Prosper! <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
 
 [0]: http://www.phonemicchart.com/
 [1]: http://www.usc.edu/
