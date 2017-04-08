@@ -1,0 +1,35 @@
+---
+layout: musicpost
+title: 'April 2017'
+date: 2017-04-01 00:00
+permalink: '/music/2017/04/'
+---
+
+<div class="music-tracks">
+    {% for track in site.data.music.tracks-april-2017.tracks %}
+        {% if track.title and track.title != "" %}
+        <div class="music-track">
+            <div class="music-track-title"><p>
+                {% if track.from %}<span>{{track.from}} - </span>{% endif %}
+                <span> {{track.title}} </span>
+                {% if track.cover %}<span> ({{track.cover}}) </span>{% endif %}
+                <span> by {{track.by}}</span>
+            </p></div>
+            <div class="music-links">
+                {% if track.youtube %}
+                    <a class="music-link music-link-youtube" href="{{track.youtube}}" target="_blank"><strong><i class="fa fa-youtube-play" aria-hidden="true"></i> <span class="black">You</span>Tube</strong></a>
+                {% endif %}
+                {% if track.applemusic %}
+                    <a class="music-link music-link-applemusic" href="{{track.applemusic}}" target="_blank"><strong><i class="fa fa-apple" aria-hidden="true"></i> MUSIC</strong></a>
+                {% endif %}
+                {% if track.spotify %}
+                    <a class="music-link music-link-spotify" href="{{track.spotify}}" target="_blank"><strong><i class="fa fa-spotify" aria-hidden="true"></i> Spotify</strong></a>
+                {% endif %}
+                {% if track.geniuslyrics %}
+                    <a class="music-link music-link-geniuslyrics" href="{{track.geniuslyrics}}" target="_blank"><strong><span aria-hidden="true"> G E N I U S </span></strong></a>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</div>
