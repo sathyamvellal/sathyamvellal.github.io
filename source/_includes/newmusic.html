@@ -1,5 +1,6 @@
 <div class="music-tracks">
     {% for track in site.data.music.tracks-this-week.tracks %}
+        {% if track.title and track.title != "" %}
         <div class="music-track">
             <div class="music-track-title"><p>
                 {% if track.from %}<span>{{track.from}} - </span>{% endif %}
@@ -22,5 +23,6 @@
                 {% endif %}
             </div>
         </div>
+        {% endif %}
     {% endfor %}
 </div>
