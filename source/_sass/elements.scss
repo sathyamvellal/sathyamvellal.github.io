@@ -21,6 +21,9 @@ p {
 	font-size: 1em;
 	line-height: 1.5em;
 }
+p.work-in-progress, p.grey {
+    color: #CCCCCC;
+}
 a:not(.music-link) {
   color: $color-link;
   text-decoration: none;
@@ -84,4 +87,15 @@ blockquote p {
   display: inline;
 	font-style: italic;
 	color: $color-ash
+}
+table.centered {
+    width: 100%;
+
+    tr {
+        width: 100%;
+    }
+    td {
+        width: 100%;
+        text-align: center;
+    }
 }
