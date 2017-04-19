@@ -1,5 +1,9 @@
 .music-link {
-    font-size: 11pt;
+    font-size: 12pt;
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+
+    display: inline-block;
 
     &.music-link-youtube {
         color: #E5322E;
@@ -17,11 +21,30 @@
         color: #1ED760;
     }
 
+    &.music-link-playmusic {
+        .grey {
+            color: #767676;
+        }
+
+        .orange {
+            color: #FF5722;
+        }
+    }
+
+    &.music-link-bandcamp {
+        color: #639AA9;
+    }
+
+    &.music-link-soundcloud {
+        color: #FF6900;
+    }
+
     &.music-link-geniuslyrics {
-        font-size: 10pt;
+        display: inline-block;
         padding-left: 0.4em;
         padding-right: 0.2em;
         padding-bottom: 0.2em;
+        padding-top: 0.1em;
         background-color: #FFFF64;
         font-family: sans-serif;
         color: #FFFF64;

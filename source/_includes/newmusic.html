@@ -9,16 +9,25 @@
                 <span> by {{track.by}}</span>
             </p></div>
             <div class="music-links">
-                {% if track.youtube %}
+                {% if track.youtube and track.youtube != "" %}
                     <a class="music-link music-link-youtube" href="{{track.youtube}}" target="_blank"><strong><i class="fa fa-youtube-play" aria-hidden="true"></i> <span class="black">You</span>Tube</strong></a>
                 {% endif %}
-                {% if track.applemusic %}
+                {% if track.applemusic and track.applemusic != "" %}
                     <a class="music-link music-link-applemusic" href="{{track.applemusic}}" target="_blank"><strong><i class="fa fa-apple" aria-hidden="true"></i> MUSIC</strong></a>
                 {% endif %}
-                {% if track.spotify %}
+                {% if track.spotify and track.spotify != "" %}
                     <a class="music-link music-link-spotify" href="{{track.spotify}}" target="_blank"><strong><i class="fa fa-spotify" aria-hidden="true"></i> Spotify</strong></a>
                 {% endif %}
-                {% if track.geniuslyrics %}
+                {% if track.playmusic and track.playmusic != "" %}
+                    <a class="music-link music-link-playmusic" href="{{track.playmusic}}" target="_blank"><strong><span class="orange"><i class="fa fa-play-circle" aria-hidden="true"></i></span> <span class="grey">Play</span><span class="orange">Music</span></strong></a>
+                {% endif %}
+                {% if track.soundcloud and track.soundcloud != "" %}
+                    <a class="music-link music-link-soundcloud" href="{{track.soundcloud}}" target="_blank"><strong><i class="fa fa-soundcloud" aria-hidden="true"></i> <i>soundcloud</i></strong></a>
+                {% endif %}
+                {% if track.bandcamp and track.bandcamp != "" %}
+                    <a class="music-link music-link-bandcamp" href="{{track.bandcamp}}" target="_blank"><strong><i class="fa fa-bandcamp" aria-hidden="true"></i> <i>bandcamp</i></strong></a>
+                {% endif %}
+                {% if track.geniuslyrics and track.geniuslyrics != "" %}
                     <a class="music-link music-link-geniuslyrics" href="{{track.geniuslyrics}}" target="_blank"><strong><span aria-hidden="true"> G E N I U S </span></strong></a>
                 {% endif %}
             </div>
