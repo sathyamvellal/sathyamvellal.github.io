@@ -30,6 +30,9 @@
                 {% if track.geniuslyrics and track.geniuslyrics != "" %}
                     <a class="music-link music-link-geniuslyrics" href="{{track.geniuslyrics}}" target="_blank"><strong><span aria-hidden="true"> G E N I U S </span></strong></a>
                 {% endif %}
+                {% if track.musixmatchlyrics and track.musixmatchlyrics != "" %}
+                    <a class="music-link music-link-musixmatchlyrics" href="{{track.musixmatchlyrics}}" target="_blank"><strong><span aria-hidden="true"> musixmatch</span></strong></a>
+                {% endif %}
             </div>
         </div>
         {% endif %}
