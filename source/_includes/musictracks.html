@@ -1,5 +1,5 @@
 <div class="music-tracks">
-    {% for track in site.data.music.tracks-this-week.tracks %}
+    {% for track in {{include.data}} %}
         {% if track.title and track.title != "" %}
         <div class="music-track">
             <div class="music-track-title"><p>
