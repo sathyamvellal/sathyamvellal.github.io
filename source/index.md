@@ -5,7 +5,7 @@ layout: default
 ## Hi.
 
 <br/>
-I'm **Sathyam** [/sʌθ-jəm/][0], a Computer Science graduate student at the [University of Southern California][1], Los Angeles, and specializing in [Simulations][2] and [High Performance Computing][3]. I love programming and am crazy about simulating [things around me][4]. I plan to one day contribute in [Space Tech][5]. Yes, I'm a huge fan of [SimCity][6] and [Kerbal Space Program][7].
+I'm **Sathyam** [sa-th-yum][0], a Computer Science graduate student at the [University of Southern California][1], Los Angeles, and specializing in [Simulations][2] and [High Performance Computing][3]. I love programming and am crazy about simulating [things around me][4]. I plan to one day contribute in [Space Tech][5]. Yes, I'm a huge fan of [SimCity][6] and [Kerbal Space Program][7].
 
 <br/>
 I come from [Bangalore, India][8] (which is pretty much the LA of India; minus Hollywood). So, it should come as no surprise that I'm a [foodie][9] and run on [coffee][10]! I love instrumental music and worship [Hans Zimmer][11]. I draw a lot of inspiration from him -  
