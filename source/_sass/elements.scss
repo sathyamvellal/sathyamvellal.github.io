@@ -21,8 +21,11 @@ p {
 	font-size: 1em;
 	line-height: 1.5em;
 }
-p.work-in-progress, p.grey {
+.grey {
     color: #CCCCCC;
+}
+.dark-grey {
+    color: #AAAAAA;
 }
 a:not(.music-link) {
   color: $color-link;
