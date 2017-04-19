@@ -3,9 +3,9 @@
         {% if track.title and track.title != "" %}
         <div class="music-track">
             <div class="music-track-title"><p>
-                {% if track.from %}<span>{{track.from}} - </span>{% endif %}
+                {% if track.from and track.from != "" %}<span>{{track.from}} - </span>{% endif %}
                 <span> {{track.title}} </span>
-                {% if track.cover %}<span> ({{track.cover}}) </span>{% endif %}
+                {% if track.cover and and track.cover != "" %}<span> ({{track.cover}}) </span>{% endif %}
                 <span> by {{track.by}}</span>
             </p></div>
             <div class="music-links">
