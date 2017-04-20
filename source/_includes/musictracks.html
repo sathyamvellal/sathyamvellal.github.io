@@ -17,7 +17,7 @@ function openAppleMusic(url) {
                 {% if track.from and track.from != "" %}<span>{{track.from}} - </span>{% endif %}
                 <span> <strong>{{track.title}}</strong> </span>
                 {% if track.cover and track.cover != "" %}<span class="dark-grey"> ({{track.cover}}) </span>{% endif %}
-                <span> <span class="dark-grey">by</span> {{track.by}}</span>
+                {% if track.by and track.by != "" %}<span> <span class="dark-grey">by</span> {{track.by}}</span>{% endif %}
             </p></div>
             <div class="music-links">
                 {% if track.youtube and track.youtube != "" %}
