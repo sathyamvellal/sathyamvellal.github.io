@@ -9,8 +9,12 @@ function openAppleMusic(url) {
 }
 </script>
 
+{% if include.data.date and include.date.date != "" %}
+<p class="grey centered" style="margin-top: -2em; margin-bottom: 2.5em; font-size: 13pt;">{{include.data.date}}</p>
+{% endif %}
+
 <div class="music-tracks">
-    {% for track in {{include.data}} %}
+    {% for track in {{include.data.tracks}} %}
         {% if track.title and track.title != "" %}
         <div class="music-track">
             <div class="music-track-title"><p>
