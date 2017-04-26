@@ -101,10 +101,11 @@
 
 .music-explicit {
     font-size: 8pt;
-    font-family: monospace;
+    font-style: bold;
+    font-family: sans-serif !important;
     background-color: #444444;
     color: #EEEEEE;
-    padding: 0.2em 0.4em 0.2em 0.5em;
+    padding: 0.2em 0.6em 0.2em 0.6em;
     margin-right: 0.3em;
     vertical-align: text-top;
 }

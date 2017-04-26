@@ -20,7 +20,7 @@ function openAppleMusic(url) {
         {% if track.title and track.title != "" %}
         <div class="music-track">
             <div class="music-track-title"><p>
-                {% if track.explicit %}<span class="music-explicit">E!</span>{% endif %}
+                {% if track.explicit %}<span class="music-explicit">E</span>{% endif %}
                 {% if track.from and track.from != "" %}<span>{{track.from}} - </span>{% endif %}
                 <span> <strong>{{track.title}}</strong> </span>
                 {% if track.cover and track.cover != "" %}<span class="dark-grey"> ({{track.cover}}) </span>{% endif %}
