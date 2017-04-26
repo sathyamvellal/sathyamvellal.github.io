@@ -180,6 +180,7 @@ tracks:
       bandcamp: ""
       geniuslyrics: ""
       musixmatchlyrics: ""
+      explicit: true
 
     - title: "D_Generation"
       from: "Celebrate the Oscars"
