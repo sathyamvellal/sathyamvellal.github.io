@@ -32,5 +32,5 @@ Live Long and Prosper! <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
 [10]: https://en.wikipedia.org/wiki/Coffee
 [11]: https://en.wikipedia.org/wiki/Hans_Zimmer
 [12]: https://twitter.com/sathyamvellal
-[13]: http://sathyam.me/resume
-[14]: http://sathyam.me/resume-long
+[13]: /resume
+[14]: /resume-long
