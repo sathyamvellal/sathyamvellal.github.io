@@ -5,7 +5,7 @@ layout: default
 ## Hi.
 
 <br/>
-I'm **Sathyam** [/sa-th-yum/][0], a Computer Science graduate student at the [University of Southern California][1], Los Angeles, and specializing in [Simulations][2] and [High Performance Computing][3]. I love to break down complex problems and simulating the intricate details of it. I'm particularly interested in [Agent Based Modelling][15]. I plan to one day contribute in [Space Tech][5]. And yes, I'm a huge fan of [SimCity][6] and [Kerbal Space Program][7]. I prefer [he/him or they/them][16] pronouns.
+I'm **Sathyam** [/sa-th-yum/][0], a Computer Science graduate student at the [University of Southern California][1], Los Angeles, and specializing in [Simulations][2] and [High Performance Computing][3]. I love to break down complex problems and simulating the intricate details of it. I'm particularly interested in [Agent Based Modelling][15]. I plan to one day contribute in [Space Tech][5]. And yes, I'm a huge fan of [SimCity][6] and [Kerbal Space Program][7].
 
 <br/>
 I come from [Bangalore][8], dubbed as the Silicon Valley of India, and frankly, the most welcoming city in India. To paint a picture, it's somewhere in between Los Angeles and the Bay Area. It should also come as no surprise that I'm a [foodie][9] and run on [coffee][10] (a typical Bangalorean)! I love instrumental music and worship [Hans Zimmer][11]. I draw a lot of inspiration from him -  
@@ -15,6 +15,9 @@ I come from [Bangalore][8], dubbed as the Silicon Valley of India, and frankly, 
 
 <br/>
 To reach me, tweet [@sathyamvellal][12]. Or email **sathyam AT vellals DOT com**. You can find my [short resume here][13] and my [long resume here][14].
+
+<br/>
+I prefer [he/him or they/them][16] pronouns.
 
 <br/>
 Live Long and Prosper! <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
