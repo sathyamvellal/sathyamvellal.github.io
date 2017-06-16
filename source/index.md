@@ -17,7 +17,7 @@ I come from [Bangalore][8], dubbed as the Silicon Valley of India, and frankly, 
 To reach me, tweet [@sathyamvellal][12]. Or email **sathyam AT vellals DOT com**. You can find my [short resume here][13] and my [long resume here][14].
 
 <br/>
-I prefer [he/him or they/them][16] pronouns.
+I prefer [he/him][16] pronouns.
 
 <br/>
 Live Long and Prosper! <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
@@ -38,4 +38,4 @@ Live Long and Prosper! <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
 [13]: /resume
 [14]: /resume-long
 [15]: https://en.wikipedia.org/wiki/Agent-based_model
-[16]: http://my.pronoun.is/he?or=they
+[16]: http://my.pronoun.is/he
