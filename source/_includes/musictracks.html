@@ -11,9 +11,10 @@ function openAppleMusic(url) {
 }
 </script>
 
-{% if include.data.date and include.date.date != "" %}
-<p class="grey centered" style="margin-top: -2em; margin-bottom: 2.5em; font-size: 13pt;">{{include.data.date}}</p>
-{% endif %}
+<p class="centered" style="margin-top: -1.5em; margin-bottom: 2.5em; font-size: 13pt;">
+  <span class="grey">Updated {{include.data.date}}</span><br/>
+  <a style="padding-left: 1.5em; margin-top: -0.5em;" class="music-link music-link-spotify" href="{{site.data.music.playlists.new.spotify}}" target="_blank"><strong><i class="fa fa-spotify" aria-hidden="true"></i> Spotify Playlist</strong></a>
+</p>
 
 <div class="music-tracks">
     {% for track in {{include.data.tracks}} %}
