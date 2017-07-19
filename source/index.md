@@ -5,19 +5,19 @@ layout: default
 ## Hi.
 
 <br/>
-I'm **Sathyam** [/sa-th-yum/][0], a Computer Science graduate student at the [University of Southern California][1], Los Angeles, and specializing in [Simulations][2] and [High Performance Computing][3]. I love to break down complex problems and simulating the intricate details of it. I'm particularly interested in [Agent Based Modelling][15]. I plan to one day contribute in [Space Tech][5]. And yes, I'm a huge fan of [SimCity][6] and [Kerbal Space Program][7].
+I'm **Sathyam** [/sa-th-yum/][0]{:target="_blank"}, a Computer Science graduate student at the [University of Southern California][1]{:target="_blank"}, Los Angeles, and specializing in [Simulations][2]{:target="_blank"} and [High Performance Computing][3]{:target="_blank"}. I love to break down complex problems and simulating the intricate details of it. I'm particularly interested in [Agent Based Modelling][15]{:target="_blank"}. I plan to one day contribute in [Space Tech][5]{:target="_blank"}. And yes, I'm a huge fan of [SimCity][6]{:target="_blank"} and [Kerbal Space Program][7]{:target="_blank"}.
 
 <br/>
-I come from [Bangalore][8], dubbed as the Silicon Valley of India, and frankly, the most welcoming city in India. To paint a picture, it's somewhere in between Los Angeles and the Bay Area. It should also come as no surprise that I'm a [foodie][9] and run on [coffee][10] (a typical Bangalorean)! I love instrumental music and worship [Hans Zimmer][11]. I draw a lot of inspiration from him -  
+I come from [Bangalore][8]{:target="_blank"}, dubbed as the Silicon Valley of India, and frankly, the most welcoming city in India. To paint a picture, it's somewhere in between Los Angeles and the Bay Area. It should also come as no surprise that I'm a [foodie][9]{:target="_blank"} and run on [coffee][10]{:target="_blank"} (a typical Bangalorean)! I love instrumental music and worship [Hans Zimmer][11]{:target="_blank"}. I draw a lot of inspiration from him -  
 
 <br/>
 > If something happened where I couldn't write music anymore, it would kill me. It's not just a job. It's not just a hobby. It's why I get up in the morning.
 
 <br/>
-To reach me, tweet [@sathyamvellal][12]. Or email **sathyam AT vellals DOT com**. You can find my [short resume here][13] and my [long resume here][14].
+To reach me, tweet [@sathyamvellal][12]{:target="_blank"}. Or email **sathyam AT vellals DOT com**. You can find my [short resume here][13]{:target="_blank"} and my [long resume here][14]{:target="_blank"}.
 
 <br/>
-I prefer [he/him][16] pronoun.
+I prefer [he/him][16]{:target="_blank"} pronoun.
 
 <br/>
 Live Long and Prosper! <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
