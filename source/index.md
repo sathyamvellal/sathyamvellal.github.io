@@ -14,7 +14,7 @@ I come from [Bangalore][8]{:target="_blank"}, dubbed as the Silicon Valley of In
 > If something happened where I couldn't write music anymore, it would kill me. It's not just a job. It's not just a hobby. It's why I get up in the morning.
 
 <br/>
-To reach me, tweet [@sathyamvellal][12]{:target="_blank"}. Or email **sathyam AT vellals DOT com**. You can find my [short resume here][13]{:target="_blank"} and my [long resume here][14]{:target="_blank"}.
+To reach me, tweet [@sathyamvellal][12]{:target="_blank"}. Or email **sathyam AT vellals DOT com**. You can find my [resume here][13]{:target="_blank"}.
 
 <br/>
 I prefer [he/him][16]{:target="_blank"} pronoun.
