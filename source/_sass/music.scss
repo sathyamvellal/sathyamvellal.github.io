@@ -93,10 +93,27 @@
     padding-bottom: 2em;
 }
 
+.music-archives-header {
+}
+
 .music-archives {
     text-align: center;
-    padding-top: 2em;
+    padding-top: 1.5em;
     padding-bottom: 2em;
+
+    .year-list-header {
+        text-align: center;
+        padding-top: 1em;
+    }
+    .year-list {
+        padding-top: 1em;
+
+        li {
+            display: inline;
+            line-height: 1.5em;
+        }
+        text-align: center;
+    }
 }
 
 .music-explicit {
