@@ -3,7 +3,7 @@
       {% for item in site.data.navigation %}
           {% if page.url != item.url %}
             <li>
-                <a href="{{ item.url }}" target="_blank">{{ item.title }}</a>
+                <a href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a>
             </li>
           {% endif %}
       {% endfor %}
