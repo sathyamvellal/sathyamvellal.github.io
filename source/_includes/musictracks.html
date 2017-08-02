@@ -59,3 +59,29 @@ function openAppleMusic(url) {
         {% endif %}
     {% endfor %}
 </div>
+
+<hr class="faded"/>
+<div class="music-archives">
+    <h2 class="music-archives-header"><strong>Archives</strong></h2>
+    {% for post in site.categories.music %}
+        {% capture this_year %}{{ post.date | date: "%Y" }}{% endcapture %}
+        {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
+
+        {% if forloop.first %}
+        <h2 class="year-list-header"><strong>{{this_year}}</strong></h2>
+        <ul class="year-list">
+        {% endif %}
+
+        <li><a href="{{post.url}}">{{ post.date | date: '%B' }}</a></li>
+
+        {% if forloop.last %}
+        </ul>
+        {% else %}
+            {% if this_year != next_year %}
+            </ul>
+            <strong><h2 class="year-list-header">{{next_year}}</h2></strong>
+            <ul class="year-list">
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+</div>
