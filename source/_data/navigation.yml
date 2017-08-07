@@ -2,6 +2,10 @@
   url: /
   target: ''
 
+- title: <i class="fa fa-book" aria-hidden="true"></i>
+  url: /blog/
+  target: ''
+
 - title: <i class="fa fa-music" aria-hidden="true"></i>
   url: /music/
   target: ''
@@ -22,9 +26,9 @@
   url: https://www.instagram.com/sathyamvellal/
   target: '_blank'
 
-- title: <i class="fa fa-youtube" aria-hidden="true"></i>
-  url: https://www.youtube.com/c/SathyamVellal
-  target: '_blank'
+# - title: <i class="fa fa-youtube" aria-hidden="true"></i>
+#   url: https://www.youtube.com/c/SathyamVellal
+#   target: '_blank'
 
 - title: <i class="fa fa-mixcloud" aria-hidden="true"></i>
   url: https://www.mixcloud.com/sathyamvellal
