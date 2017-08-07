@@ -26,9 +26,9 @@
   url: https://www.instagram.com/sathyamvellal/
   target: '_blank'
 
-# - title: <i class="fa fa-youtube" aria-hidden="true"></i>
-#   url: https://www.youtube.com/c/SathyamVellal
-#   target: '_blank'
+- title: <i class="fa fa-youtube" aria-hidden="true"></i>
+  url: https://www.youtube.com/c/SathyamVellal
+  target: '_blank'
 
 - title: <i class="fa fa-mixcloud" aria-hidden="true"></i>
   url: https://www.mixcloud.com/sathyamvellal
@@ -36,4 +36,8 @@
 
 - title: <i class="fa fa-thumb-tack" aria-hidden="true"></i>
   url: https://pinboard.in/u:sathyamvellal
+  target: '_blank'
+
+- title: <i class="fa fa-camera" aria-hidden="true"></i>
+  url: /photos/
   target: '_blank'
