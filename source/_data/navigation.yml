@@ -38,9 +38,9 @@
   url: https://pinboard.in/u:sathyamvellal
   target: '_blank'
 
-- title: <i class="fa fa-camera-retro" aria-hidden="true"></i>
-  url: /photos/
-  target: '_blank'
+# - title: <i class="fa fa-camera-retro" aria-hidden="true"></i>
+#   url: /photos/
+#   target: '_blank'
 
 - title: <i class="fa fa-heartbeat" aria-hidden="true"></i>
   url: https://strava.com/athletes/sathyamvellal

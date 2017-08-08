@@ -11,41 +11,14 @@
 	}
 	ul {
 		margin-top: 10px;
-		width: 101%;
+		width: 100%;
 		max-width: 100%;
-		overflow: hidden;
-		overflow-x: scroll;
-		white-space: nowrap;
+		display: table;
 		height: 2.3em;
 		li {
             font-size: 1.5em;
-			display: inline;
-			padding: 0px 0.4em;
+			display: table-cell;
 			text-align: center;
 		}
 	}
-}
-
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-}
-
-::-webkit-scrollbar:vertical {
-    width: 12px;
-}
-
-::-webkit-scrollbar:horizontal {
-    height: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: rgba(50, 110, 130, 0.6);
-    border-radius: 10px;
-    border: 4px solid #ffffff;
-}
-
-::-webkit-scrollbar-track {
-	padding-top: 5px;
-    border-radius: 5px;
-    background-color: #ffffff;
 }
