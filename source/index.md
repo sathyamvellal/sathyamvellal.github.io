@@ -17,7 +17,7 @@ I come from [Bengaluru][8]{:target="_blank"}, dubbed as the Silicon Valley of In
 To reach me, tweet [@sathyamvellal][12]{:target="_blank"}. Or email **sathyam AT vellals DOT com**. You can find my [resume here][13]{:target="_blank"}.
 
 <br/>
-I prefer [he/him][16]{:target="_blank"} pronoun.
+I prefer [he/him][16]{:target="_blank"} pronouns.
 
 <br/>
 Live Long and Prosper! <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
