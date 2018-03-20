@@ -5,15 +5,34 @@ $(document).ready(function() {
   $.get("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sathyamvellal&api_key=0791402f4b42c447c7d3c2f913fa2427&format=json&limit=20")
   .done(function(results) {
     var tracks = results.recenttracks.track;
+    var data = [];
+    for (var i = 0; i < tracks.length; ++i) {
+      var track = tracks[i];
+      data.push({
+        image: track.image[1]["#text"],
+        track: {
+          name: track["name"],
+          artist: track["artist"]["#text"],
+          album: track["album"]["#text"]
+        }
+      });
+    }
     var columns = [
-      { name: "image", title: " ", type: "array", formatter: function(image) { return "<img width=40 src='" + image[1]["#text"] + "'/>"; }},
-      { name: "name", title: "Name",  },
-      { name: "artist", title: "Artist", type: "object", formatter: function(artist) { return artist["#text"]; }},
-      { name: "album", title: "Album", type: "object", formatter: function(album) { return album["#text"]; }}
+      { name: "image", title: " ", type: "text",
+        formatter: function(image) {
+          return "<img width=40 src='" + image + "'/>";
+        }
+      },
+      { name: "track", title: "Track", type: "object",
+        formatter: function(track) {
+          return "<span><strong>" + track.name + "</strong></span></br/><span>" + track.artist + "</span> - <span class='grey'>" + track.album + "</span>";
+        }
+      },
     ];
     $("#recentlyplayed").footable({
+      showHeader: false,
       columns: columns,
-      rows: tracks
+      rows: data
     });
   }).fail(function(err) {
     console.log('Error in loading recently played ...');
