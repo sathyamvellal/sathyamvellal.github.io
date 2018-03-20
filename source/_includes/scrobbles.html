@@ -1,0 +1,22 @@
+<table class="table" id="recentlyplayed"></table>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $.get("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sathyamvellal&api_key=0791402f4b42c447c7d3c2f913fa2427&format=json&limit=20")
+  .done(function(results) {
+    var tracks = results.recenttracks.track;
+    var columns = [
+      { name: "image", title: " ", type: "array", formatter: function(image) { return "<img width=40 src='" + image[1]["#text"] + "'/>"; }},
+      { name: "name", title: "Name",  },
+      { name: "artist", title: "Artist", type: "object", formatter: function(artist) { return artist["#text"]; }},
+      { name: "album", title: "Album", type: "object", formatter: function(album) { return album["#text"]; }}
+    ];
+    $("#recentlyplayed").footable({
+      columns: columns,
+      rows: tracks
+    });
+  }).fail(function(err) {
+    console.log('Error in loading recently played ...');
+  })
+})
+</script>
