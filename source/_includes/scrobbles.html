@@ -25,7 +25,7 @@ $(document).ready(function() {
       },
       { name: "track", title: "Track", type: "object",
         formatter: function(track) {
-          return "<a href=\"https://www.youtube.com/results?search_query=" + track.name + " " + track.artist + " " + track.album + "\">" + "<span><strong>" + track.name + "</strong></span></br/><span>" + track.artist + "</span> - <span class='grey'>" + track.album + "</span></a>";
+          return "<a target=\"_blank\" href=\"https://www.youtube.com/results?search_query=" + track.name + " " + track.artist + " " + track.album + "\">" + "<span><strong>" + track.name + "</strong></span></br/><span>" + track.artist + "</span> - <span class='grey'>" + track.album + "</span></a>";
         }
       },
     ];
