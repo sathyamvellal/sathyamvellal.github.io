@@ -1,14 +1,12 @@
 ---
 ---
-@import "variables";
-@import "themes/flatblue";
+@import "bootstrap";
 @import "elements";
 @import "wrapper";
 @import "header";
 @import "blog";
 @import "music";
 @import "post";
-@import "bootstrap";
 
 .header ul {
   padding: 0;
