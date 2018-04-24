@@ -20,7 +20,7 @@ To reach me, tweet [@sathyamvellal][12]{:target="_blank"}. Or email **sathyam AT
 I prefer [he/him][16]{:target="_blank"} pronouns.
 
 <br/>
-Live Long and Prosper! <i class="fa fa-hand-spock-o" aria-hidden="true"></i>
+Live Long and Prosper! <i class="fal fa-hand-spock"></i>
 
 [0]: http://www.phonemicchart.com/
 [1]: http://www.usc.edu/
