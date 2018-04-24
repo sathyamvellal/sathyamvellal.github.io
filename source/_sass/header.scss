@@ -1,6 +1,4 @@
-.header {
-	padding-top: 2em;
-	padding-bottom: 3em;
+.header, .footer {
 	@media screen and (max-width: 600px) {
 		padding-top: 1em;
 		padding-bottom: 2em;
@@ -16,9 +14,22 @@
 		display: table;
 		height: 2.3em;
 		li {
-            font-size: 1.5em;
+      font-size: 1.5em;
 			display: table-cell;
 			text-align: center;
 		}
 	}
+}
+
+.header ul, .footer ul {
+  padding: 0;
+}
+
+.header.wrapper, .footer.wrapper {
+  padding: 0;
+}
+
+.menuItem {
+  font-size: $font-size-base * 1.5;
+  text-align: center;
 }
