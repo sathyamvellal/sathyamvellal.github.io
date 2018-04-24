@@ -1,15 +1,3 @@
-- title: <i class="fas fa-home"></i></i>
-  url: /
-  target: ''
-
-- title: <i class="fal fa-file-alt"></i>
-  url: /blog/
-  target: ''
-
-- title: <i class="fab fa-itunes-note"></i>
-  url: /music/
-  target: ''
-
 - title: <i class="fab fa-twitter"></i>
   url: https://twitter.com/sathyamvellal
   target: '_blank'

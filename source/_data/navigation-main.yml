@@ -1,0 +1,11 @@
+- title: <i class="fas fa-home"></i></i>
+  url: /
+  target: ''
+
+- title: <i class="fas fa-book"></i>
+  url: /blog/
+  target: ''
+
+- title: <i class="fab fa-itunes-note"></i>
+  url: /music/
+  target: ''
