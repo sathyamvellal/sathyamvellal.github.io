@@ -109,11 +109,21 @@ hr.faded {
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
 }
 
-nav {
+.header {
   background-color: $white;
 
   .btn {
     background-color: $white;
     border: 0;
+  }
+
+  a {
+  	&:hover::after, &.active::after {
+  		content: '';
+  		left: 0;
+  		bottom: 0;
+  		border-bottom: 0;
+      border-bottom: 1px solid $dark;
+  	}
   }
 }
