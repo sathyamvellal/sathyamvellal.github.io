@@ -1,15 +1,11 @@
 </br>
 <div class="container">
-    <div class="row">
-      {% for item in site.data.navigation-main %}
-          {% if page.url != item.url %}
-          <div class="col menuItem">
-            <button type="button" class="btn btn-light btn-lg">
-              <a class="text-dark" href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a>
-            </button>
-          </div>
-          {% endif %}
-      {% endfor %}
-    </div>
+  <div class="row">
+    {% for item in site.data.navigation-main %}
+      <div class="col menuItem">
+        <a class="text-dark" href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a>
+      </div>
+    {% endfor %}
   </div>
 </div>
+</br>

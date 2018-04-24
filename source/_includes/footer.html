@@ -1,12 +1,10 @@
 <div class="container">
   <p class="text-center grey">Find me on</p>
-  <div class="row">
+  <ul>
     {% for item in site.data.navigation-others %}
-      <div class="col menuItem">
-        <button type="button" class="btn btn-light btn-lg">
+      <li>
           <a class="text-dark" href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a>
-        </button>
-      </div>
+      </li>
     {% endfor %}
-  </div>
+  </ul>
 </div>
