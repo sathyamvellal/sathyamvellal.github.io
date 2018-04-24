@@ -119,3 +119,20 @@ hr.faded {
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
+.black-links {
+  a:not(.music-link) {
+    color: $dark;
+    &:visited {
+  	   color: $dark;
+    }
+    &:hover {
+  	   color: $dark;
+    }
+  	&:hover::after, &.active::after {
+  		border-bottom: 1px solid $dark;
+  	}
+    &:active {
+  	  color: $link-color;
+    }
+  }
+}
