@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Hi.
+#### Hi.
 
 <br/>
 I'm **Sathyam** [/sa-th-yum/][0]{:target="_blank"}, a Computer Science graduate student at the [University of Southern California][1]{:target="_blank"}, Los Angeles, and specializing in [Simulations][2]{:target="_blank"} and [High Performance Computing][3]{:target="_blank"}. I love breaking down complex problems and simulating its intricate details. I'm particularly interested in [Molecular Dynamics Simulation][17] and [Scientific Visualisation][18]. I plan to one day contribute in [Space Tech][5]{:target="_blank"}. And yes, I'm a [trekkie][19], and a fan of [SimCity][6]{:target="_blank"} and [Kerbal Space Program][7]{:target="_blank"}.
