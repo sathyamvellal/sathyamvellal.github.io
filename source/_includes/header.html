@@ -1,43 +1,14 @@
-<nav class="navbar sticky-top navbar-light header">
-  <div class="row">
-    {% for item in site.data.navigation-main %}
-        {% if page.url != item.url %}
-        <div class="col-6 menuItem">
-          <button type="button" class="btn btn-light btn-lg">
-            <a class="text-dark" href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a>
-          </button>
-        </div>
-        {% endif %}
-    {% endfor %}
-  </div>
-  <div class-"row">
-    <div class="col">
-      <button type="button" class="btn btn-light btn-lg" >
-        <a class="text-dark" href="javascript:void(0)" data-toggle="modal" data-target="#menuModal">
-          <i class="fas fa-th"></i>
-        </a>
-      </button>
-    </div>
-  </div>
-</nav>
-
-<!-- Menu Modal -->
-<div class="modal fade" id="menuModal" tabindex="-1" role="dialog" aria-labelledby="menuModalTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-body">
-        <div class="container-fluid">
-          <div class="row">
-            {% for item in site.data.navigation-others %}
-                {% if page.url != item.url %}
-                <div class="col-4 menuItem my-4">
-                  <a href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a>
-                </div>
-                {% endif %}
-            {% endfor %}
+<div class="container">
+    <div class="row">
+      {% for item in site.data.navigation-main %}
+          {% if page.url != item.url %}
+          <div class="col menuItem">
+            <button type="button" class="btn btn-light btn-lg">
+              <a class="text-dark" href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a>
+            </button>
           </div>
-        </div>
-      </div>
+          {% endif %}
+      {% endfor %}
     </div>
   </div>
 </div>

@@ -1,1 +1,11 @@
-
+<div class="container">
+  <div class="row">
+    {% for item in site.data.navigation-others %}
+      <div class="col menuItem">
+        <button type="button" class="btn btn-light btn-lg">
+          <a class="text-dark" href="{{ item.url }}" target="{{ item.target }}">{{ item.title }}</a>
+        </button>
+      </div>
+    {% endfor %}
+  </div>
+</div>
