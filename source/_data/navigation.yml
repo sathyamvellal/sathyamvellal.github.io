@@ -6,35 +6,39 @@
 #   url: /blog/
 #   target: ''
 
-- title: <i class="fa fa-music" aria-hidden="true"></i>
+- title: <i class="fas fa-music"></i>
   url: /music/
   target: ''
 
-- title: <i class="fa fa-twitter" aria-hidden="true"></i>
+- title: <i class="fab fa-twitter"></i>
   url: https://twitter.com/sathyamvellal
   target: '_blank'
 
-- title: <i class="fa fa-github-square" aria-hidden="true"></i>
+- title: <i class="fab fa-github-square"></i>
   url: https://github.com/sathyamvellal
   target: '_blank'
 
-- title: <i class="fa fa-linkedin" aria-hidden="true"></i>
+- title: <i class="fab fa-linkedin"></i>
   url: https://linkedin.com/in/sathyamvellal
   target: '_blank'
 
-- title: <i class="fa fa-instagram" aria-hidden="true"></i>
+- title: <i class="fab fa-instagram"></i>
   url: https://www.instagram.com/sathyamvellal/
   target: '_blank'
 
-- title: <i class="fa fa-youtube" aria-hidden="true"></i>
+- title: <i class="fab fa-youtube"></i>
   url: https://www.youtube.com/c/SathyamVellal
   target: '_blank'
 
-- title: <i class="fa fa-mixcloud" aria-hidden="true"></i>
+- title: <i class="fab fa-mixcloud"></i>
   url: https://www.mixcloud.com/sathyamvellal
   target: '_blank'
 
-- title: <i class="fa fa-thumb-tack" aria-hidden="true"></i>
+- title: <i class="fas fa-film"></i>
+  url: https://letterboxd.com/sathyamvellal/
+  target: '_blank'
+
+- title: <i class="fas fa-thumbtack"></i>
   url: https://pinboard.in/u:sathyamvellal
   target: '_blank'
 
@@ -42,6 +46,6 @@
 #   url: /photos/
 #   target: '_blank'
 
-- title: <i class="fa fa-heartbeat" aria-hidden="true"></i>
+- title: <i class="fab fa-strava"></i>
   url: https://strava.com/athletes/sathyamvellal
   target: '_blank'
