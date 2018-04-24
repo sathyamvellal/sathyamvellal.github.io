@@ -1,15 +1,26 @@
-@import "bootstrap/scss/functions";
-@import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins";
+@import "bootstrap/functions";
+@import "bootstrap-variables-overrides";
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+@import "bootstrap/reboot";
 
-@import "bootstrap/scss/badge";
-@import "bootstrap/scss/tooltip";
-@import "bootstrap/scss/popover";
+@at-root {
+  @-ms-viewport { width: device-width; } // stylelint-disable-line at-rule-no-vendor-prefix
+}
 
-.span-popover {
-	font-family: monospace;
-	cursor: pointer;
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
 }
-div.popover {
-	font-family: 'Alegreya', serif;
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
+
+@import "bootstrap/grid";
+@import "bootstrap/utilities/display";
+@import "bootstrap/utilities/flex";
+
+@import "bootstrap/tables";
