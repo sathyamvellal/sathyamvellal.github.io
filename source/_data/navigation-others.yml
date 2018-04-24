@@ -26,6 +26,10 @@
   url: https://letterboxd.com/sathyamvellal/
   target: '_blank'
 
+# - title: <i class="fab fa-imdb"></i>
+#   url: https://www.imdb.com/user/ur35260435/
+#   target: '_blank'
+
 - title: <i class="fas fa-thumbtack"></i>
   url: https://pinboard.in/u:sathyamvellal
   target: '_blank'
