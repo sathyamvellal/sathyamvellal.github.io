@@ -1,26 +1,2 @@
-@import "bootstrap/functions";
 @import "bootstrap-variables-overrides";
-@import "bootstrap/variables";
-@import "bootstrap/mixins";
-@import "bootstrap/reboot";
-
-@at-root {
-  @-ms-viewport { width: device-width; } // stylelint-disable-line at-rule-no-vendor-prefix
-}
-
-html {
-  box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-@import "bootstrap/grid";
-@import "bootstrap/utilities/display";
-@import "bootstrap/utilities/flex";
-
-@import "bootstrap/tables";
+@import "bootstrap/bootstrap";
