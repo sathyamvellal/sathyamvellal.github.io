@@ -1,5 +1,7 @@
 ---
 layout: default
+title: 'Sathyam Vellal / Blog'
+description: 'Personal Blog'
 ---
 
 <!-- <div class="blog">
@@ -26,10 +28,10 @@ layout: default
     {% for post in site.categories.blog %}
     <div class="card border-0">
       <div class="card-body px-0">
-        <h5 class="card-title">{{ post.title }}</h5>
+        <h5 class="card-title"><a href="{{ post.url }}" class="card-link">{{ post.title }}</a></h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: '%b %d %Y' }}</h6>
       </div>
-      <img class="card-img-top" src="http://images4.fanpop.com/image/photos/21100000/Frasier-and-Niles-frasier-21198152-1280-720.jpg" alt="Card image cap">
+      <a href="{{ post.url }}" class="card-link card-img-link"><img class="card-img-top" src="http://images4.fanpop.com/image/photos/21100000/Frasier-and-Niles-frasier-21198152-1280-720.jpg" alt="{{ post.imageAlt }}"/></a>
       <div class="card-body px-0">
         <p class="card-text">
           {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
