@@ -1,8 +1,8 @@
 .wrapper {
-	max-width: 600px;
+	max-width: $br;
 	margin: auto;
 	// padding: 60px 30px 60px 30px;
-	@media screen and (max-width: 600px) {
+	@media screen and (max-width: $br) {
 		padding-left: 1em;
 		padding-right: 1em;
 	}
