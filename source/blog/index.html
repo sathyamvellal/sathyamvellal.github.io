@@ -2,8 +2,7 @@
 layout: default
 ---
 
-<div class="blog">
-    <!-- <h1>Blog Posts:</h1> -->
+<!-- <div class="blog">
     <ul>
         {% for post in site.categories.blog %}
         <li>
@@ -20,4 +19,25 @@ layout: default
         </li>
         {% endfor %}
     </ul>
+</div> -->
+
+<div class="blog">
+  <ul class="pl-0">
+    {% for post in site.categories.blog %}
+    <div class="card border-0">
+      <div class="card-body px-0">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: '%b %d %Y' }}</h6>
+      </div>
+      <img class="card-img-top" src="http://images4.fanpop.com/image/photos/21100000/Frasier-and-Niles-frasier-21198152-1280-720.jpg" alt="Card image cap">
+      <div class="card-body px-0">
+        <p class="card-text">
+          {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+        </p>
+        <a href="{{ post.url }}" class="card-link">Read on ...</a>
+        <!-- <span href="#" class="card-link">Category: Another link</span> -->
+      </div>
+    </div>
+    {% endfor %}
+  </ul>
 </div>
