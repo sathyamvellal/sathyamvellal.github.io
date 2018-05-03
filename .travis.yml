@@ -5,10 +5,7 @@ branches:
     - master
 
 deploy:
-  provider: pages
-  skip-cleanup: true
-  github-token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep-history: true
-  target-branch: master
-  local-dir: site
-  committer-from-gh: true
+  provider: script
+  script: bash deploy.sh
+  on:
+    branch: source
