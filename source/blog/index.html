@@ -31,15 +31,18 @@ description: 'Personal Blog'
         <h5 class="card-title"><a href="{{ post.url }}" class="card-link">{{ post.title }}</a></h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: '%b %d %Y' }}</h6>
       </div>
-      <a href="{{ post.url }}" class="card-link card-img-link"><img class="card-img-top" src="http://images4.fanpop.com/image/photos/21100000/Frasier-and-Niles-frasier-21198152-1280-720.jpg" alt="{{ post.imageAlt }}"/></a>
+      {% if post.coverimage %}
+        <a href="{{ post.url }}" class="card-link card-img-link"><img class="card-img-top" src="{{ post.coverimage }}" alt="{{ post.imageAlt }}"/></a>
+      {% endif %}
       <div class="card-body px-0">
         <p class="card-text">
-          {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+          {{ post.excerpt }}
         </p>
         <a href="{{ post.url }}" class="card-link">Read on ...</a>
         <!-- <span href="#" class="card-link">Category: Another link</span> -->
       </div>
     </div>
+    <hr/>
     {% endfor %}
   </ul>
 </div>
