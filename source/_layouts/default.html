@@ -8,6 +8,10 @@
   </br>
   <div class="wrapper">
     {{ content }}
+    <br/>
+    {% if page.comments %}
+      {% include comments.html %}
+    {% endif %}
   </div>
   <br/>
   <hr/>
