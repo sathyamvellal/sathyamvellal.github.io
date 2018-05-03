@@ -2,7 +2,7 @@
 
 <script type="text/javascript">
 $(document).ready(function() {
-  $.get("http://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sathyamvellal&api_key=0791402f4b42c447c7d3c2f913fa2427&format=json&limit=20")
+  $.get("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sathyamvellal&api_key=0791402f4b42c447c7d3c2f913fa2427&format=json&limit=20")
   .done(function(results) {
     var tracks = results.recenttracks.track;
     var data = [];
