@@ -2,7 +2,7 @@
 
 bundle exec jekyll build
 
-if [ -d "site" ]
+if [ -d "site" ]; then
   cd site
   git add .
   git commit -m "Site update"
