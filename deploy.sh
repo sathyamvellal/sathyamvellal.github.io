@@ -1,5 +1,6 @@
 #!/bin/bash
 
+bundle install
 bundle exec jekyll build
 
 if [ -d "site" ]; then
