@@ -8,3 +8,15 @@
 @import "blog";
 @import "music";
 @import "post";
+
+@media (max-width: 540px) {
+  body {
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 540px) {
+  body {
+    font-weight: 400;
+  }
+}
