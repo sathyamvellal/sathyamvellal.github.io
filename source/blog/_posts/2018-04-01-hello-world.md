@@ -6,7 +6,6 @@ category: 'Hello'
 coverimage: "http://images4.fanpop.com/image/photos/21100000/Frasier-and-Niles-frasier-21198152-1280-720.jpg"
 permalink: '/blog/hello-world'
 comments: true
-commentId: 1
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla porttitor accumsan tincidunt. Vivamus suscipit tortor eget felis porttitor volutpat. Proin eget tortor risus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Curabitur aliquet quam id dui posuere blandit.

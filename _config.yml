@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 host: 0.0.0.0
+url: https://sathyam.me
 
 title: Sathyam Vellal
 email: sathyam@vellals.com
