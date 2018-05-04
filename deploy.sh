@@ -12,4 +12,5 @@ if [ -d "site" ]; then
   cd ..
 else
   echo "Could not clone deploy branch ..."
+  exit 1
 fi
