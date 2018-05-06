@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html favicon="/favicon_pride.png" %}
+<body>
+  <div class="header wrapper">
+    {% include header.html %}
+  </div>
+  </br>
+  <div class="wrapper">
+    {% for post in site.tags[page.filter_tag] %}
+    <div class="card border-0">
+      <div class="card-body px-0">
+        <h5 class="card-title"><a href="{{ post.url }}" class="card-link">{{ post.title }}</a></h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ post.date | date: '%b %d %Y' }}</h6>
+      </div>
+      {% if post.coverimage %}
+        <a href="{{ post.url }}" class="card-link card-img-link"><img class="card-img-top" src="{{ post.coverimage }}" alt="{{ post.imageAlt }}"/></a>
+      {% endif %}
+      <div class="card-body px-0">
+        <p class="card-text">
+          {{ post.excerpt }}
+        </p>
+      </div>
+    </div>
+    <hr/>
+    {% endfor %}
+  </div>
+  <br/>
+  <hr/>
+  <div class="footer wrapper">
+    {% include footer.html %}
+  </div>
+  {% include scripts.html %}
+</body>
+</html>
