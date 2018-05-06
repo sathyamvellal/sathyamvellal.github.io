@@ -6,7 +6,7 @@
     {% include header.html %}
   </div>
   </br>
-  <div class="wrapper">
+  <div class="container wrapper">
     {% for post in site.tags[page.filter_tag] %}
       {% include post_excerpt.html post=post %}
     {% endfor %}
