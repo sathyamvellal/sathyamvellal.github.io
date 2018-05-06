@@ -16,6 +16,15 @@
 host: 0.0.0.0
 url: https://sathyam.me
 
+blog:
+  tags:
+    dir: "blog/tags/"
+    layout: "tag.html"
+    title_prefix: "Sathyam Vellal / Blog / Tags / "
+
+categories: ['General']
+tags: ['Coming Out', 'Goodbye', 'Los Angeles', 'USC']
+
 title: Sathyam Vellal
 email: sathyam@vellals.com
 name: Sathyam Vellal
