@@ -1,0 +1,4 @@
+{% if include.post.category != nil %}
+   in
+  <a href="/blog/categories/{{ include.post.category | replace_regex: '\s+', '-' | downcase }}">{{ include.post.category }}</a>
+{% endif %}

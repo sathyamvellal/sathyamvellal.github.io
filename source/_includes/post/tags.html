@@ -1,0 +1,13 @@
+{% if include.post.tags != nil and include.post.tags.size > 0 %}
+<span class="tags">
+  Tags:
+  {% assign sorted_tags=include.post.tags | sort %}
+  {% for tag in sorted_tags %}
+    {% if forloop.index != include.post.tags.size %}
+      <a href="/blog/tags/{{ tag | replace_regex: '\s+', '-' | downcase }}">{{ tag }}</a>,
+    {% else %}
+      <a href="/blog/tags/{{ tag | replace_regex: '\s+', '-' | downcase }}">{{ tag }}</a>
+    {% endif %}
+  {% endfor %}
+</span>
+{% endif %}
