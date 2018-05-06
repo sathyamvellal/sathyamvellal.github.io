@@ -4,6 +4,7 @@ title: "0 A.D. Fundraiser: 3 weeks remain!"
 date: 2013-10-02 01:23
 comments: true
 permalink: "0ad-Fundraiser-3-weels"
+description: "Help contribute to an open source Age of Empires replacement."
 disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 ---
 <div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>

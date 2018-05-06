@@ -4,6 +4,7 @@ title: "Welcome to PES OpenSource"
 date: 2014-08-23 21:08
 comments: true
 permalink: "/blog/welcome-to-pes-opensource"
+description: "This post is mainly targeted to the students of PES Institute of Technology/PES University, Bangalore."
 disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 ---
 <div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>

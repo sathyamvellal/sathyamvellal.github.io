@@ -4,11 +4,12 @@ title: "Hollywood in 2014 (for me)"
 date: 2013-12-19 15:51
 comments: true
 permalink: "/blog/hollywood-in-2014"
+description: "2013 is almost closing and its time to take a peek at films of 2014."
 disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 ---
 <div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>
 
-2013 is almost closing and its time to take a peak at films of 2014. This list though, is my preference. You can check the [entire list in wikipedia][1]. Here, I've linked the films to a trailer and a rating of my expectations (arranged by rating and alphabetically).
+2013 is almost closing and its time to take a peek at films of 2014. This list though, is my preference. You can check the [entire list in wikipedia][1]. Here, I've linked the films to a trailer and a rating of my expectations (arranged by rating and alphabetically).
 
 <!-- more -->
 

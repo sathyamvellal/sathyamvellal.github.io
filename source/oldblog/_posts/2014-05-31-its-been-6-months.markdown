@@ -4,6 +4,7 @@ title: "It's been six months!"
 date: 2014-05-31 10:03
 comments: true
 permalink: "/blog/its-been-6-months"
+description: "Yes. That's how long it's been since last I wrote."
 disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 ---
 <div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>

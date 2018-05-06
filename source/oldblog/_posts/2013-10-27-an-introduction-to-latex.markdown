@@ -7,6 +7,7 @@ date: 2013-10-27 14:32
 comments: true
 published: true
 permalink: "/blog/an-introduction-to-latex"
+description: "The write-up of my talk on LaTeX for beginners, as a part of Tech Talk Tuesday, an initiative of PES OpenSource"
 disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 ---
 <div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>

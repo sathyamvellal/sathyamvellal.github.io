@@ -4,6 +4,7 @@ title: "Hello World"
 date: 2013-07-04 19:40
 comments: true
 permalink: "/blog/hello-world"
+description: "In the Hindu pantheon, Lord Vinayaka is worshipped first; believed to be the remover of obstacles. For a programmer, Hello World serves this purpose"
 disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 ---
 <div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>

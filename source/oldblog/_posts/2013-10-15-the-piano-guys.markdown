@@ -4,6 +4,7 @@ title: "The Piano Guys"
 date: 2013-10-15 17:26
 comments: true
 permalink: "/blog/the-piano-guys"
+description: "Music is not just about melody or harmony. Its about enjoying, feeling and extracting the emotions out of the listener and ThePianoGuys do just that."
 disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 ---
 <div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>
