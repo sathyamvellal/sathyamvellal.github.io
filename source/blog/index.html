@@ -5,9 +5,12 @@ description: 'Personal Blog'
 ---
 
 <div class="blog">
-  <ul class="pl-0">
+  <div class="pl-0">
     {% for post in site.categories.blog %}
       {% include post_excerpt.html post=post %}
     {% endfor %}
-  </ul>
+    {% for post in site.categories.oldblog %}
+      {% include post_excerpt.html post=post %}
+    {% endfor %}
+  </div>
 </div>
