@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{% include head.html favicon="/favicon_pride.png" %}
+<body>
+  <div class="header wrapper">
+    {% include header.html %}
+  </div>
+  </br>
+  <div class="container wrapper">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-11 col-md-9 col-lg-7">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  <br/>
+  <hr/>
+  <div class="footer wrapper">
+    {% include footer.html %}
+  </div>
+  {% include scripts.html %}
+</body>
+</html>
