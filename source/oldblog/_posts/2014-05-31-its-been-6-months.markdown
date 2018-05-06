@@ -3,7 +3,10 @@ layout: post
 title: "It's been six months!"
 date: 2014-05-31 10:03
 comments: true
+permalink: "/blog/its-been-6-months"
+disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 ---
+<div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>
 
 Yes. That's how long it's been since last I wrote. Not that I wasn't interested or anything, I had a lot of work! My final year project and my internship at PayPal, eBayInc. It wasn't easy. Going to work in the morning and coming back to work on the college project. Phew! My college project's done and its my last week of internship now, ending on June 6th. And the best part - I'm back to working on things I've missed since the past 6-7 months!
 

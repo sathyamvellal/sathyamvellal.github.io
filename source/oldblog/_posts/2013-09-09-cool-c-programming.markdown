@@ -3,21 +3,24 @@ layout: post
 title: "Cool C Programming"
 date: 2013-09-09 20:33
 comments: true
+permalink: "/blog/cool-c-programming"
+disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 ---
+<div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>
 
-This post contains the writeup of my talk on **Cool C Programming** as part of the **Tech Talk Tuesday** series by **[PES OpenSource](http://pesos.pes.edu)** at PES Institute of Technology.
+This post contains the writeup of my talk on **Cool C Programming** as part of the **Tech Talk Tuesday** series by **[PES OpenSource](http://pesos.pes.edu)** at PES Institute of Technology.<!-- more -->
 (Please ignore any typos in this post; its pretty long and I wrote it in a hurry!)
 
-## The C Preprocessor
+###### The C Preprocessor
 
 In the C Program build process, there are three main phases.
 
-* Preprocessing
-* Compiling
-* Linking
+- Preprocessing
+- Compiling
+- Linking
 
-The C Preprocessor is dumb! It does not know anything about a C program. It is mainly used to manage the program's text according to our needs before the compiler begins its task. Managing involves including of header files, conditional inclusion of pieces of code, expanding macros, etc.  
-<!-- more -->
+The C Preprocessor is dumb! It does not know anything about a C program. It is mainly used to manage the program's text according to our needs before the compiler begins its task. Managing involves including of header files, conditional inclusion of pieces of code, expanding macros, etc.
+
 If you want to see the output of the preprocessor, you can use the `-E` flag for the compiler; ie compile the program as `gcc -E file.c`. This dumps the preprocessed output of file.c onto your terminal.
 
 There are three standard input/output buffers
@@ -26,7 +29,7 @@ There are three standard input/output buffers
 * `stdout` The default output buffer
 * `stderr` The output buffer for error/log messages
 
-### Conditional Syntax - `#ifdef` and `#ifndef`
+##### Conditional Syntax - `#ifdef` and `#ifndef`
 
 The preprocessor directive `#ifdef` is used to define conditional groups of code at the preprocessor level. Based on a condition, a piece of code may or may not be included in the program. The body of this directive is usually termed *controlled text*
 
@@ -38,7 +41,7 @@ The preprocessor directive `#ifdef` is used to define conditional groups of code
 
 In the above example, the body of `#ifdef` is included only if `SOME_MACRO` is defined. The `#define` directive is used to define MACROs.
 
-#### Example
+###### Example
 
 Here's a sample program.
 
@@ -120,7 +123,7 @@ int main()
 ```
 ###### Fig(1.4)
 
-You can observe that when the macro is defined, the controlled text is included. Note again, that the preprocessor does not know that the controlled text is a function or any of the C constructs. All it sees is some text.  
+You can observe that when the macro is defined, the controlled text is included. Note again, that the preprocessor does not know that the controlled text is a function or any of the C constructs. All it sees is some text.
 You can also define MACROs when invoking the compiler with the `-D` option. Compiling the code in Fig(1.1) as `gcc -E -DSOME_MACRO 1.c` gives me the same output as Fig(1.4).
 
 MACROs also can be object-like MACROs and function-like MACROs.
@@ -161,11 +164,11 @@ int main()
 
 `BAR` is an object-like MACRO which the preprocessor substitutes as 5, according to its definition. Therefore, the MACRO call `FOO(BAR)` is now `FOO(5)`. It then expands the function-like MACRO `FOO` with its parameter as 5. You therefore see `printf("%d", 5);`. Note that the `printf` of `FOO` does not end with a semicolon. But the MACRO is used with a semicolon `FOO(...);`. This ensures that printf ends with a semicolon. Why this approach? Its a standard convention to end every statement of a C program with a semicolon and it would be very odd to have some line not ending with it.
 
-### And now for a few tricks
+##### And now for a few tricks
 
-#### Creating debug MACROs
+###### Creating debug MACROs
 
-Lot of programmers are used to debug by logging the program's execution. This can be as simple as using `printf` all over the code to print messages (on the `stderr` buffer) and use this information to debug. Further more, you may want to write pieces of code to mainly check the correctness of the program (only while you're developing it). When its time for you to release your code, you'll have to remove all the logging statements, blocks of code which was used to check correctness, etc. This brings in a lot of work the developer. Additionally, if at some later point of time, the user had to improve his code, he might want to insert all such blocks again (its literally a headache!).  
+Lot of programmers are used to debug by logging the program's execution. This can be as simple as using `printf` all over the code to print messages (on the `stderr` buffer) and use this information to debug. Further more, you may want to write pieces of code to mainly check the correctness of the program (only while you're developing it). When its time for you to release your code, you'll have to remove all the logging statements, blocks of code which was used to check correctness, etc. This brings in a lot of work the developer. Additionally, if at some later point of time, the user had to improve his code, he might want to insert all such blocks again (its literally a headache!).
 Now, the preprocessor turns out to be very helpful!
 
 The following program demonstrates three features widely used in C Programs. We'll go through each one by one
@@ -224,7 +227,7 @@ Aborted (core dumped)
 
 Wow! That's magic! The program did not even try to perform the division because the assertion `(4 - 4) != 0` failed and also printed a lot of debugging messages!
 
-Let us now analyze what happened.  
+Let us now analyze what happened.
 In Fig(1.9), the program was compiled with the `CHECK_ENABLED` MACRO defined which included the following controlled text in the program.
 
 ``` c
@@ -244,11 +247,11 @@ When the program is compiled without defining `CHECK_ENABLED` MACRO [refer Fig(1
 
 This defines a function-like MACRO `CHECK(X, Y)` to nothing! So the function-like MACRO expands to nothing! ie the assertion is not in the code any more and so the program prints "7" and gets a floating point exception when trying a division with zero.
 
-So what just happened? In Fig(1.9) the program was executed in a debugging mode; the debugging mode in the above example was enabled by defining the `CHECK_ENABLED` MACRO; and in this debugging mode, the assertion statement was included in the code and the program aborted stating where it failed and why. The debugging mode also included some debugging messages which I printed so that I'd know what went wrong and where.  
-When the debugging mode wasn't enabled (by not defining the `CHECK_ENABLED` MACRO), the assertion wasn't included in the code by the preprocessor as `CHECK(X, Y)` expands to nothing. Now the program crashes.  
-Look at the error that comes up - `Floating point exception (core dumped)`. You cannot make out what happened where! The runtime threw an error message and exited the program. Whereas when the debugging is enabled, the assertion gives a better error message - `a.out: 1_preprocessor.c:13: foo: Assertion `(x - y) != 0' failed.`. It failed in line 13. That's where the function-like MACRO `CHECK(x, y)` expands.  
+So what just happened? In Fig(1.9) the program was executed in a debugging mode; the debugging mode in the above example was enabled by defining the `CHECK_ENABLED` MACRO; and in this debugging mode, the assertion statement was included in the code and the program aborted stating where it failed and why. The debugging mode also included some debugging messages which I printed so that I'd know what went wrong and where.
+When the debugging mode wasn't enabled (by not defining the `CHECK_ENABLED` MACRO), the assertion wasn't included in the code by the preprocessor as `CHECK(X, Y)` expands to nothing. Now the program crashes.
+Look at the error that comes up - `Floating point exception (core dumped)`. You cannot make out what happened where! The runtime threw an error message and exited the program. Whereas when the debugging is enabled, the assertion gives a better error message - `a.out: 1_preprocessor.c:13: foo: Assertion `(x - y) != 0' failed.`. It failed in line 13. That's where the function-like MACRO `CHECK(x, y)` expands.
 
-**Feature/Trick #1** : In short, you can now run your program in debug mode and release mode by just defining / not-defining a debug MACRO. Normally this debug MACRO is `DEBUG`. I've used `CHECK_ENABLED` in the example to include some checks. You must also understand now that in the release mode, we only concentrate on execution of the program and not error checking because they can make the program slower. Imagine calling the `foo(4, 3)` a million times in the debug mode. The assert function is called a million times but your intention is to check the correctness of the code and not the execution speed. In the release mode, the assertion is not even there and so your program executes much faster and is assumed to be correct.  
+**Feature/Trick #1** : In short, you can now run your program in debug mode and release mode by just defining / not-defining a debug MACRO. Normally this debug MACRO is `DEBUG`. I've used `CHECK_ENABLED` in the example to include some checks. You must also understand now that in the release mode, we only concentrate on execution of the program and not error checking because they can make the program slower. Imagine calling the `foo(4, 3)` a million times in the debug mode. The assert function is called a million times but your intention is to check the correctness of the code and not the execution speed. In the release mode, the assertion is not even there and so your program executes much faster and is assumed to be correct.
 Nice trick huh? Such an amazing work around to solve such an important problem and that too with just using the C Preprocessor!
 
 I mentioned long back that there are three features the above program [Fig(1.7)] tries to show. The first was the debug/release switch which we have covered in detail. The second is this very odd statement -
@@ -259,7 +262,7 @@ do { printf("Performing Assertion\n"); assert((X - Y) != 0); printf("Assertion p
 ```
 ###### Fig(1.12)
 
-**Feature/Trick #2** : Why the `do { ... } while(0)` ??! Why can't I just write a set of statements? Maybe because I wanted to group them. Then why couldn't I just use `{ ... }` instead of the do while zero?  
+**Feature/Trick #2** : Why the `do { ... } while(0)` ??! Why can't I just write a set of statements? Maybe because I wanted to group them. Then why couldn't I just use `{ ... }` instead of the do while zero?
 Consider this situation
 
 ``` c
@@ -274,7 +277,7 @@ int main ()
 ```
 ###### Fig(1.13)
 
-Remember that its a standard convention not to end the code within a function-like MACRO with a semicolon (because the MACRO is used with a semicolon at the end)? So the second `printf` doesn't end with a semicolon, its taken care of later.  
+Remember that its a standard convention not to end the code within a function-like MACRO with a semicolon (because the MACRO is used with a semicolon at the end)? So the second `printf` doesn't end with a semicolon, its taken care of later.
 An if condition is associated only with the statement/block following it. After the function-like MACRO `FOO(X, Y)` expands, we have something like the following -
 
 ``` c
@@ -395,7 +398,7 @@ void foo()
 The above snippet includes the old version of the function `foo()` if `USE_OLD_FOO` is defined, else by default the new version would be used. One may need to use old versions of codes for legacy support (say). But when using the old version, the developer would like to warn the user about it. In such cases, you can use the `#warning` directive. The `#errror` is similar, but throws an error
 
 ---
-## Swapping two variables
+###### Swapping two variables
 
 **Feature/Trick 6** : This is more a programming trick than a trick in C. To swap two variables without using additional space or arithmetic operators, you can simply use the xor operator; like so -
 
@@ -407,9 +410,9 @@ a = a ^ b;
 ###### Fig(2.1)
 
 ---
-## Pointers in C
+###### Pointers in C
 
-### Arrays and Pointers not entirely the same!
+##### Arrays and Pointers not entirely the same!
 
 **Feature/Trick 7** : One of the heavily misunderstood concepts of C is that pointers and arrays are the same. They are not. Pointers are merely variables holding the address of some location where as an array is conceptualized as a sequence of memory locations of a type. At compile time, an array is an array. Only during runtime, an array degenerates to a pointer. To prove this fact, let me show you an example -
 
@@ -431,12 +434,12 @@ And the output is (assuming size of int is 4 bytes and address size is 8 bytes) 
 
 See what happens? At compile time, the compiler has information regarding the array. It drops all the information in the end and so at runtime, an array acts like a constant pointer.
 
-### `v[index] and index[v]` are the same
+##### `v[index] and index[v]` are the same
 
 **Feature/Trick 8** : Yes arrays and pointers are not the same, but are interpreted in the same way; by dereferencing them to get the value. The indexing operation `v[index]` where `v` is some array and `index` is some index is internally converted to `*(v + index)`. The funny thing now is that if you use this as `index[v]`, its converted to `*(index + v)` and both mean the same!
 
 ---
-## Standard I/O
+###### Standard I/O
 
 **Feature/Trick 9** :You are no doubt familiar with `scanf` and `printf` functions. You also be familiar with `fscanf` and `fprintf` if you have worked on file handling.
 For example -
@@ -452,8 +455,8 @@ fclose(fptr);
 ```
 ###### Fig(4.1)
 
-The above snippet demonstrates reading from a file using `fscanf`.  
-How about this? You have a string containing two integers and you'd like to read from that. Its not a file name, its a character array. C provides reading and writing to character arrays (or C strings) with the use of `sscanf` and `sprintf`.  
+The above snippet demonstrates reading from a file using `fscanf`.
+How about this? You have a string containing two integers and you'd like to read from that. Its not a file name, its a character array. C provides reading and writing to character arrays (or C strings) with the use of `sscanf` and `sprintf`.
 Let me demonstrate this -
 
 ``` c
@@ -484,7 +487,7 @@ You can also use the new `gets_s` function; but `fgets` is pretty much the stand
 
 
 ---
-## C99, C11 and misc
+###### C99, C11 and misc
 
 You've been using the old fashioned way of initializing C structures right? Like so -
 

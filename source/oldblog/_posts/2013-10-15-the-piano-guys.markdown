@@ -3,7 +3,10 @@ layout: post
 title: "The Piano Guys"
 date: 2013-10-15 17:26
 comments: true
+permalink: "/blog/the-piano-guys"
+disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 ---
+<div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>
 
 Its a typical day and I'm just looking at *Recommended Videos* in my YouTube, which are usually songs/music/mixes; that's what I listen to. So I'm there, listening to UK Piano's new video and I find a playlist recommended for me. In that playlist is a [Cello cover of Game of Thrones][1] by [BreakofReality][2]. YouTube then features [Misty Mountains Orchestral Cover][3] from [The Hobbit][4] by [sleightlymusical][5] in my *Recommended for You* list. Now it comes! Another video recommended for me from [ThePianoGuys][6]. And WOW!
 
@@ -12,7 +15,7 @@ Its a typical day and I'm just looking at *Recommended Videos* in my YouTube, wh
 I just sat back, stopped my work and watched one video after the other. The first one that caught my eye was **Kung Fu Piano: Cello Ascends**, a play on **[Oogway Ascends][7]** from [Kung Fu Panda][8].
 
 <div class="youtube">
-    <iframe id="vid1" type="text/html" class="youtube" width="440" height="440" src="http://www.youtube.com/embed/NCaH-qqTWpk" frameborder="0">
+    <iframe id="vid1" type="text/html" class="youtube" width="560" height="315" src="http://www.youtube.com/embed/NCaH-qqTWpk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
     </iframe>
 </div>
 <div class="youtube">
@@ -54,8 +57,8 @@ Obviously I can't list all the [videos][10] here!
 
 A quote by Ludwig Van Beethoven, included in one of the videos -
 
-> Don't only practice your art,  
-> but force your way into its secrets,  
+> Don't only practice your art,
+> but force your way into its secrets,
 > for it and knowledge can raise men to the divine.
 
 [1]: http://www.youtube.com/watch?v=ydRAb9cwHnA&list=RD03X6a9odk6b_c

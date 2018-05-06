@@ -6,7 +6,10 @@ title: An introduction to <span class="latex">L<sup>A</sup>T<sub>E</sub>X</span>
 date: 2013-10-27 14:32
 comments: true
 published: true
+permalink: "/blog/an-introduction-to-latex"
+disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 ---
+<div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>
 
 The write-up of my talk on {{page.latex}} for beginners, as a part of *Tech Talk Tuesday*, an initiative of [PES OpenSource][1]. I structured my talk based on this book - [The Not So Short Introduction to {{page.latex}}][2]. So refer this book for all details as I've posted the notes I made to deliver my talk.
 
