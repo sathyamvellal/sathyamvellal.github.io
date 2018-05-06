@@ -31,3 +31,32 @@
 .full-width {
   width: 100%;
 }
+
+span.tags {
+  font-family: $font-family-monospace;
+  font-weight: 500;
+  font-size: 0.7em;
+
+  color: $gray-500;
+  a {
+    color: $gray-500;
+    &:visited {
+  	   color: $gray-500;
+    }
+    &:hover {
+  	   color: $link-color;
+    }
+  }
+}
+span.post-date {
+  color: $gray-600;
+  a {
+    color: $gray-600;
+    &:visited {
+  	   color: $gray-600;
+    }
+    &:hover {
+  	   color: $link-color;
+    }
+  }
+}
