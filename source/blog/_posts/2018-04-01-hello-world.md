@@ -1,9 +1,10 @@
 ---
 layout: post
-title: 'Hello World'
-date: 2018-04-01 00:00
-category: 'Hello'
-coverimage: "http://images4.fanpop.com/image/photos/21100000/Frasier-and-Niles-frasier-21198152-1280-720.jpg"
+title: 'Ode to LA'
+date: 2018-05-01 00:00
+category: 'General'
+tags: ['Los Angeles', 'Goodbye', 'USC', 'Coming Out']
+coverimage: "https://lh3.googleusercontent.com/P8xLK6FlyVKFkXbrFAyvlGzWeOk3ZFL9H0vjQZslk6NR42W_tpzjh-GGtmXjLJchAwGZ5b75oIHeC7BICLb91UXQo6jgsVjbrnLPxeKRsJoy7O99bDb6ELkNrfPJ_eHtGSIcTTveKPti63XB1C84AZngK4GJ29J0_vCWl68TJ9bYbnZNVxfqhC8zTL7wO4d_uJ9YMEY8k4jr2TlT5q6jBwj8U3lrnu7LAd8UCQvGoOmUIuNRBxoOHz53wOHH3qtrtW4OPnIQKPl61zF2Lgpt698p0bYeT5ZvAOxRk1tdmRTfYjRD07XBWj7F9p4TRAXi9aAl1YeUa1wVaA4_gkUzqQvoeWa6GywDU9_Z1RLcp41-fa_QtvOHrfcheEfDFhPUJxVei3LS4hy_aIAzKe68EDwGfNYClpJSR7trO1eliJQbbUPqQDE7WVsN_NUWIV3Q-t-qTft6K3zTa_rnslszLOAkybli7xbS5G8ujJSvEPSqEjQu2_v_YD3MGuW9Igbc_bEJdV-w4TKc4RfAn0ELoTmaTVBG8zVjv289fUp9TIn3f8bl9rsA960ejNCMru58fuFMCYjuD0caKaqhC-1RjvEwhkG3rvOrVic-qIXB=w2774-h1560-no"
 permalink: '/blog/hello-world'
 comments: true
 ---
