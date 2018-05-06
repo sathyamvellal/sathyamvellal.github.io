@@ -24,7 +24,6 @@ module Jekyll
       if site.layouts.key? 'category'
         dir = site.config['blog']['category']['dir'] || 'blog/category/'
         site.config["categories_list"].each do |category|
-          print "Category: " + category + "\n"
           category_name = category.gsub(/\s+/, '-').downcase
           file_name = category_name + "/index.html"
           site.pages << CategoryPage.new(site, site.source, File.join(dir, category_name), category)
