@@ -1,0 +1,32 @@
+<div class="card border-0">
+  <div class="card-body px-0">
+    <h5 class="card-title"><a href="{{ post.url }}" class="card-link">{{ post.title }}</a></h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      <span class="post-date">
+        <a href="/blog/archives">{{ post.date | date: '%b %d %Y' }}</a> in
+        <a href="/blog/categories/{{ post.category | replace_regex: '\s+', '-' }}">{{ post.category }}</a>
+      </span>
+    </h6>
+  </div>
+  {% if post.coverimage %}
+    <a href="{{ post.url }}" class="card-link card-img-link"><div class="card-img-wrapper"><img class="card-img-top" src="{{ post.coverimage }}" alt="{{ post.imageAlt }}"/></div></a>
+  {% endif %}
+  <div class="card-body px-0">
+    <p class="card-text">
+      {{ post.excerpt }} <a href="{{ post.url }}">» read more »</a>
+    </p>
+    <span class="tags">
+      <em>Tags:
+      {% for tag in post.tags %}
+        {% if forloop.index != post.tags.size %}
+          <a href="/blog/tags/{{ tag | replace_regex: '\s+', '-' }}">{{ tag }}</a>,
+        {% else %}
+          <a href="/blog/tags/{{ tag | replace_regex: '\s+', '-' }}">{{ tag }}</a>
+        {% endif %}
+      {% endfor %}
+      </em>
+    </span>
+    <!-- <span href="#" class="card-link">Category: Another link</span> -->
+  </div>
+</div>
+<hr/>
