@@ -1,32 +1,5 @@
 .blog {
 	padding-bottom: 30px;
-	li {
-		margin-bottom: 2em;
-
-		.top {
-			width: 100%;
-			display: table;
-
-			.url {
-				display: table-cell;
-				text-align: left;
-			}
-			.date {
-				display: table-cell;
-				text-align: right;
-			}
-		}
-	}
-	.date {
-		text-align: right;
-	}
-	.excerpt {
-		padding-top: 0.5em;
-
-		.more {
-			padding-left: 0.5em;
-		}
-	}
 }
 .full-width {
   width: 100%;

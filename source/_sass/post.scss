@@ -105,3 +105,23 @@
 		}
 	}
 }
+
+article {
+  div.disclaimer {
+    margin-bottom: 1rem;
+    font-size: 0.9em;
+  }
+
+  ul li {
+    list-style: circle;
+    margin-bottom: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  div.highlighter-rouge {
+    padding: 0.5em;
+  }
+}
