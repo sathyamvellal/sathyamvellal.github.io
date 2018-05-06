@@ -21,9 +21,13 @@ blog:
     dir: "blog/tags/"
     layout: "tag.html"
     title_prefix: "Sathyam Vellal / Blog / Tags / "
+  category:
+    dir: "blog/categories/"
+    layout: "category.html"
+    title_prefix: "Sathyam Vellal / Blog / Categories / "
 
-categories: ['General']
-tags: ['Coming Out', 'Goodbye', 'Los Angeles', 'USC']
+categories_list: ['General']
+tags_list: ['Coming Out', 'Goodbye', 'Los Angeles', 'USC']
 
 title: Sathyam Vellal
 email: sathyam@vellals.com
