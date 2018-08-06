@@ -1,15 +1,20 @@
 ---
 layout: post
-title: "Welcome to PES OpenSource"
-date: 2014-08-23 21:08
+title: Welcome to PES OpenSource
+date: '2014-08-23 21:08'
 comments: true
-permalink: "/blog/welcome-to-pes-opensource"
-description: "This post is mainly targeted to the students of PES Institute of Technology/PES University, Bangalore."
-disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
+permalink: /blog/welcome-to-pes-opensource
+description: >-
+  This post is mainly targeted to the students of PES Institute of
+  Technology/PES University, Bangalore.
+disclaimer: >-
+  Note: This is a blog post from an older version of this website. Links and
+  styles on this page might not work/render as expected.
+published: true
 ---
 <div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>
 
-Heya there! This post is mainly targeted to the students of PES Institute of Technology/PES University, Bangalore. If you are not, and are new to the Open Source Movement, you can still find a lot of useful information here. You can also learn the ways of PES Open Source, and join our movement in making educational institutions a place of more knowledge and productivity.
+Hey there! This post is mainly targeted to the students of PES Institute of Technology/PES University, Bangalore. If you are not, and are new to the Open Source Movement, you can still find a lot of useful information here. You can also learn the ways of PES Open Source, and join our movement in making educational institutions a place of more knowledge and productivity.
 
 <!-- more -->
 
