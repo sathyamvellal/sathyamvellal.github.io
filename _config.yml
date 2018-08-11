@@ -35,6 +35,13 @@ tags_list: [
   'USC'
 ]
 
+metadata:
+	_posts:
+		- name: "layout"
+			field:
+				element: "hidden"
+					value: "post"
+
 title: Sathyam Vellal
 email: sathyam@vellals.com
 name: Sathyam Vellal
