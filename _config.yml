@@ -36,12 +36,9 @@ tags_list: [
 ]
 
 prose:
-	metadata:
-    	_posts:
-        	- name: "layout"
-              field:
-              	element: "hidden"
-                value: "post"
+	rooturl: "source"
+    siteuril: "https://sathyam.me"
+    metadata: true
 
 title: Sathyam Vellal
 email: sathyam@vellals.com
