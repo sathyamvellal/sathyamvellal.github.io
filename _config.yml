@@ -36,9 +36,9 @@ tags_list: [
 ]
 
 prose:
-	rooturl: "source"
-    siteuril: "https://sathyam.me"
-    metadata: true
+  rooturl: "source"
+  siteuril: "https://sathyam.me"
+  metadata: true
 
 title: Sathyam Vellal
 email: sathyam@vellals.com
