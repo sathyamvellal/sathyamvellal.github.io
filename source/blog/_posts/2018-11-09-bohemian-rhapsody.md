@@ -13,11 +13,11 @@ comments: true
 published: true
 ---
 
-# Bohemian Rhapsody
-
-🌕🌕🌕🌕🌗
+⭐⭐⭐⭐⭐
 
 I'm a kid from the 90s and never really experienced the musical sensations of the 80s. During my primary and high schooling years, friends sung "We Will Rock You", and I went along as well. Somewhere later, I came across Bohemian Rhapsody, and loved it, even though I couldn't make much sense of the lyrics. 
+
+<!-- more -->
 
 Years later, however, when I became more aware of my closeted self, I realised the meaning of Bohemian Rhapsody - it was a song about a boy coming out to his mother. It freaked me out, and I just never listened to it again. My friends used to enjoy playing and singing it with tonal accuracy, and I would just act like nothing was going on. 
 
