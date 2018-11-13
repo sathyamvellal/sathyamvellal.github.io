@@ -10,7 +10,7 @@ tags:
   - LGBTQ
 permalink: /blog/10/
 comments: true
-published: false
+published: true
 ---
 
 # Bohemian Rhapsody
@@ -24,4 +24,4 @@ Years later, however, when I became more aware of my closeted self, I realised t
 
 The movie Bohemian Rhapsody gives a historical look into the rise of Queen, the song 'Bohemian Rhapsody', culminating with the Love Aid concert in 1985. While it doesn't do a heartfelt job of Freddie Mercury dealing with his sexuality, in my opinion, we do see Freddie Mercury dealing with it. Of course, movies cannot show all aspects in great depth, and I can understand. 
 
-What it definitely did well, was transport me to the 80s, to experience the magnificence of Queen, Rami Malek is absolutely incredible as Freddie Mercury. Perfect casting, and acting. Comparing with the actual video of the Live Aid, his portrayal of Freddie Mercury is spot on! I'm just so grateful to have *experienced* Queen, even if virtually. 
+What it definitely did well, was transport me to the 80s, to experience the magnificence of Queen, Rami Malek is absolutely incredible as Freddie Mercury. Perfect casting, and acting. Comparing with the actual video of the Live Aid, his portrayal of Freddie Mercury is spot on! I'm just so grateful to have *experienced* Queen, even if virtually.
