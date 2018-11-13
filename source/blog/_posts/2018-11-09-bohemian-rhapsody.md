@@ -15,7 +15,6 @@ published: true
 
 # Bohemian Rhapsody
 
-⭐⭐⭐⭐⭐
 🌕🌕🌕🌕🌗
 
 I'm a kid from the 90s and never really experienced the musical sensations of the 80s. During my primary and high schooling years, friends sung "We Will Rock You", and I went along as well. Somewhere later, I came across Bohemian Rhapsody, and loved it, even though I couldn't make much sense of the lyrics. 
