@@ -12,6 +12,8 @@ published: true
     {% endfor %}
     <br/>
     <hr>
-    Head over to [sathyam.me/oldblog](https://sathyam.me/oldblog) for posts before 2016.
+    Head over to [sathyam.me/oldblog][1] for posts before 2016.
   </div>
 </div>
+
+[1]: https://sathyam.me/oldblog
