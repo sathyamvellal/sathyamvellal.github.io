@@ -14,8 +14,16 @@
   url: https://www.instagram.com/sathyamvellal/
   target: '_blank'
 
+- title: <i class="fas fa-thumbtack"></i>
+  url: https://pinboard.in/u:sathyamvellal
+  target: '_blank'
+
 - title: <i class="fab fa-youtube"></i>
   url: https://www.youtube.com/c/SathyamVellal
+  target: '_blank'
+
+- title: <i class="fas fa-film"></i>
+  url: https://letterboxd.com/sathyamvellal/
   target: '_blank'
 
 - title: <i class="fab fa-lastfm"></i>
@@ -26,18 +34,6 @@
   url: https://www.mixcloud.com/sathyamvellal
   target: '_blank'
 
-- title: <i class="fas fa-film"></i>
-  url: https://letterboxd.com/sathyamvellal/
-  target: '_blank'
-
-- title: <i class="fas fa-thumbtack"></i>
-  url: https://pinboard.in/u:sathyamvellal
-  target: '_blank'
-
 - title: <i class="fab fa-strava"></i>
   url: https://strava.com/athletes/sathyamvellal
-  target: '_blank'
-
-- title: <i class="fab fa-lastfm"></i>
-  url: https://last.fm/user/sathyamvellal
   target: '_blank'
