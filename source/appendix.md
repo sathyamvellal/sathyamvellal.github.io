@@ -1,6 +1,7 @@
 ---
 layout: page
 published: true
+title: "Appendix | Sathyam Vellal"
 ---
 
 #### People
