@@ -30,10 +30,6 @@
   url: https://www.last.fm/user/sathyamvellal
   target: _'blank'
 
-- title: <i class="fab fa-mixcloud"></i>
-  url: https://www.mixcloud.com/sathyamvellal
-  target: '_blank'
-
 - title: <i class="fab fa-strava"></i>
   url: https://strava.com/athletes/sathyamvellal
   target: '_blank'
