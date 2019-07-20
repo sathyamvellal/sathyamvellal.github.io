@@ -1,10 +1,10 @@
-$font-family-serif:           "Alegreya", serif !default;
-$font-family-sans-serif:      "Alegreya Sans", sans-serif !default;
+$font-family-serif:           "PT Serif", serif !default;
+$font-family-sans-serif:      "PT Sans", sans-serif !default;
 $font-family-monospace:       "Source Code Pro", monospace !default;
-$font-size-base:              1.0em !default; // Assumes the browser default, typically `16px`
-$headings-font-family:        "Alegreya", serif !default;
-$line-height-lg:              1.4 !default;
-$line-height-sm:              1.4 !default;
+$font-size-base:              1.0rem !default; // Assumes the browser default, typically `16px`
+$headings-font-family:        "PT Serif", serif !default;
+$line-height-lg:              1.5 !default;
+$line-height-sm:              1.5 !default;
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $headings-font-family !default;
