@@ -20,6 +20,7 @@ h1, h2 {
   text-decoration: underline !important;
 }
 
+// small screen
 @media (max-width: 720px) {
   body {
     font-weight: 400;
@@ -27,6 +28,7 @@ h1, h2 {
   }
 }
 
+// large screen
 @media (min-width: 720px) {
   body {
     font-weight: 400;

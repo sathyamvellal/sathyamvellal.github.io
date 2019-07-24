@@ -4,7 +4,7 @@
 		padding-bottom: 2em;
 	}
 	h1 {
-		font-size: 2em;
+		font-size: $h1-font-size;
 		margin-bottom: 0;
 	}
 	ul {
@@ -14,7 +14,7 @@
 		display: table;
 		height: 2.3em;
 		li {
-      font-size: 1.5em;
+	  		font-size: 1.5em;
 			display: table-cell;
 			text-align: center;
 		}
