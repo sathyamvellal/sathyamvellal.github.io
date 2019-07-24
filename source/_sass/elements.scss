@@ -3,10 +3,10 @@ body {
 	background: $white;
 	padding-bottom: 1em;
   text-align: justify;
-  font-size: 1em;
+  font-size: $font-size-base;
 }
 p {
-	font-size: 100%;
+	font-size: $font-size-base;
 	line-height: 1.5;
 }
 .grey {
@@ -58,7 +58,7 @@ em {
 }
 code, pre {
 	font-family: 'Inconsolata', monospace;
-	font-size: 80%;
+	font-size: $font-size-base * 0.8;
 }
 blockquote {
   background: #f9f9f9;
