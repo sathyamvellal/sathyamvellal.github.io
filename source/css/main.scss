@@ -24,6 +24,7 @@ h1, h2 {
 // small screen
 @media (max-width: 720px) {
   body {
+    font-size: 20pt;
     font-weight: 500;
     font-family: $font-family-sans-serif;
   }
