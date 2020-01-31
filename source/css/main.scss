@@ -24,15 +24,16 @@ h1, h2 {
 // small screen
 @media (max-width: 720px) {
   body {
-    font-size: 20pt;
+    font-size: $font-size-base * 1.2;
     font-weight: 500;
-    font-family: $font-family-sans-serif;
+    font-family: $font-family-serif;
   }
 }
 
 // large screen
 @media (min-width: 720px) {
   body {
+    font-size: $font-size-base;
     font-weight: 400;
     font-family: $font-family-serif;
   }
