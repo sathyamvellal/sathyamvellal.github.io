@@ -27,6 +27,9 @@ h1, h2 {
     font-size: $font-size-base * 1.2;
     font-weight: 400;
     font-family: $font-family-serif;
+    line-height: $line-height-sm;
+    letter-spacing: 0.02em;
+    word-spacing: 0.1em;
   }
 }
 
@@ -36,5 +39,8 @@ h1, h2 {
     font-size: $font-size-base;
     font-weight: 300;
     font-family: $font-family-serif;
+    line-height: $line-height-lg;
+    letter-spacing: 0.02em;
+    word-spacing: 0.1em;
   }
 }
