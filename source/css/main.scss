@@ -28,8 +28,9 @@ h1, h2 {
     font-weight: 400;
     font-family: $font-family-serif;
     line-height: $line-height-sm;
-    letter-spacing: 0.02em;
-    word-spacing: 0.1em;
+    letter-spacing: 0.015em;
+    word-spacing: 0.07em;
+    text-align: justify;
   }
 }
 
