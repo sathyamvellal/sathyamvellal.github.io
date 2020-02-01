@@ -24,7 +24,7 @@ h1, h2 {
 // small screen
 @media (max-width: 720px) {
   body {
-    font-size: $font-size-base * 1.2;
+    font-size: $font-size-base;
     font-weight: 400;
     font-family: $font-family-serif;
   }
