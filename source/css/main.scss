@@ -26,15 +26,20 @@ body {
 @media (max-width: 720px) {
   body {
     font-size: $font-size-base * 1.05;
-    font-weight: 300;
-    font-family: $h-font-family-serif;
+    font-weight: 400;
+    font-family: $font-family-serif;
     line-height: $line-height-sm;
     text-align: justify;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: $font-family-serif;
+    font-family: $h-font-family-serif;
+    font-weight: 800 !important;
   };
+
+  strong {
+    font-weight: 800 !important;
+  }
 }
 
 // large screen
@@ -48,5 +53,10 @@ body {
 
   h1, h2, h3, h4, h5, h6 {
     font-family: $h-font-family-sans-serif;
+    font-weight: 800 !important;
   };
+
+  strong {
+    font-weight: 800 !important;
+  }
 }
