@@ -6,12 +6,13 @@ layout: default
   <div class="col-12 col-md-10 col-lg-8">
     <article>
     {% include post/title.html post=page %}
-    <h6 class="card-subtitle mb-2 text-muted">
+    <h5 class="card-subtitle mb-2 text-muted">
       <span class="post-date">
         {% include post/date.html post=page %}
         {% include post/category.html post=page %}
       </span>
-    </h6>
+    </h5>
+    <br/>
     {% include post/content.html post=page %}
     {% include post/tags.html post=page %}
     </article>
