@@ -8,19 +8,14 @@ published: true
 <br/>
 I'm **Sathyam** [/s̥ɐ-t̥ʰjɐm/][0]{:target="_blank"}, a Software Engineer at [NVIDIA][20] and a Computer Science graduate at the [University of Southern California][1]{:target="_blank"}, Los Angeles, where I specialized in [Simulations][2]{:target="_blank"} and [High Performance Computing][3]{:target="_blank"}. I love breaking down complex problems and simulating its intricate details. I'm particularly interested in [Computer Graphics][17], [Scientific Visualisation][18] and [Generative Music][21]. I plan to one day contribute in [Space Tech][5]{:target="_blank"}. And yes, I'm a [trekkie][19], and a fan of [SimCity][6]{:target="_blank"} and [Kerbal Space Program][7]{:target="_blank"}.
 
-<br/>
 I come from [Bengaluru][8]{:target="_blank"}, dubbed as the Silicon Valley of India, and frankly, the most welcoming city in India. To paint a picture, it's somewhere in between the vastness of Los Angeles and the tech atmosphere of the San Fransisco Bay Area. Coming from Bengaluru, it should also come as no surprise that I'm a [foodie][9]{:target="_blank"} and run on coffee (Bengalureans love coffee)! I love almost any instrumental music and worship [Hans Zimmer][11]{:target="_blank"}. I draw a lot of inspiration from him -
 
-<br/>
 > If something happened where I couldn't write music anymore, it would kill me. It's not just a job. It's not just a hobby. It's why I get up in the morning.
 
-<br/>
 To reach me, tweet [@sathyamvellal][12]{:target="_blank"}. Or email **mail AT sathyam DOT me**. You can find my [resume here][13]{:target="_blank"}.
 
-<br/>
 I'm gay 🏳️‍🌈 and prefer [he/him][16]{:target="_blank"} pronouns.
 
-<br/>
 Live Long and Prosper! <i class="fal fa-hand-spock"></i>
 
 [0]: https://en.wikipedia.org/wiki/International_Phonetic_Alphabet

@@ -1,8 +1,10 @@
 ---
 ---
+// Import order matters
+@import "variables";
+@import "themes/flatblue";
 @import "fonts";
 @import "mybootstrap";
-@import "variables";
 @import "elements";
 @import "wrapper";
 @import "header";
@@ -12,26 +14,27 @@
 @import "pygments/default";
 
 // Font-Style Settings
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: $font-family-serif;
-};
-
 h1, h2 {
   text-decoration: underline !important;
+}
+
+body {
+  font-feature-settings: "kern", "liga", "clig", "calt";
 }
 
 // small screen
 @media (max-width: 720px) {
   body {
-    font-size: $font-size-base * 1.1;
-    font-weight: 400;
+    font-size: $font-size-base * 1.05;
+    font-weight: 300;
     font-family: $font-family-serif;
     line-height: $line-height-sm;
-    letter-spacing: 0.015em;
-    word-spacing: 0.07em;
     text-align: justify;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $h-font-family-serif;
+  };
 }
 
 // large screen
@@ -41,7 +44,9 @@ h1, h2 {
     font-weight: 300;
     font-family: $font-family-serif;
     line-height: $line-height-lg;
-    letter-spacing: 0.02em;
-    word-spacing: 0.1em;
   }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $h-font-family-sans-serif;
+  };
 }

@@ -1,10 +1,14 @@
 $font-family-serif:           skolar-latin, serif !default;
-$font-family-sans-serif:      sans-serif !default;
+$font-family-sans-serif:      skolar-sans-latin, sans-serif !default;
 $font-family-monospace:       "Cascadia Code Regular", monospace !default;
-$font-size-base:              1.1rem !default; // Assumes the browser default, typically `1rem = 16px`
-$line-height-lg:              1.8 !default;
-$line-height-sm:              1.5 !default;
-$dark:                        #212529 !default;
+$font-size-base:              1.0rem !default; // Assumes the browser default, typically `1rem = 16px`
+$h-font-family-serif:         clone-rounded-latin, serif !default;
+$h-font-family-sans-serif:    clone-rounded-latin, serif !default;
+$line-height-lg:              1.5 !default;
+$line-height-sm:              1.4 !default;
+$dark:                        $color-text !default;
+$white:                       $color-background !default;
+$link-color: $color-link;
 
 // Font overrides
 $h1-font-size: $font-size-base * 2.40;
@@ -13,6 +17,3 @@ $h3-font-size: $font-size-base * 1.80;
 $h4-font-size: $font-size-base * 1.50;
 $h5-font-size: $font-size-base * 1.20;
 $h6-font-size: $font-size-base * 1.00;
-
-// Other overrides
-$grid-gutter-width: 10px !default;
