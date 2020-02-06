@@ -19,27 +19,45 @@ h1, h2 {
 }
 
 body {
+  font-family: $font-family-serif;
+  font-weight: 400;
   font-feature-settings: "kern", "liga", "clig", "calt";
+  text-align: justify;
+  text-rendering: optimizeLegibility;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $h-font-family-serif;
+  text-align: left;
+  font-weight: 600;
+}
+
+ul, ol, dl {
+  padding-inline-start: 15px;
+}
+
+li {
+  padding-block-end: 5px;
+}
+
+strong {
+  font-weight: 700 !important;
 }
 
 // small screen
 @media (max-width: 720px) {
   body {
     font-size: $font-size-base * 1.05;
-    font-weight: 400;
-    font-family: $font-family-serif;
     line-height: $line-height-sm;
-    text-align: justify;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $h-font-family-serif;
-    font-weight: 800 !important;
-  };
-
-  strong {
-    font-weight: 800 !important;
-  }
+  h1 { font-size: $h1-font-size * $h-font-size-multiplier-sm; }
+  h2 { font-size: $h2-font-size * $h-font-size-multiplier-sm; }
+  h3 { font-size: $h3-font-size * $h-font-size-multiplier-sm; }
+  h4 { font-size: $h4-font-size * $h-font-size-multiplier-sm; }
 }
 
 // large screen
@@ -47,16 +65,6 @@ body {
   body {
     font-size: $font-size-base;
     font-weight: 300;
-    font-family: $font-family-serif;
     line-height: $line-height-lg;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $h-font-family-sans-serif;
-    font-weight: 800 !important;
-  };
-
-  strong {
-    font-weight: 800 !important;
   }
 }
