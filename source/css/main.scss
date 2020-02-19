@@ -59,10 +59,6 @@ strong {
     line-height: $line-height-sm;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: $h-font-family-sans-serif;
-  }
-
   h1 { font-size: $h1-font-size * $h-font-size-multiplier-sm; }
   h2 { font-size: $h2-font-size * $h-font-size-multiplier-sm; }
   h3 { font-size: $h3-font-size * $h-font-size-multiplier-sm; }
