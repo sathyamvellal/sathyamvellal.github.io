@@ -1,11 +1,11 @@
-$font-family-serif:           freight-text-pro, serif !default;
-$font-family-sans-serif:      freight-sans-pro, sans-serif !default;
+$font-family-serif:           "IBM Plex Serif", serif !default;
+$font-family-sans-serif:      "IBM Plex Sans", sans-serif !default;
 $font-family-monospace:       "Cascadia Code Regular", monospace !default;
-$font-size-base:              1.25rem !default; // Assumes the browser default, typically `1rem = 16px`
-$h-font-family-serif:         freight-text-pro, serif !default;
-$h-font-family-sans-serif:    freight-sans-pro, serif !default;
-$line-height-lg:              1.40 !default;
-$line-height-sm:              1.40 !default;
+$font-size-base:              1.1rem !default; // Assumes the browser default, typically `1rem = 16px`
+$h-font-family-serif:         "IBM Plex Serif", serif !default;
+$h-font-family-sans-serif:    "IBM Plex Sans", sans-serif !default;
+$line-height-lg:              1.50 !default;
+$line-height-sm:              1.50 !default;
 $dark:                        $color-text !default;
 $white:                       $color-background !default;
 $link-color: $color-link;

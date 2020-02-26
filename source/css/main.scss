@@ -51,7 +51,12 @@ li {
 // small screen
 @media (max-width: 720px) {
   body {
+    font-family: $font-family-sans-serif;
     line-height: $line-height-sm;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $h-font-family-sans-serif;
   }
 
   h1 { font-size: $h1-font-size * $h-font-size-multiplier-sm; }
