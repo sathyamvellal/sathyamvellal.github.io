@@ -1,3 +1,5 @@
+os: linux
+
 branches:
   only:
     - source
