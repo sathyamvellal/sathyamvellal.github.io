@@ -26,8 +26,12 @@ blog:
     layout: "category.html"
     title_prefix: "Sathyam Vellal / Blog / Categories / "
 
-gems:
+plugins:
 - jekyll-asciidoc
+
+asciidoc:
+  attributes:
+  - showtitle=@
 
 categories_list: [
   'General'
