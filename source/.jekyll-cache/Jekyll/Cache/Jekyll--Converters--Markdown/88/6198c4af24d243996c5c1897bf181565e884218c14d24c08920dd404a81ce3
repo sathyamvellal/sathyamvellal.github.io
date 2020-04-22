@@ -1,0 +1,163 @@
+I"� <div class="disclaimer center grey text-small">Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected.</div>
+
+<p>The write-up of my talk on <span class="latex">L<sup>A</sup>T<sub>E</sub>X</span> for beginners, as a part of <em>Tech Talk Tuesday</em>, an initiative of <a href="http://pesos.pes.edu/fb">PES OpenSource</a>. I structured my talk based on this book - <a href="http://tobi.oetiker.ch/lshort/lshort.pdf">The Not So Short Introduction to <span class="latex">L<sup>A</sup>T<sub>E</sub>X</span></a>. So refer this book for all details as I’ve posted the notes I made to deliver my talk.</p>
+
+<!-- more -->
+
+<h3 id="introduction">Introduction</h3>
+
+<ul>
+  <li>Donald Knuth
+    <ul>
+      <li>1977 - <span class="latex">T<sub>E</sub>X</span></li>
+      <li>1982 - first <span class="latex">T<sub>E</sub>X</span> engine</li>
+      <li>1989 - enhancements</li>
+      <li>Why the name <span class="latex">T<sub>E</sub>X</span> ? - Technology</li>
+    </ul>
+  </li>
+  <li>about <span class="latex">T<sub>E</sub>X</span> and <span class="latex">L<sup>A</sup>T<sub>E</sub>X</span></li>
+  <li><span class="latex">L<sup>A</sup>T<sub>E</sub>X</span> - Lay-Tech</li>
+  <li>Why <span class="latex">L<sup>A</sup>T<sub>E</sub>X</span> ?
+    <ul>
+      <li>professional look</li>
+      <li>mathematics &amp; science</li>
+      <li>only few commands used to specify the structure</li>
+      <li>easy generation of footnotes, references, table of contents, etc</li>
+      <li>add-on packages</li>
+      <li>highly portable</li>
+      <li>free</li>
+    </ul>
+  </li>
+</ul>
+
+<hr />
+<h3 id="basic-layout">Basic Layout</h3>
+
+<h5 id="level--2">Level -2</h5>
+
+<ul>
+  <li>spaces are uniform &amp; single line break</li>
+  <li>empty line defines end of para &amp; severl empty lines</li>
+  <li>10 meta-characters. Escape to print metachar. <code class="highlighter-rouge">\textbackslash</code> to print escape char</li>
+</ul>
+
+<h5 id="level--1">Level -1</h5>
+
+<ul>
+  <li>Commands start with <code class="highlighter-rouge">\</code></li>
+  <li>case sensitive</li>
+  <li>starred variant</li>
+  <li>terminated with a non-letter</li>
+  <li>Commands are space-hungry!</li>
+  <li>use <code class="highlighter-rouge">{}</code></li>
+  <li>parameters in <code class="highlighter-rouge">{}</code></li>
+  <li>optional params <code class="highlighter-rouge">[]</code></li>
+  <li><code class="highlighter-rouge">\command[optional]{param}</code></li>
+  <li><code class="highlighter-rouge">%</code> -&gt; Comments</li>
+  <li><code class="highlighter-rouge">verbatim</code> package. <code class="highlighter-rouge">\begin{comment}</code> to <code class="highlighter-rouge">\end{commend}</code></li>
+</ul>
+
+<h5 id="level-0">Level 0</h5>
+
+<ul>
+  <li>file must start with <code class="highlighter-rouge"><span class="k">\documentclass</span><span class="p">{</span>class<span class="p">}</span></code>
+    <ul>
+      <li>specifies type of document</li>
+      <li>some commands following this to specify some more details</li>
+      <li>optional commands -
+        <ul>
+          <li>size, papertype, formulae alignment, titlepage, twosided, openright, landscape, doc, font encoding, etc</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>to load some package <code class="highlighter-rouge">\usepackage{name}</code></li>
+  <li>write content within <code class="highlighter-rouge">\begin{document}</code> and <code class="highlighter-rouge">\end{document}</code></li>
+  <li><code class="highlighter-rouge">\pagestyle{style}</code> &amp; <code class="highlighter-rouge">\thispagestyle{style}</code>
+    <ul>
+      <li><code class="highlighter-rouge">plain</code> - page number in footer, middle</li>
+      <li><code class="highlighter-rouge">headings</code> - headings, page number. empty footer.</li>
+      <li><code class="highlighter-rouge">empty</code> - both empty</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">\include{file}</code> &amp; <code class="highlighter-rouge">\includeonly{file,file,...}</code> &amp; <code class="highlighter-rouge"><span class="k">\input</span><span class="p">{</span>file<span class="p">}</span></code></li>
+</ul>
+
+<hr />
+<h3 id="typesetting-text">Typesetting Text</h3>
+
+<h5 id="level-1">Level 1</h5>
+
+<ul>
+  <li><code class="highlighter-rouge">\\</code> &amp; <code class="highlighter-rouge">\newline</code> &amp; <code class="highlighter-rouge">\newpage</code> &amp; <code class="highlighter-rouge">\\*</code></li>
+  <li><code class="highlighter-rouge">\linebreak[n]</code> &amp; <code class="highlighter-rouge">\nolinebreak[n]</code> &amp; <code class="highlighter-rouge">\pagebreak[n]</code> &amp; <code class="highlighter-rouge">\nopagebreak[n]</code></li>
+  <li><code class="highlighter-rouge">\hyphenation{word list}</code></li>
+  <li><code class="highlighter-rouge">\-</code></li>
+  <li><code class="highlighter-rouge">\mbox{text}</code> &amp; <code class="highlighter-rouge">\fbox{text}</code></li>
+  <li><code class="highlighter-rouge">\today</code> &amp; <code class="highlighter-rouge">\TeX{}</code> &amp; <code class="highlighter-rouge">\LaTeX{}</code></li>
+  <li>quotation marks ` and ‘</li>
+  <li>ligatures -  ff fi fl etc [Refer book, Sec:2.4.8, page 24]</li>
+  <li>ellipsis - <code class="highlighter-rouge">\ldtos</code></li>
+  <li><code class="highlighter-rouge">~</code> &amp; <code class="highlighter-rouge">\@</code> &amp; <code class="highlighter-rouge">\frenchspacing</code></li>
+  <li><code class="highlighter-rouge">label{...}</code> &amp; <code class="highlighter-rouge">\ref{...}</code> &amp; <code class="highlighter-rouge">\pageref{...}</code></li>
+  <li><code class="highlighter-rouge">\footnote{...}</code></li>
+</ul>
+
+<h5 id="level-2">Level 2</h5>
+
+<ul>
+  <li><code class="highlighter-rouge">\maketitle</code>
+    <ul>
+      <li><code class="highlighter-rouge">\title</code></li>
+      <li><code class="highlighter-rouge">\author</code></li>
+      <li><code class="highlighter-rouge">\date</code> - optional</li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">\tableofcontents</code></li>
+  <li>divide publication
+    <ul>
+      <li><code class="highlighter-rouge">\frontmatter</code></li>
+      <li><code class="highlighter-rouge">\mainmatter</code></li>
+      <li><code class="highlighter-rouge">\appendix</code></li>
+      <li><code class="highlighter-rouge">\backmatter</code></li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">\part</code></li>
+  <li><code class="highlighter-rouge">\chapter</code> - depends on document class</li>
+  <li><code class="highlighter-rouge">\section</code></li>
+  <li><code class="highlighter-rouge">\subsection</code></li>
+  <li><code class="highlighter-rouge">subsubsection</code></li>
+  <li><code class="highlighter-rouge">\paragraph</code></li>
+  <li><code class="highlighter-rouge">\subparagraph</code></li>
+  <li><code class="highlighter-rouge">\begin{...}</code> &amp; <code class="highlighter-rouge">\end{...}</code>
+    <ul>
+      <li><code class="highlighter-rouge">enumerate</code>
+        <ul>
+          <li>use <code class="highlighter-rouge">\item</code></li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">itemize</code>
+        <ul>
+          <li>use <code class="highlighter-rouge">\item</code></li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">description</code>
+        <ul>
+          <li>use <code class="highlighter-rouge">\item[Name] Description ...</code></li>
+        </ul>
+      </li>
+      <li><code class="highlighter-rouge">{flushleft}</code> &amp; <code class="highlighter-rouge">{flushright}</code> &amp; <code class="highlighter-rouge">{center}</code></li>
+      <li><code class="highlighter-rouge">{quote}</code> &amp; <code class="highlighter-rouge">{verse}</code></li>
+      <li><code class="highlighter-rouge">{verbatim}</code></li>
+      <li><code class="highlighter-rouge">{tabular}</code> &amp; <code class="highlighter-rouge">{|l|c|r|p{...}}</code></li>
+      <li><code class="highlighter-rouge">{verbatim}</code></li>
+    </ul>
+  </li>
+  <li><code class="highlighter-rouge">\verb+text+</code></li>
+</ul>
+
+<h3 id="mathematics--font-handling">Mathematics &amp; Font handling</h3>
+
+<p>Refer the <a href="http://tobi.oetiker.ch/lshort/lshort.pdf">book</a>.</p>
+
+:ET

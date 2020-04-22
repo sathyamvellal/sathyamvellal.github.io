@@ -1,0 +1,90 @@
+I"�<div class="disclaimer center grey text-small">Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected.</div>
+
+<p><a href="http://play0ad.com">0 A.D.</a> is a free and open source, historical RTS game. The concept of the game was designed in 2003 and was developed for around six years as a closed-source freeware project. In 2009 the game went open source under the GPL license and art content under CC-BY-SA. This steadily attracted a lot of contributors ranging from art designers to programmers to develop the game. Much of the development and contribution started after the project was open sourced.</p>
+
+<!-- more -->
+
+<p>Less than a month ago, <a href="http://www.indiegogo.com/projects/support-0-a-d-an-open-source-strategy-game/">0 A.D. launched a crowdfunding campaign in Indiegogo</a> to help hire two contributors full-time to get it to a release state much sooner and better than its current pace of development.</p>
+
+<div class="youtube">
+    <iframe id="vid3" type="text/html" class="youtube" width="440" height="300" src="http://www.youtube.com/embed/Y-0l7Ej3cM8" frameborder="0">
+    </iframe>
+</div>
+<div class="youtube">
+    <iframe id="vid4" type="text/html" class="youtube" width="440" height="300" src="http://www.youtube.com/embed/DXDxXGTzIf4" frameborder="0">
+    </iframe>
+</div>
+
+<p>The previous and the current alpha versions have improved the game’s performance and added many new features into the game. The stage is being set for the next alpha release which brings a host of new features including a featured Multiplayer Lobby! No wonder this project pushes the bar up for gaming in Linux open source games.
+The <a href="http://www.indiegogo.com/projects/support-0-a-d-an-open-source-strategy-game/">Indiegogo campaign</a> is flexibly funded with targets starting from $40,000 till $240,000 and goals ranging from improving the game performance till releasing the first version of the game within a couple of years.</p>
+
+<p>The best part of this project being open source is the developer community! They’re not just developers and contributors. They are a family. The modern ancient family. They are a constantly working group, who’ve volunteered to build this game.</p>
+
+<p>IndieStatik covered an in-depth article about <a href="http://indiestatik.com/2013/10/01/10-years-in-alpha-how-volunteer-modders-created-0-a-d-with-the-help-of-a-community/">0 A.D. and its crowdfunding campaign</a> in which the author beautifully states -</p>
+
+<blockquote>
+  <p>“A huge project like 0 A.D. is worthy of people’s time because it’s a community project that people can find resolve in, share stories with others who helped to build it, and in a few months, or a year, or maybe even a decade, they’ll be able to look back at the game and remember the people they met, the things they learned, the things they shared.”</p>
+</blockquote>
+
+<p>I also would like to quote -</p>
+
+<blockquote>
+  <p>“It’s remarkable how a project of this size is sustainable with practically no budget, built from the passion of volunteers, who talk with one another, congratulate each other, see newcomers arrive and welcome them with open arms.”</p>
+</blockquote>
+
+<p>For there is no greater gift in the world than knowledge!
+Donate to the 0 A.D. Project and be a part of this great community.</p>
+
+<p><strong>Website:</strong> http://play0ad.com</p>
+
+<p><strong>Indiegogo Campaign:</strong> http://www.indiegogo.com/projects/support-0-a-d-an-open-source-strategy-game/</p>
+
+<p><strong>IRC Channels:</strong> <a href="http://webchat.quakenet.org/?channels=#0ad">#0ad</a> and <a href="http://webchat.quakenet.org/?channels=#0ad-dev">#0ad-dev</a> on QuakeNet IRC</p>
+
+<hr />
+<p>I’ve included some screenshots below for you to have a quick look at the game!</p>
+
+<p>A Village in Gaul and Depth and Fog rendering!</p>
+
+<p><img src="https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn2/1237349_10151914968049859_1015039661_o.jpg" alt="A Village in Gaul" />
+<img src="http://play0ad.com/wp-content/gallery/screenshots/tilt-shift-filter.jpg" alt="Depth and Fog Rendering" /></p>
+
+<p>Persian Heavy Infantry and 0 A.D.’s Atlas Map Editor</p>
+
+<p><img src="http://play0ad.com/wp-content/gallery/screenshots/alpha-8-persianheavyinfantry.jpg" alt="Persian Heavy Infantry" />
+<img src="http://play0ad.com/wp-content/gallery/screenshots/scr.png" alt="Atlas Editor" /></p>
+
+<p>Oasis in 0 A.D. Desert and Water Rendering effects.</p>
+
+<p><img src="http://play0ad.com/wp-content/gallery/screenshots/screenshot0343.png" alt="Oasis" />
+<img src="https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-prn1/1073220_10151752821764859_690497580_o.jpg" alt="Care for a swim?" /></p>
+
+<p>Building an Empire on Islands and Whales in oceans!</p>
+
+<p><img src="http://play0ad.com/wp-content/gallery/screenshots/screenshot0072.jpg" alt="Island Life" />
+<img src="http://play0ad.com/wp-content/gallery/screenshots/screenshot0060.jpg" alt="Whales" /></p>
+
+<script type="text/javascript">
+    var elem = $("#content img").eq(0).load(function() {
+        var width = $(this).width();
+        var height = $(this).height();
+        var vid3 = document.getElementById("vid3");
+        var vid4 = document.getElementById("vid4");
+        vid3.width = vid4.width = width;
+        vid3.height = vid4.height = height;
+    });
+    $("#content img").eq(4).load(function() {
+        var img2 = $(this);
+        $("#content img").eq(5).load(function() {
+            img2.height($(this).height());
+        });
+    });
+    $("#content img").eq(1).load(function() {
+        var img2 = $(this);
+        $("#content img").eq(0).load(function() {
+            img2.height($(this).height());
+        });
+    });
+</script>
+
+:ET

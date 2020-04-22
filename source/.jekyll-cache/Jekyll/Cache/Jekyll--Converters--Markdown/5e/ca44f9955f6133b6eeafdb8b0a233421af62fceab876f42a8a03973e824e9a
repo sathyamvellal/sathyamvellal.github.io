@@ -1,0 +1,92 @@
+I"�<div class="disclaimer center grey text-small">Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected.</div>
+
+<p>Its a typical day and I’m just looking at <em>Recommended Videos</em> in my YouTube, which are usually songs/music/mixes; that’s what I listen to. So I’m there, listening to UK Piano’s new video and I find a playlist recommended for me. In that playlist is a <a href="http://www.youtube.com/watch?v=ydRAb9cwHnA&amp;list=RD03X6a9odk6b_c">Cello cover of Game of Thrones</a> by <a href="http://www.youtube.com/user/BreakofReaIity">BreakofReality</a>. YouTube then features <a href="http://www.youtube.com/watch?v=5wLfOZiAd8Y">Misty Mountains Orchestral Cover</a> from <a href="http://www.imdb.com/title/tt0903624/">The Hobbit</a> by <a href="http://www.youtube.com/user/sleightlymusical">sleightlymusical</a> in my <em>Recommended for You</em> list. Now it comes! Another video recommended for me from <a href="http://thepianoguys.com/">ThePianoGuys</a>. And WOW!</p>
+
+<!-- more -->
+
+<p>I just sat back, stopped my work and watched one video after the other. The first one that caught my eye was <strong>Kung Fu Piano: Cello Ascends</strong>, a play on <strong><a href="http://www.youtube.com/watch?v=cdjnonJdxtM">Oogway Ascends</a></strong> from <a href="http://www.imdb.com/title/tt0441773/">Kung Fu Panda</a>.</p>
+
+<div class="youtube">
+    <iframe id="vid1" type="text/html" class="youtube" width="560" height="315" src="http://www.youtube.com/embed/NCaH-qqTWpk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="">
+    </iframe>
+</div>
+<div class="youtube">
+    <iframe id="vid2" type="text/html" class="youtube" width="440" height="440" src="http://www.youtube.com/embed/3v-HaH0h6gA" frameborder="0">
+    </iframe>
+</div>
+
+<p>Before you start thinking there was a green screen for the Great Wall of China, watch the <a href="http://www.youtube.com/watch?v=3v-HaH0h6gAz">second video</a>. They actually got the piano on top of it!</p>
+
+<p>I didn’t stop there! I then watched the video which YouTube originally recommended for me - A <a href="http://www.youtube.com/watch?v=FZNqs0YgWkM">Lord of the Rings cover</a>. And after that, I continued …</p>
+
+<div class="youtube">
+    <iframe id="vid3" type="text/html" class="youtube" width="440" height="440" src="http://www.youtube.com/embed/FZNqs0YgWkM" frameborder="0">
+    </iframe>
+</div>
+
+<p>Music is not just about melody or harmony. Its about enjoying, feeling and extracting the emotions out of the listener and ThePianoGuys do just that. I’ve included some more of the many they’ve made, below. DON’T forget to visit <a href="http://www.youtube.com/user/ThePianoGuys">their YouTube channel</a>!
+Obviously I can’t list all the <a href="http://www.youtube.com/user/ThePianoGuys/videos">videos</a> here!</p>
+
+<div class="youtube">
+    <iframe id="vid4" type="text/html" class="youtube" width="440" height="440" src="http://www.youtube.com/embed/9p0BqUcQ7i0" frameborder="0">
+    </iframe>
+</div>
+<div class="youtube">
+    <iframe id="vid5" type="text/html" class="youtube" width="440" height="440" src="http://www.youtube.com/embed/lUjWJSnGVB0" frameborder="0">
+    </iframe>
+</div>
+
+<p><br /></p>
+
+<div class="youtube">
+    <iframe id="vid6" type="text/html" class="youtube" width="440" height="440" src="http://www.youtube.com/embed/P94DusN4LsY" frameborder="0">
+    </iframe>
+</div>
+<div class="youtube">
+    <iframe id="vid7" type="text/html" class="youtube" width="440" height="440" src="http://www.youtube.com/embed/mJ_fkw5j-t0" frameborder="0">
+    </iframe>
+</div>
+
+<p>A quote by Ludwig Van Beethoven, included in one of the videos -</p>
+
+<blockquote>
+  <p>Don’t only practice your art,
+but force your way into its secrets,
+for it and knowledge can raise men to the divine.</p>
+</blockquote>
+
+<script type="text/javascript">
+var vid1 = document.getElementById("vid1");
+var vid2 = document.getElementById("vid2");
+var vid3 = document.getElementById("vid3");
+var vid4 = document.getElementById("vid4");
+var vid5 = document.getElementById("vid5");
+var vid6 = document.getElementById("vid6");
+var vid7 = document.getElementById("vid7");
+if (document.width < 700) {
+    vid1.width = document.width * 0.7;
+    vid2.width = document.width * 0.7;
+    vid3.width = document.width * 0.7;
+    vid4.width = document.width * 0.7;
+    vid5.width = document.width * 0.7;
+    vid6.width = document.width * 0.7;
+    vid7.width = document.width * 0.7;
+} else {
+    vid1.width = document.width * 0.32;
+    vid2.width = document.width * 0.32;
+    vid3.width = document.width * 0.64;
+    vid4.width = document.width * 0.32;
+    vid5.width = document.width * 0.32;
+    vid6.width = document.width * 0.32;
+    vid7.width = document.width * 0.32;
+}
+vid1.height = vid1.width * 0.75;
+vid2.height = vid2.width * 0.75;
+vid3.height = vid3.width * 0.75;
+vid4.height = vid4.width * 0.75;
+vid5.height = vid5.width * 0.75;
+vid6.height = vid6.width * 0.75;
+vid7.height = vid7.width * 0.75;
+</script>
+
+:ET
