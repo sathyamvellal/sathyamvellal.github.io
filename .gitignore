@@ -1,5 +1,6 @@
 site
 .sass-cache
-.jekyll-metadata
+.jekyll-metadataa
+.jekyll-cache
 .DS_Store
 .idea
