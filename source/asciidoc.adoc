@@ -1,0 +1,9 @@
+= Hello World!
+:page-layout: adoc
+:stylesheet: css/gazette.css
+
+== Section One
+
+This is a paragraph is `this` is like a code refernce.
+
+== Section Two
