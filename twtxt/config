@@ -1,0 +1,11 @@
+[twtxt]
+nick = sathyamvellal
+twtfile = C:\Users\Sathyam Vellal\repos\gh\sathyamvellal.github.io\source\twtxt.txt
+twturl = https://sathyam.me/twtxt.txt
+disclose_identity = False
+character_limit = 140
+character_warning = 140
+
+[following]
+twtxt = https://buckket.org/twtxt_news.txt
+
