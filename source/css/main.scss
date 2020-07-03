@@ -22,18 +22,19 @@ body {
   font-family: $font-family-serif;
   font-weight: 400;
   font-feature-settings: "kern", "liga", "clig", "calt";
-  text-align: justify;
+  // text-align: justify;
   text-rendering: optimizeLegibility;
   font-smooth: always;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: auto;
-  color: #000;
+  margin-left: 0.20em;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $h-font-family-serif;
   text-align: left;
-  font-weight: 700;
+  font-weight: 700 !important;
+  color: #222;
 }
 
 h1, h2, h3, h4 {
@@ -48,12 +49,18 @@ li {
   padding-block-end: 5px;
 }
 
+strong {
+  font-weight: 600 !important;
+}
+
 // small screen
 @media (max-width: 720px) {
   body {
     font-family: $font-family-sans-serif;
+    font-size: $font-size-base-sm;
     line-height: $line-height-sm;
-    font-size: $font-size-base * 1.1;
+    color: #444;
+    font-weight: 400;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -64,10 +71,6 @@ li {
   h2 { font-size: $h2-font-size * $h-font-size-multiplier-sm; }
   h3 { font-size: $h3-font-size * $h-font-size-multiplier-sm; }
   h4 { font-size: $h4-font-size * $h-font-size-multiplier-sm; }
-
-  strong {
-    font-weight: 700;
-  }
 }
 
 // large screen

@@ -1,11 +1,12 @@
-$font-family-serif:           freight-text-pro, serif !default;
-$font-family-sans-serif:      freight-sans-pro, sans-serif !default;
+$font-family-serif:           skolar-latin, serif !default;
+$font-family-sans-serif:      skolar-sans-latin, sans-serif !default;
 $font-family-monospace:       "Cascadia Code Regular", monospace !default;
-$font-size-base:              1.1rem !default; // Assumes the browser default, typically `1rem = 16px`
-$h-font-family-serif:         freight-text-pro, serif !default;
-$h-font-family-sans-serif:    freight-sans-pro, sans-serif !default;
-$line-height-lg:              1.50 !default;
-$line-height-sm:              1.50 !default;
+$font-size-base:              1.20rem !default; // Assumes the browser default, typically `1rem = 16px`
+$font-size-base-sm:           1.25rem !default; // Assumes the browser default, typically `1rem = 16px`
+$h-font-family-serif:         skolar-latin, serif !default;
+$h-font-family-sans-serif:    skolar-sans-latin, serif !default;
+$line-height-lg:              1.60 !default;
+$line-height-sm:              1.40 !default;
 $dark:                        $color-text !default;
 $white:                       $color-background !default;
 $link-color: $color-link;
@@ -18,4 +19,4 @@ $h4-font-size: $font-size-base * 1.50;
 $h5-font-size: $font-size-base * 1.20;
 $h6-font-size: $font-size-base * 1.00;
 
-$h-font-size-multiplier-sm: 0.8;
+$h-font-size-multiplier-sm: 0.870
