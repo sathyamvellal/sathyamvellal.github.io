@@ -107,29 +107,29 @@
 <ul>
   <li>spaces are uniform &amp; single line break</li>
   <li>empty line defines end of para &amp; severl empty lines</li>
-  <li>10 meta-characters. Escape to print metachar. <code class="highlighter-rouge">\textbackslash</code> to print escape char</li>
+  <li>10 meta-characters. Escape to print metachar. <code class="language-plaintext highlighter-rouge">\textbackslash</code> to print escape char</li>
 </ul>
 
 <h5 id="level--1">Level -1</h5>
 
 <ul>
-  <li>Commands start with <code class="highlighter-rouge">\</code></li>
+  <li>Commands start with <code class="language-plaintext highlighter-rouge">\</code></li>
   <li>case sensitive</li>
   <li>starred variant</li>
   <li>terminated with a non-letter</li>
   <li>Commands are space-hungry!</li>
-  <li>use <code class="highlighter-rouge">{}</code></li>
-  <li>parameters in <code class="highlighter-rouge">{}</code></li>
-  <li>optional params <code class="highlighter-rouge">[]</code></li>
-  <li><code class="highlighter-rouge">\command[optional]{param}</code></li>
-  <li><code class="highlighter-rouge">%</code> -&gt; Comments</li>
-  <li><code class="highlighter-rouge">verbatim</code> package. <code class="highlighter-rouge">\begin{comment}</code> to <code class="highlighter-rouge">\end{commend}</code></li>
+  <li>use <code class="language-plaintext highlighter-rouge">{}</code></li>
+  <li>parameters in <code class="language-plaintext highlighter-rouge">{}</code></li>
+  <li>optional params <code class="language-plaintext highlighter-rouge">[]</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\command[optional]{param}</code></li>
+  <li><code class="language-plaintext highlighter-rouge">%</code> -&gt; Comments</li>
+  <li><code class="language-plaintext highlighter-rouge">verbatim</code> package. <code class="language-plaintext highlighter-rouge">\begin{comment}</code> to <code class="language-plaintext highlighter-rouge">\end{commend}</code></li>
 </ul>
 
 <h5 id="level-0">Level 0</h5>
 
 <ul>
-  <li>file must start with <code class="highlighter-rouge"><span class="k">\documentclass</span><span class="p">{</span>class<span class="p">}</span></code>
+  <li>file must start with <code class="language-plaintext highlighter-rouge">\documentclass{class}</code>
     <ul>
       <li>specifies type of document</li>
       <li>some commands following this to specify some more details</li>
@@ -140,16 +140,16 @@
       </li>
     </ul>
   </li>
-  <li>to load some package <code class="highlighter-rouge">\usepackage{name}</code></li>
-  <li>write content within <code class="highlighter-rouge">\begin{document}</code> and <code class="highlighter-rouge">\end{document}</code></li>
-  <li><code class="highlighter-rouge">\pagestyle{style}</code> &amp; <code class="highlighter-rouge">\thispagestyle{style}</code>
+  <li>to load some package <code class="language-plaintext highlighter-rouge">\usepackage{name}</code></li>
+  <li>write content within <code class="language-plaintext highlighter-rouge">\begin{document}</code> and <code class="language-plaintext highlighter-rouge">\end{document}</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\pagestyle{style}</code> &amp; <code class="language-plaintext highlighter-rouge">\thispagestyle{style}</code>
     <ul>
-      <li><code class="highlighter-rouge">plain</code> - page number in footer, middle</li>
-      <li><code class="highlighter-rouge">headings</code> - headings, page number. empty footer.</li>
-      <li><code class="highlighter-rouge">empty</code> - both empty</li>
+      <li><code class="language-plaintext highlighter-rouge">plain</code> - page number in footer, middle</li>
+      <li><code class="language-plaintext highlighter-rouge">headings</code> - headings, page number. empty footer.</li>
+      <li><code class="language-plaintext highlighter-rouge">empty</code> - both empty</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">\include{file}</code> &amp; <code class="highlighter-rouge">\includeonly{file,file,...}</code> &amp; <code class="highlighter-rouge"><span class="k">\input</span><span class="p">{</span>file<span class="p">}</span></code></li>
+  <li><code class="language-plaintext highlighter-rouge">\include{file}</code> &amp; <code class="language-plaintext highlighter-rouge">\includeonly{file,file,...}</code> &amp; <code class="language-plaintext highlighter-rouge">\input{file}</code></li>
 </ul>
 
 <hr />
@@ -158,71 +158,71 @@
 <h5 id="level-1">Level 1</h5>
 
 <ul>
-  <li><code class="highlighter-rouge">\\</code> &amp; <code class="highlighter-rouge">\newline</code> &amp; <code class="highlighter-rouge">\newpage</code> &amp; <code class="highlighter-rouge">\\*</code></li>
-  <li><code class="highlighter-rouge">\linebreak[n]</code> &amp; <code class="highlighter-rouge">\nolinebreak[n]</code> &amp; <code class="highlighter-rouge">\pagebreak[n]</code> &amp; <code class="highlighter-rouge">\nopagebreak[n]</code></li>
-  <li><code class="highlighter-rouge">\hyphenation{word list}</code></li>
-  <li><code class="highlighter-rouge">\-</code></li>
-  <li><code class="highlighter-rouge">\mbox{text}</code> &amp; <code class="highlighter-rouge">\fbox{text}</code></li>
-  <li><code class="highlighter-rouge">\today</code> &amp; <code class="highlighter-rouge">\TeX{}</code> &amp; <code class="highlighter-rouge">\LaTeX{}</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\\</code> &amp; <code class="language-plaintext highlighter-rouge">\newline</code> &amp; <code class="language-plaintext highlighter-rouge">\newpage</code> &amp; <code class="language-plaintext highlighter-rouge">\\*</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\linebreak[n]</code> &amp; <code class="language-plaintext highlighter-rouge">\nolinebreak[n]</code> &amp; <code class="language-plaintext highlighter-rouge">\pagebreak[n]</code> &amp; <code class="language-plaintext highlighter-rouge">\nopagebreak[n]</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\hyphenation{word list}</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\-</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\mbox{text}</code> &amp; <code class="language-plaintext highlighter-rouge">\fbox{text}</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\today</code> &amp; <code class="language-plaintext highlighter-rouge">\TeX{}</code> &amp; <code class="language-plaintext highlighter-rouge">\LaTeX{}</code></li>
   <li>quotation marks ` and ‘</li>
   <li>ligatures -  ff fi fl etc [Refer book, Sec:2.4.8, page 24]</li>
-  <li>ellipsis - <code class="highlighter-rouge">\ldtos</code></li>
-  <li><code class="highlighter-rouge">~</code> &amp; <code class="highlighter-rouge">\@</code> &amp; <code class="highlighter-rouge">\frenchspacing</code></li>
-  <li><code class="highlighter-rouge">label{...}</code> &amp; <code class="highlighter-rouge">\ref{...}</code> &amp; <code class="highlighter-rouge">\pageref{...}</code></li>
-  <li><code class="highlighter-rouge">\footnote{...}</code></li>
+  <li>ellipsis - <code class="language-plaintext highlighter-rouge">\ldtos</code></li>
+  <li><code class="language-plaintext highlighter-rouge">~</code> &amp; <code class="language-plaintext highlighter-rouge">\@</code> &amp; <code class="language-plaintext highlighter-rouge">\frenchspacing</code></li>
+  <li><code class="language-plaintext highlighter-rouge">label{...}</code> &amp; <code class="language-plaintext highlighter-rouge">\ref{...}</code> &amp; <code class="language-plaintext highlighter-rouge">\pageref{...}</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\footnote{...}</code></li>
 </ul>
 
 <h5 id="level-2">Level 2</h5>
 
 <ul>
-  <li><code class="highlighter-rouge">\maketitle</code>
+  <li><code class="language-plaintext highlighter-rouge">\maketitle</code>
     <ul>
-      <li><code class="highlighter-rouge">\title</code></li>
-      <li><code class="highlighter-rouge">\author</code></li>
-      <li><code class="highlighter-rouge">\date</code> - optional</li>
+      <li><code class="language-plaintext highlighter-rouge">\title</code></li>
+      <li><code class="language-plaintext highlighter-rouge">\author</code></li>
+      <li><code class="language-plaintext highlighter-rouge">\date</code> - optional</li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">\tableofcontents</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\tableofcontents</code></li>
   <li>divide publication
     <ul>
-      <li><code class="highlighter-rouge">\frontmatter</code></li>
-      <li><code class="highlighter-rouge">\mainmatter</code></li>
-      <li><code class="highlighter-rouge">\appendix</code></li>
-      <li><code class="highlighter-rouge">\backmatter</code></li>
+      <li><code class="language-plaintext highlighter-rouge">\frontmatter</code></li>
+      <li><code class="language-plaintext highlighter-rouge">\mainmatter</code></li>
+      <li><code class="language-plaintext highlighter-rouge">\appendix</code></li>
+      <li><code class="language-plaintext highlighter-rouge">\backmatter</code></li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">\part</code></li>
-  <li><code class="highlighter-rouge">\chapter</code> - depends on document class</li>
-  <li><code class="highlighter-rouge">\section</code></li>
-  <li><code class="highlighter-rouge">\subsection</code></li>
-  <li><code class="highlighter-rouge">subsubsection</code></li>
-  <li><code class="highlighter-rouge">\paragraph</code></li>
-  <li><code class="highlighter-rouge">\subparagraph</code></li>
-  <li><code class="highlighter-rouge">\begin{...}</code> &amp; <code class="highlighter-rouge">\end{...}</code>
+  <li><code class="language-plaintext highlighter-rouge">\part</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\chapter</code> - depends on document class</li>
+  <li><code class="language-plaintext highlighter-rouge">\section</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\subsection</code></li>
+  <li><code class="language-plaintext highlighter-rouge">subsubsection</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\paragraph</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\subparagraph</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\begin{...}</code> &amp; <code class="language-plaintext highlighter-rouge">\end{...}</code>
     <ul>
-      <li><code class="highlighter-rouge">enumerate</code>
+      <li><code class="language-plaintext highlighter-rouge">enumerate</code>
         <ul>
-          <li>use <code class="highlighter-rouge">\item</code></li>
+          <li>use <code class="language-plaintext highlighter-rouge">\item</code></li>
         </ul>
       </li>
-      <li><code class="highlighter-rouge">itemize</code>
+      <li><code class="language-plaintext highlighter-rouge">itemize</code>
         <ul>
-          <li>use <code class="highlighter-rouge">\item</code></li>
+          <li>use <code class="language-plaintext highlighter-rouge">\item</code></li>
         </ul>
       </li>
-      <li><code class="highlighter-rouge">description</code>
+      <li><code class="language-plaintext highlighter-rouge">description</code>
         <ul>
-          <li>use <code class="highlighter-rouge">\item[Name] Description ...</code></li>
+          <li>use <code class="language-plaintext highlighter-rouge">\item[Name] Description ...</code></li>
         </ul>
       </li>
-      <li><code class="highlighter-rouge">{flushleft}</code> &amp; <code class="highlighter-rouge">{flushright}</code> &amp; <code class="highlighter-rouge">{center}</code></li>
-      <li><code class="highlighter-rouge">{quote}</code> &amp; <code class="highlighter-rouge">{verse}</code></li>
-      <li><code class="highlighter-rouge">{verbatim}</code></li>
-      <li><code class="highlighter-rouge">{tabular}</code> &amp; <code class="highlighter-rouge">{|l|c|r|p{...}}</code></li>
-      <li><code class="highlighter-rouge">{verbatim}</code></li>
+      <li><code class="language-plaintext highlighter-rouge">{flushleft}</code> &amp; <code class="language-plaintext highlighter-rouge">{flushright}</code> &amp; <code class="language-plaintext highlighter-rouge">{center}</code></li>
+      <li><code class="language-plaintext highlighter-rouge">{quote}</code> &amp; <code class="language-plaintext highlighter-rouge">{verse}</code></li>
+      <li><code class="language-plaintext highlighter-rouge">{verbatim}</code></li>
+      <li><code class="language-plaintext highlighter-rouge">{tabular}</code> &amp; <code class="language-plaintext highlighter-rouge">{|l|c|r|p{...}}</code></li>
+      <li><code class="language-plaintext highlighter-rouge">{verbatim}</code></li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">\verb+text+</code></li>
+  <li><code class="language-plaintext highlighter-rouge">\verb+text+</code></li>
 </ul>
 
 <h3 id="mathematics--font-handling">Mathematics &amp; Font handling</h3>
