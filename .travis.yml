@@ -1,11 +1,11 @@
 dist: bionic
-language: ruby
+language: node_js
+node_js:
+  - 12
 
 branches:
   only:
-    - source
-  except:
-    - master
+    - eleventy-port
 
 deploy:
   provider: script
