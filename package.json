@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "python -m http.server -d _site",
-    "build": "gulp css && npx eleventy",
-    "test": "bash deploy.sh && echo \"Done!\""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
@@ -16,11 +14,6 @@
   },
   "dependencies": {
     "gulp": "^4.0.2",
-    "gulp-exec": "^5.0.0",
-    "gulp-sass": "^4.1.0",
-    "markdown-it": "^12.0.2",
-    "markdown-it-attrs": "^3.0.3",
-    "markdown-it-container": "^3.0.0",
-    "markdown-it-div": "^1.1.0"
+    "gulp-sass": "^4.1.0"
   }
 }
