@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "python -m http.server -d _site",
     "test": "bash deploy.sh && echo \"Done!\""
   },
   "keywords": [],
