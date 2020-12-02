@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "python -m http.server -d _site",
+    "build": "gulp css && npx eleventy",
     "test": "bash deploy.sh && echo \"Done!\""
   },
   "keywords": [],
@@ -15,6 +16,7 @@
   },
   "dependencies": {
     "gulp": "^4.0.2",
+    "gulp-exec": "^5.0.0",
     "gulp-sass": "^4.1.0"
   }
 }
