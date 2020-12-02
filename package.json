@@ -17,6 +17,8 @@
   "dependencies": {
     "gulp": "^4.0.2",
     "gulp-exec": "^5.0.0",
-    "gulp-sass": "^4.1.0"
+    "gulp-sass": "^4.1.0",
+    "markdown-it": "^12.0.2",
+    "markdown-it-attrs": "^3.0.3"
   }
 }
