@@ -1,11 +1,13 @@
 module.exports = function(eleventyConfig) {
     var markdownIt = require('markdown-it');
     var markdownItAttrs = require('markdown-it-attrs');
+    var markdownItDiv = require('markdown-it-div');
     var markdownOptions = {
         html: true
     };
     var markdownLib = markdownIt(markdownOptions)
-                        .use(markdownItAttrs);
+                        .use(markdownItAttrs)
+                        .use(markdownItDiv);
     eleventyConfig.setLibrary('md', markdownLib);
 
     eleventyConfig.addShortcode("greet", function(entity) {
