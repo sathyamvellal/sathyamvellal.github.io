@@ -1,9 +1,20 @@
-<html>
+<html lang=en>
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
     <title>{{title}}</title>
+    <link href="/css/bulma.css" rel="stylesheet" type="text/css">
     <link href="/css/main.css" rel="stylesheet" type="text/css"> 
 </head>
 <body>
-    {{ content | safe }}
+    {% include "navbar.njk" %}
+    <div>
+        <div class="content is-medium p-2">
+            <div class="container">
+                {{ content | safe }}
+            </div>
+        </div>
+    </div>
 </body>
 </html>
