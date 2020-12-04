@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Title
+title: Sathyam Vellal
 ---
 
 ### Hi.
