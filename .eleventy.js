@@ -1,9 +1,13 @@
+var yaml = require('js-yaml');
+
 module.exports = function(eleventyConfig) {
     eleventyConfig.addShortcode("greet", function(entity) {
         return entity + "!";
     });
 
     eleventyConfig.addPassthroughCopy({"source/_static" : "/"});
+
+    eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
 
     return {
         pathPrefix: "/",
