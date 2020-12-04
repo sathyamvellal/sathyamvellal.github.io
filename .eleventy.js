@@ -1,3 +1,5 @@
+var yaml = require('js-yaml');
+
 module.exports = function(eleventyConfig) {
     var markdownIt = require('markdown-it');
     var markdownItAttrs = require('markdown-it-attrs');
@@ -15,6 +17,8 @@ module.exports = function(eleventyConfig) {
     });
 
     eleventyConfig.addPassthroughCopy({"source/_static" : "/"});
+
+    eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
 
     return {
         pathPrefix: "/",
