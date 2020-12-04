@@ -6,13 +6,13 @@
 <body>
     {% include "navbar.njk" %}
     <div> <!-- for some reason the top div disappears, so have a top-level dummy div; probably bulma's doing... -->
-        <section class="section">
             <div class="content is-medium">
                 <div class="container">
-                    {{ content | safe }}
+                    <section class="section">
+                        {{ content | safe }}
+                    </section>
                 </div>
             </div>
-        </section>
     </div>
     <footer class="footer">
         <div class="content has-text-centered">
