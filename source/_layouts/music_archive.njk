@@ -1,0 +1,14 @@
+---
+layout: post
+---
+
+<ul>
+{% for track in tracks %}
+    {% if track.title %}
+        <li><strong>{{ track.title }}</strong>
+        {% if track.from %} from {{ track.from }} {% endif %} 
+        {% if track.by %} by {{ track.by }}{% endif %}
+        {% if track.cover %} &nbsp;({{ track.cover }}) {% endif %}</li>
+    {% endif %}
+{% endfor %}
+</ul>
