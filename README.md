@@ -1,5 +1,5 @@
-11ty Website Template
-======================
+My Personal Website v3.0
+========================
 
 - Source lives in `source` dir.
 - Output compiled to `_site` dir.
@@ -11,3 +11,4 @@
 - Sass format styling code lives in `sass`
 - `gulp css` to build sass code
 - `eleventy` to build website
+- `gulp` to build all
