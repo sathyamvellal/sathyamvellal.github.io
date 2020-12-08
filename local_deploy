@@ -11,6 +11,6 @@ echo "Deploying..."
 cd $BUILD_DIR
 git add .
 git commit -m "Site update"
-git push "$REPO_URL" $DEPLOY_BRANCH --force
+git push origin $DEPLOY_BRANCH --force
 cd ..
 echo "Deploying... done!"
