@@ -2,7 +2,7 @@
 
 USERNAME=sathyamvellal
 REPO_NAME=sathyamvellal.github.io
-REPO_URL=https://${GITHUB_TOKEN}@github.com/$USERNAME/$REPO_NAME.git
+REPO_URL=git@github.com:$USERNAME/$REPO_NAME.git
 BUILD_DIR=_site
 DEPLOY_BRANCH=master
 
