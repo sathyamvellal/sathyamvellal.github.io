@@ -1,385 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-
-<title>Sathyam Vellal / Music</title>
-
-<meta name="description" content="Music I like/listen to">
-
-
-
-<link rel="stylesheet" href="https://use.typekit.net/ikh8ujl.css">
-<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i,700,700i|IBM+Plex+Sans:400,400i,700,700i&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" type="text/css" href="/css/main.css">
-<link rel="stylesheet" type="text/css" href="/css/footable.bootstrap.min.css">
-<script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="/js/util.js"></script>
-<script type="text/javascript" src="/js/popper.js"></script>
-<script type="text/javascript" src="/js/tooltip.js"></script>
-<script type="text/javascript" src="/js/bootstrap/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="/js/moment.min.js"></script>
-<script type="text/javascript" src="/js/footable.min.js"></script>
-<link rel="shortcut icon" type="image/png" href=/favicon_music.png>
-<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-<script defer src="https://pro.fontawesome.com/releases/v5.0.10/js/all.js" integrity="sha384-+1nLPoB0gaUktsZJP+ycZectl3GX7wP8Xf2PE/JHrb7X1u7Emm+v7wJMbAcPr8Ge" crossorigin="anonymous"></script>
-
-
-
+<html>
+<head>
+    <title>Music Archives</title>
+    <link href="/css/main.css" rel="stylesheet" type="text/css"> 
+</head>
 <body>
-  <div class="header wrapper">
-    </br>
-<div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-10">
-      <div class="row">
-        
-          <div class="col menuItem">
-            <a class="text-dark" href="/" target=""><i class="fas fa-home"></i></a>
-          </div>
-        
-          <div class="col menuItem">
-            <a class="text-dark" href="/music/" target=""><i class="fab fa-itunes-note"></i></a>
-          </div>
-        
-      </div>
-    </div>
-  </div>
+    <div class="container">
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="thenavbar">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="thenavbar" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/">
+                Home
+                </a>
+
+                <a class="navbar-item" href="/blog">
+                Blog
+                </a>
+
+                <a class="navbar-item" href="/music">
+                Music
+                </a>
+            </div>
+        </div>
+    </nav>
 </div>
-</br>
-
-  </div>
-  </br>
-  <div class="container wrapper">
-    <div class="row justify-content-center">
-      <div class="col-12 col-sm-11 col-md-9 col-lg-7">
-        <div class="music">
-    <div class="music-top" id="stage">
-        <p><strong><i class="fa fa-headphones" aria-hidden="true"></i></strong><p>
-        <p>Music I like/listen to.</p>
-        <p class="grey">This space shows recents. Monthly music archives are below.<br/>(No longer updated)</p>
-    </div>
-
-    <div class="music-posts">
-        <ul class="pl-0">
-            <li>
-                <div class="music-post black-links">
-                    <div class="music-post-header">
-                      <h5 class="url"><a href="https://www.last.fm/user/sathyamvellal">Recently played (by Last.fm scrobbles)</a></h5>
-                    </div>
-                    <div class="music-post-content">
-                        <table class="table full-width" id="recentlyplayed"></table>
 
 <script type="text/javascript">
-$(document).ready(function() {
-  $.get("https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=sathyamvellal&api_key=0791402f4b42c447c7d3c2f913fa2427&format=json&limit=20")
-  .done(function(results) {
-    var tracks = results.recenttracks.track;
-    var data = [];
-    for (var i = 0; i < tracks.length; ++i) {
-      var track = tracks[i];
-      data.push({
-        image: track.image[1]["#text"],
-        track: {
-          name: track["name"],
-          artist: track["artist"]["#text"],
-          album: track["album"]["#text"]
-        }
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Get all "navbar-burger" elements
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  // Check if there are any navbar burgers
+  if ($navbarBurgers.length > 0) {
+
+    // Add a click event on each of them
+    $navbarBurgers.forEach( el => {
+      el.addEventListener('click', () => {
+
+        // Get the target from the "data-target" attribute
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
       });
-    }
-    var columns = [
-      { name: "image", title: " ", type: "text",
-        formatter: function(image) {
-          return "<img width=40 src='" + image + "'/>";
-        }
-      },
-      { name: "track", title: "Track", type: "object",
-        formatter: function(track) {
-          return "<a target=\"_blank\" href=\"https://www.youtube.com/results?search_query=" + track.name + " " + track.artist + " " + track.album + "\">" + "<span><strong>" + track.name + "</strong></span></br/><span>" + track.artist + "</span> - <span class='grey'>" + track.album + "</span></a>";
-        }
-      },
-    ];
-    $("#recentlyplayed").footable({
-      showHeader: false,
-      columns: columns,
-      rows: data
     });
-  }).fail(function(err) {
-    console.log('Error in loading recently played ...');
-  })
-})
-</script>
+  }
 
-                    </div>
+});
+</script
+    <div> <!-- for some reason the top div disappears, so have a top-level dummy div; probably bulma's doing... -->
+            <div class="content is-medium">
+                <div class="container">
+                    <section class="section">
+                        <h1>Music Archives</h1>
+<ul><li><a href="/music/2016/09/">September 2016 Music Archive</a></li><li><a href="/music/2016/10/">October 2016 Music Archive</a></li><li><a href="/music/2016/11/">November 2016 Music Archive</a></li><li><a href="/music/2016/12/">December 2016 Music Archive</a></li><li><a href="/music/2017/01/">January 2017 Music Archive</a></li><li><a href="/music/2017/02/">February 2017 Music Archive</a></li><li><a href="/music/2017/03/">March 2017 Music Archive</a></li><li><a href="/music/2017/04/">April 2017 Music Archive</a></li><li><a href="/music/2017/05/">May 2017 Music Archive</a></li><li><a href="/music/2017/06/">June 2017 Music Archive</a></li><li><a href="/music/2017/07/">July 2017 Music Archive</a></li><li><a href="/music/2017/08/">August 2017 Music Archive</a></li><li><a href="/music/2017/09/">September 2017 Music Archive</a></li><li><a href="/music/2017/10/">October 2017 Music Archive</a></li></ul>
+                    </section>
                 </div>
-            </li>
-            <script type="text/javascript">
-function openAppleMusic(url) {
-    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) { // if iOS
-        window.open(url.replace('https', 'music'), '_blank');
-    } else { // otherwise
-        window.open(url, '_blank');
-    }
-
-    return false;
-}
-</script>
-
-
-
-<div class="music-tracks">
-    
-</div>
-
-<hr class="faded"/>
-<div class="music-archives">
-    <h4 class="music-archives-header">Archives</h4>
-    
-        
-        
-
-        
-        <h5 class="year-list-header">2017</h5>
-        <ul class="year-list">
-        
-
-        <li><a href="/music/2017/10/">October</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2017/09/">September</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2017/08/">August</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2017/07/">July</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2017/06/">June</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2017/05/">May</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2017/04/">April</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2017/03/">March</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2017/02/">February</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2017/01/">January</a></li>
-
-        
-            
-            </ul>
-            <h5 class="year-list-header">2016</h5>
-            <ul class="year-list">
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2016/12/">December</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2016/11/">November</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2016/10/">October</a></li>
-
-        
-            
-        
-    
-        
-        
-
-        
-
-        <li><a href="/music/2016/09/">September</a></li>
-
-        
-        </ul>
-        
-    
-</div>
-
-            <hr class="faded" />
-            <div class="music-archives">
-                <h4 class="music-archives-header">Concerts</h4>
             </div>
-            <li>
-                <div class="music-post">
-                    <div class="music-post-header">
-                      <span class="url"><a href="/music/concerts/2017/hans-zimmer-revealed">Hans Zimmer Revealed 2017</a>, Microsoft Theatre, Los Angeles</span>
-                    </div>
-                </div>
-                <div class="music-post">
-                    <div class="music-post-header">
-                      <span class="url"><a href="https://goo.gl/photos/c9sLFiKG6Yp4uq2V9">Eddie Palmieri Salsa Orchestra 2016</a>, Burton Chace Park, Marina Del Rey</span>
-                    </div>
-                </div>
-                <div class="music-post">
-                    <div class="music-post-header">
-                      <span class="url"><a href="https://goo.gl/photos/5NUxF6WSQEGTNgFJ6">New Jazz Showcase - Jazz Music by USC Students 2016</a>, Ground Zero Performance Cafe, USC</span>
-                    </div>
-                </div>
-            </li>
-        </ul>
     </div>
-</div>
-
-      </div>
-    </div>
-  </div>
-  <br/>
-  <hr/>
-  <div class="footer wrapper">
-    <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-12 col-md-10">
-      <p class="text-center grey">Find me on</p>
-      <ul>
-        
-          <li>
-              <a class="text-dark" href="https://twitter.com/sathyamvellal" target="_blank"><i class="fab fa-twitter"></i></a>
-          </li>
-        
-          <li>
-              <a class="text-dark" href="https://github.com/sathyamvellal" target="_blank"><i class="fab fa-github"></i></a>
-          </li>
-        
-          <li>
-              <a class="text-dark" href="https://linkedin.com/in/sathyamvellal" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-          </li>
-        
-          <li>
-              <a class="text-dark" href="https://www.instagram.com/sathyamvellal/" target="_blank"><i class="fab fa-instagram"></i></a>
-          </li>
-        
-          <li>
-              <a class="text-dark" href="https://pinboard.in/u:sathyamvellal" target="_blank"><i class="fas fa-thumbtack"></i></a>
-          </li>
-        
-          <li>
-              <a class="text-dark" href="https://www.youtube.com/c/SathyamVellal" target="_blank"><i class="fab fa-youtube"></i></a>
-          </li>
-        
-          <li>
-              <a class="text-dark" href="https://letterboxd.com/sathyamvellal/" target="_blank"><i class="fas fa-film"></i></a>
-          </li>
-        
-          <li>
-              <a class="text-dark" href="https://www.last.fm/user/sathyamvellal" target="_'blank'"><i class="fab fa-lastfm"></i></a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</div>
-
-  </div>
-  <script type="text/javascript">
-// $(".span-tooltip").tooltip();
-$(".span-popover").popover();
-</script>
-
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p>copyright 2020</p>
+        </div>
+    </footer>
 </body>
 </html>
