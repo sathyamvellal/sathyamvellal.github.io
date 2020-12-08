@@ -17,7 +17,7 @@ cd sathyamvellal.github.io
 
 # Clone build
 echo "Cloning build dir into $BUILD_DIR"
-git clone -b eleventy-port-build https://${GITHUB_TOKEN}@github.com/sathyamvellal/sathyamvellal.github.io.git" $BUILD_DIR
+git clone -b eleventy-port-build "https://${GITHUB_TOKEN}@github.com/sathyamvellal/sathyamvellal.github.io.git" $BUILD_DIR
 
 # prepare environment
 echo "Preparing environment..."
