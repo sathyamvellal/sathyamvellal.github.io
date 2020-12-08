@@ -1,13 +1,8 @@
 {
-  "name": "eleventy-website",
-  "version": "1.0.0",
+  "name": "sathyam-vellal-website",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "python -m http.server -d _site",
-    "build": "gulp css && npx eleventy",
-    "test": "bash deploy.sh && echo \"Done!\""
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
