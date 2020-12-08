@@ -9,6 +9,6 @@ branches:
 
 deploy:
   provider: script
-  script: bash deploy.sh
+  script: ./travis_deploy
   on:
     branch: source
