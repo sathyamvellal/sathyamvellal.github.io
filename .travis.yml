@@ -5,10 +5,10 @@ node_js:
 
 branches:
   only:
-    - eleventy-port
+    - source
 
 deploy:
   provider: script
   script: bash deploy.sh
   on:
-    branch: eleventy-port
+    branch: source
