@@ -4,8 +4,8 @@ ROOT_DIR=sathyamvellal.github.io
 BUILD_DIR=_site
 
 echo "Cloning source..."
-git clone -b master "https://${GITHUB_TOKEN}@github.com/sathyamvellal/sathyamvellal.github.io.git" $ROOT_DIR
-echo "Clongin source... done!"
+git clone -b eleventy-port "https://${GITHUB_TOKEN}@github.com/sathyamvellal/sathyamvellal.github.io.git" $ROOT_DIR
+echo "Cloning source... done!"
 
 if [ ! -d "sathyamvellal.github.io" ]; then
     echo "ERROR: Could not find source... Exiting..."
@@ -14,6 +14,9 @@ fi
 
 # cd to website source folder
 cd sathyamvellal.github.io
+
+# Clone build
+git clone -b eleventy-port-build https://${GITHUB_TOKEN}@github.com/sathyamvellal/sathyamvellal.github.io.git" $BUILD_DIR
 
 # prepare environment
 echo "Preparing environment..."
@@ -35,6 +38,6 @@ echo "Deploying..."
 cd _site
 git add .
 git commit -m "Site update"
-git push "https://${GITHUB_TOKEN}@github.com/sathyamvellal/sathyamvellal.github.io.git" eleventy-port-build
+git push "https://${GITHUB_TOKEN}@github.com/sathyamvellal/sathyamvellal.github.io.git" eleventy-port-build --force
 cd ..
 echo "Deploying... done!"
