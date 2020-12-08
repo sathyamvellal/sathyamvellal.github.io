@@ -5,8 +5,8 @@ REPO_NAME=sathyamvellal.github.io
 REPO_URL=https://${GITHUB_TOKEN}@github.com/$USERNAME/$REPO_NAME.git
 ROOT_DIR=$REPO_NAME
 BUILD_DIR=_site
-SOURCE_BRANCH=eleventy-port
-DEPLOY_BRANCH=$SOURCE_BRANCH-build
+SOURCE_BRANCH=source
+DEPLOY_BRANCH=master
 
 echo "Cloning source..."
 git clone -b $SOURCE_BRANCH "$REPO_URL" $ROOT_DIR
