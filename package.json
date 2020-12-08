@@ -1,11 +1,8 @@
 {
-  "name": "eleventy-website",
-  "version": "1.0.0",
+  "name": "sathyam-vellal-website",
+  "version": "3.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "test": "bash deploy.sh && echo \"Done!\""
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
