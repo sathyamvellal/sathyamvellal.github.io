@@ -1,23 +1,33 @@
 #!/bin/bash
 
-ROOT_DIR=sathyamvellal.github.io
+USERNAME=sathyamvellal
+REPO_NAME=sathyamvellal.github.io
+REPO_URL=https://${GITHUB_TOKEN}@github.com/$USERNAME/$REPO_NAME.git
+ROOT_DIR=$REPO_NAME
 BUILD_DIR=_site
+SOURCE_BRANCH=eleventy-port
+DEPLOY_BRANCH=$SOURCE_BRANCH-build
 
 echo "Cloning source..."
-git clone -b eleventy-port "https://${GITHUB_TOKEN}@github.com/sathyamvellal/sathyamvellal.github.io.git" $ROOT_DIR
+git clone -b $SOURCE_BRANCH "$REPO_URL" $ROOT_DIR
 echo "Cloning source... done!"
 
-if [ ! -d "sathyamvellal.github.io" ]; then
+if [ ! -d "$ROOT_DIR" ]; then
     echo "ERROR: Could not find source... Exiting..."
     exit 1
 fi
 
 # cd to website source folder
-cd sathyamvellal.github.io
+cd $ROOT_DIR
 
 # Clone build
 echo "Cloning build dir into $BUILD_DIR"
-git clone -b eleventy-port-build "https://${GITHUB_TOKEN}@github.com/sathyamvellal/sathyamvellal.github.io.git" $BUILD_DIR
+git clone -b $DEPLOY_BRANCH "$REPO_URL" $BUILD_DIR
+
+if [ ! -d "$BUILD_DIR" ]; then
+    echo "ERROR: Could not find build dir... Exiting..."
+    exit 1
+fi
 
 # prepare environment
 echo "Preparing environment..."
@@ -25,20 +35,15 @@ npm install
 echo "Preparing environment... done!"
 
 # build css
-echo "Building css..."
-gulp css
-echo "Building css... done!"
-
-# build site
-echo "Building site..."
-npx eleventy
-echo "Building site... done!"
+echo "Building..."
+gulp 
+echo "Building... done!"
 
 # deploy
 echo "Deploying..."
-cd _site
+cd $BUILD_DIR
 git add .
 git commit -m "Site update"
-git push "https://${GITHUB_TOKEN}@github.com/sathyamvellal/sathyamvellal.github.io.git" eleventy-port-build --force
+git push "$REPO_URL" $DEPLOY_BRANCH --force
 cd ..
 echo "Deploying... done!"
