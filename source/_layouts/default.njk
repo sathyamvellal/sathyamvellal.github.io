@@ -9,19 +9,9 @@
 </head>
 <body>
     {% include "navbar.njk" %}
-    <div> <!-- for some reason the top div disappears, so have a top-level dummy div; probably bulma's doing... -->
-            <div class="content is-medium">
-                <div class="container">
-                    <section class="section">
-                        {{ content | safe }}
-                    </section>
-                </div>
-            </div>
-    </div>
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p>copyright 2020</p>
-        </div>
-    </footer>
+    <section class="section">
+        {% include "content.njk" %}
+    </section>
+    {% include "footer.njk" %}
 </body>
 </html>
