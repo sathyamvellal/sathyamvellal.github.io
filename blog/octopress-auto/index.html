@@ -71,6 +71,14 @@ document.addEventListener('DOMContentLoaded', () => {
 <h1>Octopress + Travis + Prose + SGit + Jota</h1>
 
 
+    <em>Mon Nov 17 2014 16:00:00 GMT-0800 (Pacific Standard Time)</em>
+
+</br>
+
+
+<p class="disclaimer">Note: This is a blog post from an older version of this website that has been copied over without any modifications. Links and styles on this page may be missing or might not render as expected.</p>
+</br>
+
 <p>I had a problem. I wanted to blog more and mostly wrote in my personal laptop.  Although, I usually wouldn't have the time to finish it. And so, there would go an incomplete blog post which I never finished for weeks; all because it was in my laptop. From months I wanted to move my blogging online and I've finally done that.</p>
 <!--- more --->
 <p>I've setup <a href="https://travis-ci.org">Travis-CI</a> for my website now. If you don't know, travis is a continuous integration service for building and testing projects on Github. We can use it to autobuild octopress projects and deploy to github pages. To integrate travis to your octopress website, visit <a href="http://blog.yasuoza.com/2014/01/13/octopress-plus-github-pages-plus-travis/">Yasuoza Diary's post</a>. The post gives most of the details on what to do. Now any commit to the source branch should trigger travis build. But it's going to build both the source branch and the pages branch (because there was a commit there too, since a deployment was done). Just change the setting in travis to &quot;build only if <code>.travis.yml</code> is present&quot;. This should now skip trying to build from master.</p>
