@@ -62,12 +62,11 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
-</script
-    <div> <!-- for some reason the top div disappears, so have a top-level dummy div; probably bulma's doing... -->
-            <div class="content is-medium">
-                <div class="container">
-                    <section class="section">
-                        
+</script>
+    <section class="section">
+        <div class="container">
+    <div class="content is-medium">
+        
 <h1>Cool C Programming</h1>
 
 
@@ -537,14 +536,15 @@ int main()
 <p>The above program illustrates a generic <code>print</code> function which adapts to the type of the argument sent! How is this achieved? C11 introduced the <code>_Generic</code> keyword. This maps the type and the corresponding function that should be called for the type. You can abstract this to a function-like MACRO. In the above program, a function-like macro <code>print(X)</code> is defined to expand to the <code>_Generic</code> keyword construct. This takes in as its first argument <code>_Generic((X), ...</code>as the parameter and the rest map the type to the function that needs to be called <code>_Generic((X), char: printchar, int: printint, ...</code>; in the end this construct is invoked like a function by passing the value <code>...double: printdouble)(X)</code>. The abstract function-like MACRO can be used to call this type-generic function and that's cool!</p>
 <p>That's it folks! Hope you enjoyed reading this!</p>
 
-                    </section>
-                </div>
-            </div>
     </div>
+</div>
+    </section>
+    <div class="container">
     <footer class="footer">
         <div class="content has-text-centered">
             <p>copyright 2020</p>
         </div>
     </footer>
+</div>
 </body>
 </html>
