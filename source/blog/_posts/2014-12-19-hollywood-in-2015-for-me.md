@@ -1,11 +1,10 @@
 ---
-layout: post
+layout: oldblogpost
 title: Hollywood in 2015 (for me)
 date: 2014-12-25
 comments: true
 published: false
 permalink: /blog/hollywood-in-2015/
-disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not render as they are supposed to."
 tags: ['old_blogpost']
 ---
 

@@ -6,5 +6,9 @@ layout: default
 {% if subtitle %}
     <h2>{{ subtitle }}</h2>
 {% endif %}
+{% if date %}
+    <em>{{ date }}</em>
+{% endif %}
+</br>
 
 {{ content | safe }}

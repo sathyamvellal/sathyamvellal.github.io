@@ -1,14 +1,12 @@
 ---
-layout: post
+layout: oldblogpost
 title: "Cool C Programming"
 date: 2013-09-09
 comments: true
 permalink: /blog/cool-c-programming/
 description: "This post contains the writeup of my talk on Cool C Programming as part of the Tech Talk Tuesday series by PES OpenSourceat PES Institute of Technology."
-disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 tags: ['old_blogpost', 'blogpost']
 ---
-<div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>
 
 This post contains the writeup of my talk on **Cool C Programming** as part of the **Tech Talk Tuesday** series by **[PES OpenSource](http://pesos.pes.edu)** at PES Institute of Technology.<!-- more -->
 (Please ignore any typos in this post; its pretty long and I wrote it in a hurry!)

@@ -1,11 +1,10 @@
 ---
 title: "Octopress + Travis + Prose + SGit + Jota"
-layout: post
+layout: oldblogpost
 published: false
 date: 2014-11-18
 comments: true
 permalink: //blog/octopress-auto/
-disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not render as they are supposed to."
 tags: ['old_blogpost']
 ---
 

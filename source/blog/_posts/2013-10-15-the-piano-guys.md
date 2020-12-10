@@ -1,14 +1,12 @@
 ---
-layout: post
+layout: oldblogpost
 title: "The Piano Guys"
 date: 2013-10-15
 comments: true
 permalink: /blog/the-piano-guys/
 description: "Music is not just about melody or harmony. Its about enjoying, feeling and extracting the emotions out of the listener and ThePianoGuys do just that."
-disclaimer: "Note: This is a blog post from an older version of this website. Links and styles on this page might not work/render as expected."
 tags: ['old_blogpost']
 ---
-<div class="disclaimer center grey text-small">{{ page.disclaimer }}</div>
 
 Its a typical day and I'm just looking at *Recommended Videos* in my YouTube, which are usually songs/music/mixes; that's what I listen to. So I'm there, listening to UK Piano's new video and I find a playlist recommended for me. In that playlist is a [Cello cover of Game of Thrones][1] by [BreakofReality][2]. YouTube then features [Misty Mountains Orchestral Cover][3] from [The Hobbit][4] by [sleightlymusical][5] in my *Recommended for You* list. Now it comes! Another video recommended for me from [ThePianoGuys][6]. And WOW!
 
