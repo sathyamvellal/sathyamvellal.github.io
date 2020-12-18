@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+// override bulma variables
+@import "initial-variables";
+@import "custom-variables.scss";
+@import "derived-variable.scss";
+
+// import bulma library
+@import "../thirdparty/bulma/sass/utilities/_all";
+@import "../thirdparty/bulma/sass/base/_all";
+@import "../thirdparty/bulma/sass/elements/_all";
+@import "../thirdparty/bulma/sass/form/_all";
+@import "../thirdparty/bulma/sass/components/_all";
+@import "../thirdparty/bulma/sass/grid/_all";
+@import "../thirdparty/bulma/sass/helpers/_all";
+@import "../thirdparty/bulma/sass/layout/_all";
