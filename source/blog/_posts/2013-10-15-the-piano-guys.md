@@ -5,7 +5,7 @@ date: 2013-10-15
 comments: true
 permalink: /blog/the-piano-guys/
 description: "Music is not just about melody or harmony. Its about enjoying, feeling and extracting the emotions out of the listener and ThePianoGuys do just that."
-tags: ['old_blogpost']
+tags: ['old_post']
 ---
 
 Its a typical day and I'm just looking at *Recommended Videos* in my YouTube, which are usually songs/music/mixes; that's what I listen to. So I'm there, listening to UK Piano's new video and I find a playlist recommended for me. In that playlist is a [Cello cover of Game of Thrones][1] by [BreakofReality][2]. YouTube then features [Misty Mountains Orchestral Cover][3] from [The Hobbit][4] by [sleightlymusical][5] in my *Recommended for You* list. Now it comes! Another video recommended for me from [ThePianoGuys][6]. And WOW!

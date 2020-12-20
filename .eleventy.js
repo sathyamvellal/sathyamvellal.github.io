@@ -1,4 +1,5 @@
 var yaml = require('js-yaml');
+var pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function(eleventyConfig) {
     var markdownIt = require('markdown-it');
@@ -19,6 +20,8 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({"source/_static" : "/"});
 
     eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
+
+    eleventyConfig.addPlugin(pluginRss);
 
     return {
         pathPrefix: "/",

@@ -8,7 +8,7 @@ comments: true
 published: true
 permalink: /blog/an-introduction-to-latex/
 description: "The write-up of my talk on LaTeX for beginners, as a part of Tech Talk Tuesday, an initiative of PES OpenSource"
-tags: ['old_blogpost']
+tags: ['old_post']
 ---
 
 The write-up of my talk on {{page.latex}} for beginners, as a part of *Tech Talk Tuesday*, an initiative of [PES OpenSource][1]. I structured my talk based on this book - [The Not So Short Introduction to {{page.latex}}][2]. So refer this book for all details as I've posted the notes I made to deliver my talk.

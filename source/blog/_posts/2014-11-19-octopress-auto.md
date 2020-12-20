@@ -5,7 +5,7 @@ published: false
 date: 2014-11-18
 comments: true
 permalink: //blog/octopress-auto/
-tags: ['old_blogpost']
+tags: ['old_post']
 ---
 
 I had a problem. I wanted to blog more and mostly wrote in my personal laptop.  Although, I usually wouldn't have the time to finish it. And so, there would go an incomplete blog post which I never finished for weeks; all because it was in my laptop. From months I wanted to move my blogging online and I've finally done that.
