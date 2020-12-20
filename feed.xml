@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Sathyam Vellal&#39;s Blog</title>
+  <subtitle>Music, Food and Code - The three dimensions to my world</subtitle>
+  <link href="https://sathyam.me/feed.xml" rel="self"/>
+  <link href="https://sathyam.me/"/>
+  <updated>2013-10-01T17:00:00-07:00</updated>
+  <id>https://sathyam.me/</id>
+  <author>
+    <name>Sathyam Vellal</name>
+    <email>mail@sathyam.me</email>
+  </author>
+  
+  <entry>
+    <title>Cool C Programming</title>
+    <link href="https://sathyam.me/blog/cool-c-programming/"/>
+    <updated>2013-09-08T17:00:00-07:00</updated>
+    <id>https://sathyam.me/blog/cool-c-programming/</id>
+    <content type="html">&lt;p&gt;This post contains the writeup of my talk on &lt;strong&gt;Cool C Programming&lt;/strong&gt; as part of the &lt;strong&gt;Tech Talk Tuesday&lt;/strong&gt; series by &lt;strong&gt;&lt;a href=&quot;http://pesos.pes.edu/&quot;&gt;PES OpenSource&lt;/a&gt;&lt;/strong&gt; at PES Institute of Technology.&lt;!-- more --&gt;
+(Please ignore any typos in this post; its pretty long and I wrote it in a hurry!)&lt;/p&gt;
+&lt;h6&gt;The C Preprocessor&lt;/h6&gt;
+&lt;p&gt;In the C Program build process, there are three main phases.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Preprocessing&lt;/li&gt;
+&lt;li&gt;Compiling&lt;/li&gt;
+&lt;li&gt;Linking&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The C Preprocessor is dumb! It does not know anything about a C program. It is mainly used to manage the program&#39;s text according to our needs before the compiler begins its task. Managing involves including of header files, conditional inclusion of pieces of code, expanding macros, etc.&lt;/p&gt;
+&lt;p&gt;If you want to see the output of the preprocessor, you can use the &lt;code&gt;-E&lt;/code&gt; flag for the compiler; ie compile the program as &lt;code&gt;gcc -E file.c&lt;/code&gt;. This dumps the preprocessed output of file.c onto your terminal.&lt;/p&gt;
+&lt;p&gt;There are three standard input/output buffers&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;stdin&lt;/code&gt; The input buffer&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stdout&lt;/code&gt; The default output buffer&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;stderr&lt;/code&gt; The output buffer for error/log messages&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5&gt;Conditional Syntax - &lt;code&gt;#ifdef&lt;/code&gt; and &lt;code&gt;#ifndef&lt;/code&gt;&lt;/h5&gt;
+&lt;p&gt;The preprocessor directive &lt;code&gt;#ifdef&lt;/code&gt; is used to define conditional groups of code at the preprocessor level. Based on a condition, a piece of code may or may not be included in the program. The body of this directive is usually termed &lt;em&gt;controlled text&lt;/em&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#ifdef SOME_MACRO
+//some piece of code
+#endif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;In the above example, the body of &lt;code&gt;#ifdef&lt;/code&gt; is included only if &lt;code&gt;SOME_MACRO&lt;/code&gt; is defined. The &lt;code&gt;#define&lt;/code&gt; directive is used to define MACROs.&lt;/p&gt;
+&lt;h6&gt;Example&lt;/h6&gt;
+&lt;p&gt;Here&#39;s a sample program.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#ifdef SOME_MACRO
+void foo ()
+{
+}
+#endif
+
+int main()
+{
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.1)&lt;/h6&gt;
+&lt;p&gt;Observe that &lt;code&gt;SOME_MACRO&lt;/code&gt; is not defined. And hence the controlled text should not be included. And here&#39;s the output of the preprocessor (compiled with &lt;code&gt;-E&lt;/code&gt; option)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;# 1 &amp;quot;1.c&amp;quot;
+# 1 &amp;quot;&amp;lt;command-line&amp;gt;&amp;quot;
+# 1 &amp;quot;/usr/include/stdc-predef.h&amp;quot; 1 3 4
+# 1 &amp;quot;&amp;lt;command-line&amp;gt;&amp;quot; 2
+# 1 &amp;quot;1.c&amp;quot;
+
+
+
+
+
+
+int main()
+{
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.2)&lt;/h6&gt;
+&lt;p&gt;Let me now define the MACRO &lt;code&gt;#ifdef&lt;/code&gt; using &lt;code&gt;#define&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#define SOME_MACRO
+
+#ifdef SOME_MACRO
+void foo ()
+{
+}
+#endif
+
+int main()
+{
+    return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.3)&lt;/h6&gt;
+&lt;p&gt;And this is the output of the preprocessor now.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;# 1 &amp;quot;1.c&amp;quot;
+# 1 &amp;quot;&amp;lt;command-line&amp;gt;&amp;quot;
+# 1 &amp;quot;/usr/include/stdc-predef.h&amp;quot; 1 3 4
+# 1 &amp;quot;&amp;lt;command-line&amp;gt;&amp;quot; 2
+# 1 &amp;quot;1.c&amp;quot;
+
+
+
+void foo ()
+{
+}
+
+
+int main()
+{
+    return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.4)&lt;/h6&gt;
+&lt;p&gt;You can observe that when the macro is defined, the controlled text is included. Note again, that the preprocessor does not know that the controlled text is a function or any of the C constructs. All it sees is some text.
+You can also define MACROs when invoking the compiler with the &lt;code&gt;-D&lt;/code&gt; option. Compiling the code in Fig(1.1) as &lt;code&gt;gcc -E -DSOME_MACRO 1.c&lt;/code&gt; gives me the same output as Fig(1.4).&lt;/p&gt;
+&lt;p&gt;MACROs also can be object-like MACROs and function-like MACROs.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#define BAR 5
+#define FOO(X) printf(&amp;quot;%d&amp;quot;, X)
+
+int main()
+{
+    //FOO is a function-like MACRO and BAR is an object-like MACRO.
+    FOO(BAR);
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.5)&lt;/h6&gt;
+&lt;p&gt;Here&#39;s the preprocessed output of the code in Fig(1.5)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;# 1 &amp;quot;1.c&amp;quot;
+# 1 &amp;quot;&amp;lt;command-line&amp;gt;&amp;quot;
+# 1 &amp;quot;/usr/include/stdc-predef.h&amp;quot; 1 3 4
+# 1 &amp;quot;&amp;lt;command-line&amp;gt;&amp;quot; 2
+# 1 &amp;quot;1.c&amp;quot;
+
+
+
+int main()
+{
+
+    printf(&amp;quot;%d&amp;quot;, 5);
+    return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.6)&lt;/h6&gt;
+&lt;p&gt;&lt;code&gt;BAR&lt;/code&gt; is an object-like MACRO which the preprocessor substitutes as 5, according to its definition. Therefore, the MACRO call &lt;code&gt;FOO(BAR)&lt;/code&gt; is now &lt;code&gt;FOO(5)&lt;/code&gt;. It then expands the function-like MACRO &lt;code&gt;FOO&lt;/code&gt; with its parameter as 5. You therefore see &lt;code&gt;printf(&amp;quot;%d&amp;quot;, 5);&lt;/code&gt;. Note that the &lt;code&gt;printf&lt;/code&gt; of &lt;code&gt;FOO&lt;/code&gt; does not end with a semicolon. But the MACRO is used with a semicolon &lt;code&gt;FOO(...);&lt;/code&gt;. This ensures that printf ends with a semicolon. Why this approach? Its a standard convention to end every statement of a C program with a semicolon and it would be very odd to have some line not ending with it.&lt;/p&gt;
+&lt;h5&gt;And now for a few tricks&lt;/h5&gt;
+&lt;h6&gt;Creating debug MACROs&lt;/h6&gt;
+&lt;p&gt;Lot of programmers are used to debug by logging the program&#39;s execution. This can be as simple as using &lt;code&gt;printf&lt;/code&gt; all over the code to print messages (on the &lt;code&gt;stderr&lt;/code&gt; buffer) and use this information to debug. Further more, you may want to write pieces of code to mainly check the correctness of the program (only while you&#39;re developing it). When its time for you to release your code, you&#39;ll have to remove all the logging statements, blocks of code which was used to check correctness, etc. This brings in a lot of work the developer. Additionally, if at some later point of time, the user had to improve his code, he might want to insert all such blocks again (its literally a headache!).
+Now, the preprocessor turns out to be very helpful!&lt;/p&gt;
+&lt;p&gt;The following program demonstrates three features widely used in C Programs. We&#39;ll go through each one by one&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;assert.h&amp;gt;
+
+#ifdef CHECK_ENABLED
+#define CHECK(X, Y) \
+do { printf(&amp;quot;Performing Assertion\n&amp;quot;); assert((X - Y) != 0); printf(&amp;quot;Assertion passed\n&amp;quot;); } while (0)
+#else
+#define CHECK(X, Y)
+#endif
+
+void foo (int x, int y)
+{
+    CHECK(x, y);
+    printf (&amp;quot;%d: %d\n&amp;quot;, __LINE__, (x+y)/(x-y));
+}
+
+int main ()
+{
+    foo (4, 3);
+    foo (4, 4);
+    return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.7)&lt;/h6&gt;
+&lt;p&gt;Let this be a file, &lt;em&gt;debug.c&lt;/em&gt; .
+What is this program trying to do? This program calls the function &lt;code&gt;foo()&lt;/code&gt; with 2 arguments, &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt;.; and foo wants perform the operation &lt;code&gt;(x + y) / (x - y)&lt;/code&gt;. It also uses a function-like MACRO &lt;code&gt;CHECK&lt;/code&gt; which expands to an assert statement (forget about the &lt;code&gt;do {...} while(0)&lt;/code&gt; for now). &lt;code&gt;assert&lt;/code&gt; is a library function declared in &lt;code&gt;assert.h&lt;/code&gt; which aborts the program if the given assertion fails (in this example &lt;code&gt;(x - y) != 0&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;According to our expectations, The program and must execute the first &lt;code&gt;foo(4, 3)&lt;/code&gt; function call and should fail when trying execute the second &lt;code&gt;foo(4, 4)&lt;/code&gt; function call because of division by zero (Forget about the &lt;code&gt;__LINE__&lt;/code&gt; in the printf). Now let me compile it without defining the &lt;code&gt;CHECK_ENABLED&lt;/code&gt; MACRO. Compile with &lt;code&gt;gcc debug.c&lt;/code&gt; and run &lt;code&gt;./a.out&lt;/code&gt;; the following is the output.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;14: 7
+Floating point exception (core dumped)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.8)&lt;/h6&gt;
+&lt;p&gt;It worked as expected. The program printed &amp;quot;7&amp;quot; and failed when executing the second &lt;code&gt;foo(4, 4)&lt;/code&gt; function call because of the division with zero. Let me now compile with also defining the &lt;code&gt;CHECK_ENABLED&lt;/code&gt; MACRO. Compile with &lt;code&gt;gcc debug.c DCHECK_ENABLED&lt;/code&gt; and run &lt;code&gt;./a.out&lt;/code&gt; and here&#39;s the output.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Performing Assertion
+Assertion passed
+14: 7
+Performing Assertion
+a.out: 1_preprocessor.c:13: foo: Assertion `(x - y) != 0&#39; failed.
+Aborted (core dumped)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.9)&lt;/h6&gt;
+&lt;p&gt;Wow! That&#39;s magic! The program did not even try to perform the division because the assertion &lt;code&gt;(4 - 4) != 0&lt;/code&gt; failed and also printed a lot of debugging messages!&lt;/p&gt;
+&lt;p&gt;Let us now analyze what happened.
+In Fig(1.9), the program was compiled with the &lt;code&gt;CHECK_ENABLED&lt;/code&gt; MACRO defined which included the following controlled text in the program.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#define CHECK(X, Y) \
+do { printf(&amp;quot;Performing Assertion\n&amp;quot;); assert((X - Y) != 0); printf(&amp;quot;Assertion passed\n&amp;quot;); } while (0)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.10)&lt;/h6&gt;
+&lt;p&gt;This defines a function-like MACRO &lt;code&gt;CHECK(X, Y)&lt;/code&gt; to be &lt;code&gt;do { printf(&amp;quot;Performing Assertion\n&amp;quot;); assert((X - Y) != 0); printf(&amp;quot;Assertion passed\n&amp;quot;); } while (0)&lt;/code&gt;. Hence this function-like MACRO &lt;code&gt;CHECK(X, Y);&lt;/code&gt; expands to &lt;code&gt;do { printf(&amp;quot;Performing Assertion\n&amp;quot;); assert((X - Y) != 0); printf(&amp;quot;Assertion passed\n&amp;quot;); } while (0)&lt;/code&gt;. With &lt;code&gt;foo(4, 3);&lt;/code&gt; this assertion succeeds and prints &amp;quot;7&amp;quot;; with &lt;code&gt;foo(4, 4&amp;quot;);&lt;/code&gt; this assertion fails and the program aborts.&lt;/p&gt;
+&lt;p&gt;When the program is compiled without defining &lt;code&gt;CHECK_ENABLED&lt;/code&gt; MACRO [refer Fig(1.8)], the controlled text in the else portion of the conditional group gets included in the program. ie&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#define CHECK(X, Y)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.11)&lt;/h6&gt;
+&lt;p&gt;This defines a function-like MACRO &lt;code&gt;CHECK(X, Y)&lt;/code&gt; to nothing! So the function-like MACRO expands to nothing! ie the assertion is not in the code any more and so the program prints &amp;quot;7&amp;quot; and gets a floating point exception when trying a division with zero.&lt;/p&gt;
+&lt;p&gt;So what just happened? In Fig(1.9) the program was executed in a debugging mode; the debugging mode in the above example was enabled by defining the &lt;code&gt;CHECK_ENABLED&lt;/code&gt; MACRO; and in this debugging mode, the assertion statement was included in the code and the program aborted stating where it failed and why. The debugging mode also included some debugging messages which I printed so that I&#39;d know what went wrong and where.
+When the debugging mode wasn&#39;t enabled (by not defining the &lt;code&gt;CHECK_ENABLED&lt;/code&gt; MACRO), the assertion wasn&#39;t included in the code by the preprocessor as &lt;code&gt;CHECK(X, Y)&lt;/code&gt; expands to nothing. Now the program crashes.
+Look at the error that comes up - &lt;code&gt;Floating point exception (core dumped)&lt;/code&gt;. You cannot make out what happened where! The runtime threw an error message and exited the program. Whereas when the debugging is enabled, the assertion gives a better error message - &lt;code&gt;a.out: 1_preprocessor.c:13: foo: Assertion &lt;/code&gt;(x - y) != 0&#39; failed.&lt;code&gt;. It failed in line 13. That&#39;s where the function-like MACRO &lt;/code&gt;CHECK(x, y)` expands.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick #1&lt;/strong&gt; : In short, you can now run your program in debug mode and release mode by just defining / not-defining a debug MACRO. Normally this debug MACRO is &lt;code&gt;DEBUG&lt;/code&gt;. I&#39;ve used &lt;code&gt;CHECK_ENABLED&lt;/code&gt; in the example to include some checks. You must also understand now that in the release mode, we only concentrate on execution of the program and not error checking because they can make the program slower. Imagine calling the &lt;code&gt;foo(4, 3)&lt;/code&gt; a million times in the debug mode. The assert function is called a million times but your intention is to check the correctness of the code and not the execution speed. In the release mode, the assertion is not even there and so your program executes much faster and is assumed to be correct.
+Nice trick huh? Such an amazing work around to solve such an important problem and that too with just using the C Preprocessor!&lt;/p&gt;
+&lt;p&gt;I mentioned long back that there are three features the above program [Fig(1.7)] tries to show. The first was the debug/release switch which we have covered in detail. The second is this very odd statement -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;do { printf(&amp;quot;Performing Assertion\n&amp;quot;); assert((X - Y) != 0); printf(&amp;quot;Assertion passed\n&amp;quot;); } while (0)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.12)&lt;/h6&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick #2&lt;/strong&gt; : Why the &lt;code&gt;do { ... } while(0)&lt;/code&gt; ??! Why can&#39;t I just write a set of statements? Maybe because I wanted to group them. Then why couldn&#39;t I just use &lt;code&gt;{ ... }&lt;/code&gt; instead of the do while zero?
+Consider this situation&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#define FOO(X, Y) printf(&amp;quot;%s\n&amp;quot;, X); printf(&amp;quot;%s\n&amp;quot;, Y)
+
+int main ()
+{
+    if (/*some condition*/)
+        FOO(&amp;quot;YES&amp;quot;, &amp;quot;TRUE&amp;quot;);
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.13)&lt;/h6&gt;
+&lt;p&gt;Remember that its a standard convention not to end the code within a function-like MACRO with a semicolon (because the MACRO is used with a semicolon at the end)? So the second &lt;code&gt;printf&lt;/code&gt; doesn&#39;t end with a semicolon, its taken care of later.
+An if condition is associated only with the statement/block following it. After the function-like MACRO &lt;code&gt;FOO(X, Y)&lt;/code&gt; expands, we have something like the following -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;if (/*some condition*/)
+        printf(&amp;quot;%s\n&amp;quot;, &amp;quot;YES&amp;quot;); printf(&amp;quot;%s\n&amp;quot;, &amp;quot;TRUE&amp;quot;);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.14)&lt;/h6&gt;
+&lt;p&gt;Note that the first printf gets associated with the if condition and not the second! So &amp;quot;TRUE&amp;quot; is always printed. What a bug! So to avoid this let me rewrite the program as follows -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#define FOO(X, Y) { printf(&amp;quot;%s\n&amp;quot;, X); printf(&amp;quot;%s\n&amp;quot;, Y) }
+
+int main ()
+{
+    if (/*some condition*/)
+        FOO(&amp;quot;YES&amp;quot;, &amp;quot;TRUE&amp;quot;);
+    else
+        FOO(&amp;quot;NO&amp;quot;, &amp;quot;FALSE&amp;quot;);
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.15)&lt;/h6&gt;
+&lt;p&gt;Notice that I&#39;ve now included flower brackets to group the two printfs into a block and I also wanted an else portion which I&#39;ve included. This sounds fine. Lets now observe what happens when the function-like MACRO &lt;code&gt;FOO(X, Y)&lt;/code&gt; expands.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;if (/*some condition*/)
+    { printf(&amp;quot;%s\n&amp;quot;, &amp;quot;YES&amp;quot;); printf(&amp;quot;%s\n&amp;quot;, &amp;quot;TRUE&amp;quot;) };
+else
+    { printf(&amp;quot;%s\n&amp;quot;, &amp;quot;NO&amp;quot;); printf(&amp;quot;%s\n&amp;quot;, &amp;quot;FALSE&amp;quot;) };
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.16)&lt;/h6&gt;
+&lt;p&gt;Observe that the second printf doesn&#39;t end with a semicolon but the blocks end with a semicolon, because the semicolon was present after the MACRO. This will through a bunch of errors because printf doesn&#39;t have a semicolon to start with and there&#39;s a semicolon after the if block (which ends the if block) so the else portion becomes stray code without a corresponding if! Uff! This is crazy! Well, no. Here is why do while zero is used. Lets rewrite the program using do while zero&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#define FOO(X, Y) do { printf(&amp;quot;%s\n&amp;quot;, X); printf(&amp;quot;%s\n&amp;quot;, Y); } while(0)
+
+int main ()
+{
+    if (/*some condition*/)
+        FOO(&amp;quot;YES&amp;quot;, &amp;quot;TRUE&amp;quot;);
+    else
+        FOO(&amp;quot;NO&amp;quot;, &amp;quot;FALSE&amp;quot;);
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.17)&lt;/h6&gt;
+&lt;p&gt;When the MACRO expands, we get it like this -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;if (/*some condition*/)
+    do { printf(&amp;quot;%s\n&amp;quot;, &amp;quot;YES&amp;quot;); printf(&amp;quot;%s\n&amp;quot;, &amp;quot;TRUE&amp;quot;); } while(0);
+else
+    do { printf(&amp;quot;%s\n&amp;quot;, &amp;quot;NO&amp;quot;); printf(&amp;quot;%s\n&amp;quot;, &amp;quot;FALSE&amp;quot;); } while(0);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.18)&lt;/h6&gt;
+&lt;p&gt;You can now see that the if block contains one statement which is a loop. All the statements are placed in that loop and this loop executes only once because the condition fails. Isn&#39;t that amazing?!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick #3&lt;/strong&gt; : And lastly, the third feature the program uses is &lt;code&gt;printf(&amp;quot;%d&amp;quot;, __LINE__);&lt;/code&gt;. &lt;code&gt;__LINE__&lt;/code&gt; is a preprocessor MACRO that expands to current line number in the source file, as an integer. &lt;code&gt;__LINE__&lt;/code&gt; is useful when generating log statements, debug messages, etc. There&#39;s also &lt;code&gt;__FILE__&lt;/code&gt; which expands to the current file name.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick #4&lt;/strong&gt; : Consider the following header file (say &lt;em&gt;file.h&lt;/em&gt;)&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;struct foo {
+    int a;
+    char b;
+};
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.19)&lt;/h6&gt;
+&lt;p&gt;Now if your project contains a lot of files and you include this header file in many of them and compile, you&#39;ll encounter errors of redeclaration! And so header files begin with the following construct&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#ifndef FILE_H
+#define FILE_H
+
+struct foo {
+    int a;
+    char b;
+};
+
+#endif
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.20)&lt;/h6&gt;
+&lt;p&gt;So what&#39;s the change now? When some .c file which includes this header is being compiled, it sees the directive &lt;code&gt;#ifndef FILE_H ... #endif&lt;/code&gt;; which basically means include the controlled text if the MACRO &lt;code&gt;FILE_H&lt;/code&gt; is not defined. But wait, what is this present in the controlled text? &lt;code&gt;#define FILE_H&lt;/code&gt;. What I&#39;m doing is defining the MACRO &lt;code&gt;FILE_H&lt;/code&gt; and including the header contents if &lt;code&gt;FILE_H&lt;/code&gt; was previously not declared. Now when another file is being compiled which includes the same header, the compiler sees that the MACRO &lt;code&gt;FILE_H&lt;/code&gt;  is defined now and skips including the controlled text of the conditional group avoiding redeclaration of structures and other entities of a header file.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 5&lt;/strong&gt; : This is the last preprocessor feature I&#39;ll be discussing! The C preprocessor gives two directives &lt;code&gt;#warning&lt;/code&gt; and &lt;code&gt;#error&lt;/code&gt;. I expect you might have guessed their uses. Consider the following code snippet -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#ifdef USE_OLD_FOO
+#warning &amp;quot;Using old foo(). This is deprecated! You are getting this message because USE_OLD_FOO is defined&amp;quot;
+void foo()
+{
+    //This implementation is no longer recommended for use.
+    /*
+    Some implementation
+    */
+}
+#else
+void foo()
+{
+    //A better foo implementation
+    /*
+    Some implementation
+    */
+}
+#endif
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(1.21)&lt;/h6&gt;
+&lt;p&gt;The above snippet includes the old version of the function &lt;code&gt;foo()&lt;/code&gt; if &lt;code&gt;USE_OLD_FOO&lt;/code&gt; is defined, else by default the new version would be used. One may need to use old versions of codes for legacy support (say). But when using the old version, the developer would like to warn the user about it. In such cases, you can use the &lt;code&gt;#warning&lt;/code&gt; directive. The &lt;code&gt;#errror&lt;/code&gt; is similar, but throws an error&lt;/p&gt;
+&lt;hr&gt;
+&lt;h6&gt;Swapping two variables&lt;/h6&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 6&lt;/strong&gt; : This is more a programming trick than a trick in C. To swap two variables without using additional space or arithmetic operators, you can simply use the xor operator; like so -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;a = a ^ b;
+b = a ^ b;
+a = a ^ b;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(2.1)&lt;/h6&gt;
+&lt;hr&gt;
+&lt;h6&gt;Pointers in C&lt;/h6&gt;
+&lt;h5&gt;Arrays and Pointers not entirely the same!&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 7&lt;/strong&gt; : One of the heavily misunderstood concepts of C is that pointers and arrays are the same. They are not. Pointers are merely variables holding the address of some location where as an array is conceptualized as a sequence of memory locations of a type. At compile time, an array is an array. Only during runtime, an array degenerates to a pointer. To prove this fact, let me show you an example -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int a[10] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+int *b = a;
+
+printf(&amp;quot;%d\n%d\n&amp;quot;, sizeof(a), sizeof(b));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(3.1)&lt;/h6&gt;
+&lt;p&gt;And the output is (assuming size of int is 4 bytes and address size is 8 bytes) -&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;40
+8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(3.2)&lt;/h6&gt;
+&lt;p&gt;See what happens? At compile time, the compiler has information regarding the array. It drops all the information in the end and so at runtime, an array acts like a constant pointer.&lt;/p&gt;
+&lt;h5&gt;&lt;code&gt;v[index] and index[v]&lt;/code&gt; are the same&lt;/h5&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 8&lt;/strong&gt; : Yes arrays and pointers are not the same, but are interpreted in the same way; by dereferencing them to get the value. The indexing operation &lt;code&gt;v[index]&lt;/code&gt; where &lt;code&gt;v&lt;/code&gt; is some array and &lt;code&gt;index&lt;/code&gt; is some index is internally converted to &lt;code&gt;*(v + index)&lt;/code&gt;. The funny thing now is that if you use this as &lt;code&gt;index[v]&lt;/code&gt;, its converted to &lt;code&gt;*(index + v)&lt;/code&gt; and both mean the same!&lt;/p&gt;
+&lt;hr&gt;
+&lt;h6&gt;Standard I/O&lt;/h6&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 9&lt;/strong&gt; :You are no doubt familiar with &lt;code&gt;scanf&lt;/code&gt; and &lt;code&gt;printf&lt;/code&gt; functions. You also be familiar with &lt;code&gt;fscanf&lt;/code&gt; and &lt;code&gt;fprintf&lt;/code&gt; if you have worked on file handling.
+For example -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;FILE *fptr = fopen(&amp;quot;some_file.txt&amp;quot;, &amp;quot;r&amp;quot;);
+char* first_name; int age;
+
+fscanf(fptr, &amp;quot;%s %d&amp;quot;, first_name, &amp;amp;age);
+printf(&amp;quot;Name: %s\nAge: %d\n\n&amp;quot;, first_name, age);
+
+fclose(fptr);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(4.1)&lt;/h6&gt;
+&lt;p&gt;The above snippet demonstrates reading from a file using &lt;code&gt;fscanf&lt;/code&gt;.
+How about this? You have a string containing two integers and you&#39;d like to read from that. Its not a file name, its a character array. C provides reading and writing to character arrays (or C strings) with the use of &lt;code&gt;sscanf&lt;/code&gt; and &lt;code&gt;sprintf&lt;/code&gt;.
+Let me demonstrate this -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;char str[20] = &amp;quot;10 20&amp;quot;;
+int a, b;
+
+sscanf(str, &amp;quot;%d %d&amp;quot;, &amp;amp;a, &amp;amp;b);
+sprintf(str, &amp;quot;%d %d&amp;quot;, a*a, b*b);
+printf(&amp;quot;%s&amp;quot;, str);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(4.2)&lt;/h6&gt;
+&lt;p&gt;In the above snippet, a string contains two numbers 10 and 20 (as characters of the string). Using sscanf you can read these to variables and also write back to the C string!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 10&lt;/strong&gt; : &lt;code&gt;scanf&lt;/code&gt; is probably one of the most magical function in C. To know more about the tricks in &lt;code&gt;scanf&lt;/code&gt;, visit &lt;a href=&quot;http://qr.ae/IHQTN&quot;&gt;my answer in quora&lt;/a&gt; about the same.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 11&lt;/strong&gt; : One of the many problems with C strings is reading them; C strings can easily overflow if a string longer than size of the character array is entered. &lt;code&gt;scanf&lt;/code&gt; is useless and so is &lt;code&gt;gets&lt;/code&gt;. The best function to use when reading strings is &lt;code&gt;fgets&lt;/code&gt;. &lt;code&gt;fgets&lt;/code&gt; takes the string, the length to be read and the file stream where the string is to be read from as arguments. If you want to read from the console, you can use &lt;code&gt;stdin&lt;/code&gt; as your input file stream. The function call would then go like this -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int n; //some length; maybe known later.
+char str[n]; //works from c99
+
+fgets(str, n, stdin); //reads max n characters to &#39;str&#39; from stdin.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(4.3)&lt;/h6&gt;
+&lt;p&gt;You can also use the new &lt;code&gt;gets_s&lt;/code&gt; function; but &lt;code&gt;fgets&lt;/code&gt; is pretty much the standard convention.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h6&gt;C99, C11 and misc&lt;/h6&gt;
+&lt;p&gt;You&#39;ve been using the old fashioned way of initializing C structures right? Like so -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;struct foo
+{
+    int a;
+    int b;
+};
+
+int main()
+{
+    struct foo f = {100, 123};
+    printf(&amp;quot;%d %d\n&amp;quot;, f.a, f.b);
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(5.1)&lt;/h6&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 12&lt;/strong&gt; : C99 provides a new way of doing the same with more ease. Like so -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;struct foo
+{
+    int a;
+    int b;
+};
+
+int main()
+{
+    struct foo f = {.b = 123, .a = 100}; // C99 style
+    printf(&amp;quot;%d %d\n&amp;quot;, f.a, f.b);
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(5.2)&lt;/h6&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 13&lt;/strong&gt; : C99 also provides a mechanism to initialize only certain indices of an array.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;int a[100] = {1, [50] = 1}; //initializes a[0] and a[50] to 1 and the rest 0
+printf(&amp;quot;%d %d %d %d\n&amp;quot;, a[0], a[1], a[50], a[51]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(5.3)&lt;/h6&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 14&lt;/strong&gt; : Did you know about the &lt;code&gt;atexit&lt;/code&gt; function? This function can be used to register functions that are to be called when the program finishes its execution! For example -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+
+void foo(void)
+{
+    printf(&amp;quot;Goodbye Foo!\n&amp;quot;);
+}
+
+void bar(void)
+{
+    printf(&amp;quot;Goodbye Bar!\n&amp;quot;);
+}
+
+int main(int argc, wchar_t* argv[])
+{
+    atexit(bar);
+    atexit(foo);
+    return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(5.4)&lt;/h6&gt;
+&lt;p&gt;Notice that &lt;code&gt;foo&lt;/code&gt; and &lt;code&gt;bar&lt;/code&gt; functions haven&#39;t been called but are registered to be called when the program exits. Such functions should not return anything nor accept any arguments. You can register upto 32 such functions. They&#39;ll be called in the LIFO order.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 15&lt;/strong&gt; : I found this somewhere in stackoverflow. It seems that a game the developer had to initialize a huge two dimensional float array with lots of values. And he employed this to do so -&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;double array[SIZE][SIZE] = {
+    #include &amp;quot;float_values.txt&amp;quot;
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(5.6)&lt;/h6&gt;
+&lt;p&gt;The file &lt;em&gt;float_values.txt&lt;/em&gt; contains all the values to be initialized in the array. This way, the values are not inlined in the file containing the code. The preprocessor will have included that file. Nice idea!&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Feature/Trick 16&lt;/strong&gt; : C11 has introduced something great! Heard of templates in C++ where you could write type independent code? Well, that&#39;s possible in a slightly different way in C11 now! Want to see how? Scroll down a little.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;language-c&quot;&gt;#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+
+void printchar(char X) { printf(&amp;quot;char: %c\n&amp;quot;, X); }
+void printint(int X) { printf(&amp;quot;int: %d\n&amp;quot;, X); }
+void printfloat(float X) { printf(&amp;quot;float: %f\n&amp;quot;, X); }
+void printdouble(double X) { printf(&amp;quot;double: %lf\n&amp;quot;, X); }
+#define print(X) _Generic((X), \
+                               char: printchar, \
+                               int: printint, \
+                               float: printfloat, \
+                               double: printdouble)(X)
+
+int main()
+{
+    print (1);
+    print (1.2);
+    print ((char)&#39;a&#39;);
+    return 0;
+}
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h6&gt;Fig(5.7)&lt;/h6&gt;
+&lt;p&gt;The above program illustrates a generic &lt;code&gt;print&lt;/code&gt; function which adapts to the type of the argument sent! How is this achieved? C11 introduced the &lt;code&gt;_Generic&lt;/code&gt; keyword. This maps the type and the corresponding function that should be called for the type. You can abstract this to a function-like MACRO. In the above program, a function-like macro &lt;code&gt;print(X)&lt;/code&gt; is defined to expand to the &lt;code&gt;_Generic&lt;/code&gt; keyword construct. This takes in as its first argument &lt;code&gt;_Generic((X), ...&lt;/code&gt;as the parameter and the rest map the type to the function that needs to be called &lt;code&gt;_Generic((X), char: printchar, int: printint, ...&lt;/code&gt;; in the end this construct is invoked like a function by passing the value &lt;code&gt;...double: printdouble)(X)&lt;/code&gt;. The abstract function-like MACRO can be used to call this type-generic function and that&#39;s cool!&lt;/p&gt;
+&lt;p&gt;That&#39;s it folks! Hope you enjoyed reading this!&lt;/p&gt;
+</content>
+  </entry>
+  
+  <entry>
+    <title>0 A.D. Fundraiser: 3 weeks remain!</title>
+    <link href="https://sathyam.me/blog/0ad-Fundraiser-3-weeks/"/>
+    <updated>2013-10-01T17:00:00-07:00</updated>
+    <id>https://sathyam.me/blog/0ad-Fundraiser-3-weeks/</id>
+    <content type="html">&lt;p&gt;&lt;a href=&quot;http://play0ad.com/&quot;&gt;0 A.D.&lt;/a&gt; is a free and open source, historical RTS game. The concept of the game was designed in 2003 and was developed for around six years as a closed-source freeware project. In 2009 the game went open source under the GPL license and art content under CC-BY-SA. This steadily attracted a lot of contributors ranging from art designers to programmers to develop the game. Much of the development and contribution started after the project was open sourced.&lt;/p&gt;
+&lt;!-- more --&gt;
+&lt;p&gt;Less than a month ago, &lt;a href=&quot;http://www.indiegogo.com/projects/support-0-a-d-an-open-source-strategy-game/&quot;&gt;0 A.D. launched a crowdfunding campaign in Indiegogo&lt;/a&gt; to help hire two contributors full-time to get it to a release state much sooner and better than its current pace of development.&lt;/p&gt;
+&lt;div class=&quot;youtube&quot;&gt;
+    &lt;iframe id=&quot;vid3&quot; type=&quot;text/html&quot; class=&quot;youtube&quot; width=&quot;440&quot; height=&quot;300&quot; src=&quot;http://www.youtube.com/embed/Y-0l7Ej3cM8&quot; frameborder=&quot;0&quot;&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;div class=&quot;youtube&quot;&gt;
+    &lt;iframe id=&quot;vid4&quot; type=&quot;text/html&quot; class=&quot;youtube&quot; width=&quot;440&quot; height=&quot;300&quot; src=&quot;http://www.youtube.com/embed/DXDxXGTzIf4&quot; frameborder=&quot;0&quot;&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+&lt;p&gt;The previous and the current alpha versions have improved the game&#39;s performance and added many new features into the game. The stage is being set for the next alpha release which brings a host of new features including a featured Multiplayer Lobby! No wonder this project pushes the bar up for gaming in Linux open source games.
+The &lt;a href=&quot;http://www.indiegogo.com/projects/support-0-a-d-an-open-source-strategy-game/&quot;&gt;Indiegogo campaign&lt;/a&gt; is flexibly funded with targets starting from $40,000 till $240,000 and goals ranging from improving the game performance till releasing the first version of the game within a couple of years.&lt;/p&gt;
+&lt;p&gt;The best part of this project being open source is the developer community! They&#39;re not just developers and contributors. They are a family. The modern ancient family. They are a constantly working group, who&#39;ve volunteered to build this game.&lt;/p&gt;
+&lt;p&gt;IndieStatik covered an in-depth article about &lt;a href=&quot;http://indiestatik.com/2013/10/01/10-years-in-alpha-how-volunteer-modders-created-0-a-d-with-the-help-of-a-community/&quot;&gt;0 A.D. and its crowdfunding campaign&lt;/a&gt; in which the author beautifully states -&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;A huge project like 0 A.D. is worthy of people’s time because it’s a community project that people can find resolve in, share stories with others who helped to build it, and in a few months, or a year, or maybe even a decade, they’ll be able to look back at the game and remember the people they met, the things they learned, the things they shared.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I also would like to quote -&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;quot;It’s remarkable how a project of this size is sustainable with practically no budget, built from the passion of volunteers, who talk with one another, congratulate each other, see newcomers arrive and welcome them with open arms.&amp;quot;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For there is no greater gift in the world than knowledge!
+Donate to the 0 A.D. Project and be a part of this great community.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Website:&lt;/strong&gt; http://play0ad.com&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Indiegogo Campaign:&lt;/strong&gt; http://www.indiegogo.com/projects/support-0-a-d-an-open-source-strategy-game/&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IRC Channels:&lt;/strong&gt; &lt;a href=&quot;http://webchat.quakenet.org/?channels=#0ad&quot;&gt;#0ad&lt;/a&gt; and &lt;a href=&quot;http://webchat.quakenet.org/?channels=#0ad-dev&quot;&gt;#0ad-dev&lt;/a&gt; on QuakeNet IRC&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I&#39;ve included some screenshots below for you to have a quick look at the game!&lt;/p&gt;
+&lt;p&gt;A Village in Gaul and Depth and Fog rendering!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn2/1237349_10151914968049859_1015039661_o.jpg&quot; alt=&quot;A Village in Gaul&quot;&gt;
+&lt;img src=&quot;http://play0ad.com/wp-content/gallery/screenshots/tilt-shift-filter.jpg&quot; alt=&quot;Depth and Fog Rendering&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Persian Heavy Infantry and 0 A.D.&#39;s Atlas Map Editor&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://play0ad.com/wp-content/gallery/screenshots/alpha-8-persianheavyinfantry.jpg&quot; alt=&quot;Persian Heavy Infantry&quot;&gt;
+&lt;img src=&quot;http://play0ad.com/wp-content/gallery/screenshots/scr.png&quot; alt=&quot;Atlas Editor&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Oasis in 0 A.D. Desert and Water Rendering effects.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://play0ad.com/wp-content/gallery/screenshots/screenshot0343.png&quot; alt=&quot;Oasis&quot;&gt;
+&lt;img src=&quot;https://fbcdn-sphotos-e-a.akamaihd.net/hphotos-ak-prn1/1073220_10151752821764859_690497580_o.jpg&quot; alt=&quot;Care for a swim?&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Building an Empire on Islands and Whales in oceans!&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;http://play0ad.com/wp-content/gallery/screenshots/screenshot0072.jpg&quot; alt=&quot;Island Life&quot;&gt;
+&lt;img src=&quot;http://play0ad.com/wp-content/gallery/screenshots/screenshot0060.jpg&quot; alt=&quot;Whales&quot;&gt;&lt;/p&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    var elem = $(&quot;#content img&quot;).eq(0).load(function() {
+        var width = $(this).width();
+        var height = $(this).height();
+        var vid3 = document.getElementById(&quot;vid3&quot;);
+        var vid4 = document.getElementById(&quot;vid4&quot;);
+        vid3.width = vid4.width = width;
+        vid3.height = vid4.height = height;
+    });
+    $(&quot;#content img&quot;).eq(4).load(function() {
+        var img2 = $(this);
+        $(&quot;#content img&quot;).eq(5).load(function() {
+            img2.height($(this).height());
+        });
+    });
+    $(&quot;#content img&quot;).eq(1).load(function() {
+        var img2 = $(this);
+        $(&quot;#content img&quot;).eq(0).load(function() {
+            img2.height($(this).height());
+        });
+    });
+&lt;/script&gt;
+</content>
+  </entry>
+</feed>
