@@ -3,9 +3,9 @@ layout: default
 title: Sathyam Vellal
 ---
 
-### Hi.
+### Hello!
 
-::: block
+::: .block
 I'm **Sathyam**  [/s̪ɐ-t̪ʰjɐm/][0]{target="_blank"}, a Software Engineer at [NVIDIA][20]{target="_blank"} and a Computer Science graduate at the [University of Southern California][1]{target="_blank"}, Los Angeles, where I specialized in [Simulations][2]{target="_blank"} and [High Performance Computing][3]{target="_blank"}. I love breaking down complex problems and simulating its intricate details. I'm particularly interested in [Computer Graphics][17]{target="_blank"}, [Scientific Visualisation][18]{target="_blank"} and [Generative Music][21]{target="_blank"}. I plan to one day contribute in [Space Tech][5]{target="_blank"}. And yes, I'm a [trekkie][19]{target="_blank"}, and a fan of [SimCity][6]{target="_blank"} and [Kerbal Space Program][7]{target="_blank"}.
 :::
 
