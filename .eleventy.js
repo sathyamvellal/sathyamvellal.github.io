@@ -1,5 +1,6 @@
 var yaml = require('js-yaml');
 var pluginRss = require("@11ty/eleventy-plugin-rss");
+var moment = require('moment');
 
 module.exports = function(eleventyConfig) {
     var markdownIt = require('markdown-it');
@@ -22,6 +23,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addDataExtension("yaml", contents => yaml.safeLoad(contents));
 
     eleventyConfig.addPlugin(pluginRss);
+
+    eleventyConfig.addFilter('verboseDate', function(date) {
+        return moment.utc(date).format('dddd, MMMM Do YYYY');
+    })
 
     return {
         pathPrefix: "/",

@@ -6,15 +6,6 @@ REPO_URL=git@github.com:$USERNAME/$REPO_NAME.git
 BUILD_DIR=_site
 DEPLOY_BRANCH=master
 
-# Clone build
-echo "Cloning build dir into $BUILD_DIR"
-git clone -b $DEPLOY_BRANCH "$REPO_URL" $BUILD_DIR
-
-if [ ! -d "$BUILD_DIR" ]; then
-    echo "ERROR: Could not find build dir... Exiting..."
-    exit 1
-fi
-
 # clear build_dir
 cd $BUILD_DIR
 rm -rf ./*

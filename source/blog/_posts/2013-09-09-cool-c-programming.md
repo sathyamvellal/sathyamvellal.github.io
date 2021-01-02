@@ -5,7 +5,8 @@ date: 2013-09-09
 comments: true
 permalink: /blog/cool-c-programming/
 description: "This post contains the writeup of my talk on Cool C Programming as part of the Tech Talk Tuesday series by PES OpenSourceat PES Institute of Technology."
-tags: ['old_post', 'post']
+topics: ['c programming']
+tags: ['old_post']
 ---
 
 This post contains the writeup of my talk on **Cool C Programming** as part of the **Tech Talk Tuesday** series by **[PES OpenSource](http://pesos.pes.edu)** at PES Institute of Technology.<!-- more -->
