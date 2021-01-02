@@ -4,11 +4,24 @@ USERNAME=sathyamvellal
 REPO_NAME=sathyamvellal.github.io
 REPO_URL=git@github.com:$USERNAME/$REPO_NAME.git
 BUILD_DIR=_site
+DEPLOY_DIR=_deploy
 DEPLOY_BRANCH=master
+
+# clear deploy_dir
+echo "Clearing deploy dir..."
+cd $DEPLOY_DIR
+rm -rf ./*
+cd ..
+echo "Clearing deploy dir... done!"
+
+# cp build_dir
+echo "Copying build dir..."
+cp -r $BUILD_DIR/* $DEPLOY_DIR
+echo "Copying build dir... done!"
 
 # deploy
 echo "Deploying..."
-cd $BUILD_DIR
+cd $DEPLOY_DIR
 git add .
 git commit -m "Site update"
 git push origin $DEPLOY_BRANCH --force
