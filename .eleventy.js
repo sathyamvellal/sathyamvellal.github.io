@@ -2,6 +2,8 @@ var yaml = require('js-yaml');
 var pluginRss = require("@11ty/eleventy-plugin-rss");
 var moment = require('moment');
 
+const KeySet = require('./addons/keysets');
+
 module.exports = function(eleventyConfig) {
     var markdownIt = require('markdown-it');
     var markdownItAttrs = require('markdown-it-attrs');
@@ -26,7 +28,11 @@ module.exports = function(eleventyConfig) {
 
     eleventyConfig.addFilter('verboseDate', function(date) {
         return moment.utc(date).format('dddd, MMMM Do YYYY');
-    })
+    });
+
+    var metatagsSet = new KeySet("metatags");
+    eleventyConfig.addCollection("oldblog", metatagsSet.collection("oldblog"));
+    eleventyConfig.addCollection("blog", metatagsSet.collection("blog"));
 
     return {
         pathPrefix: "/",

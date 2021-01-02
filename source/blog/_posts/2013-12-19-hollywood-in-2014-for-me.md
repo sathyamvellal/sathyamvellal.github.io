@@ -5,7 +5,7 @@ date: 2013-12-19
 comments: true
 permalink: /blog/hollywood-in-2014/
 description: "2013 is almost closing and its time to take a peek at films of 2014."
-tags: ['old_post']
+metatags: ['oldblog']
 ---
 
 2013 is almost closing and its time to take a peek at films of 2014. This list though, is my preference. You can check the [entire list in wikipedia][1]. Here, I've linked the films to a trailer and a rating of my expectations (arranged by rating and alphabetically).

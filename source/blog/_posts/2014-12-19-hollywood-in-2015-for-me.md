@@ -5,7 +5,7 @@ date: 2014-12-25
 comments: true
 published: false
 permalink: /blog/hollywood-in-2015/
-tags: ['old_post']
+metatags: ['oldblog']
 ---
 
 A long 2014 comes to an end! Quite a lot of movies this year - Interstellar, The Hobbit, Godzilla, The Lego Movie, Captain America, How to Train Your Dragon 2, Night at the Museum 3; I'll stop here.
