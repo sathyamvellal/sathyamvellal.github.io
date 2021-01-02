@@ -1,17 +1,17 @@
 var gulp = require("gulp");
 var exec = require('child_process').exec;
-var sass = require("gulp-sass");
+var _sass = require("gulp-sass");
 
-var buildCss = () => {
+var sass = () => {
     return gulp.src("./sass/*.scss")
-            .pipe(sass({
+            .pipe(_sass({
                 outputStyle: "compressed"
             })
-            .on("error", sass.logError))
+            .on("error", _sass.logError))
             .pipe(gulp.dest("./source/_static/css/"));
 };
 
-var buildEleventy = () => {
+var eleventy = () => {
     return exec('eleventy', (err, stdout, stderr) => {
         if (err) {
             throw err;
@@ -22,6 +22,6 @@ var buildEleventy = () => {
     });
 }
 
-exports.buildCss = buildCss;
-exports.buildEleventy = buildEleventy;
-exports.default = gulp.series(buildCss, buildEleventy);
+exports.sass = sass;
+exports.eleventy = eleventy;
+exports.default = gulp.series(sass, eleventy);
