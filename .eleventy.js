@@ -33,6 +33,7 @@ module.exports = function(eleventyConfig) {
     var metatagsSet = new KeySet("metatags");
     eleventyConfig.addCollection("oldblog", metatagsSet.collection("oldblog"));
     eleventyConfig.addCollection("blog", metatagsSet.collection("blog"));
+    eleventyConfig.addCollection("blog_drafts", metatagsSet.collection("blog_drafts"));
 
     return {
         pathPrefix: "/",
