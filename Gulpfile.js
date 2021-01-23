@@ -1,6 +1,11 @@
 var gulp = require("gulp");
 var exec = require('child_process').exec;
 var _sass = require("gulp-sass");
+var _del = require('del');
+
+var clean = () => {
+    return _del(["_site/**"]);
+};
 
 var sass = () => {
     return gulp.src("./sass/*.scss")
@@ -22,6 +27,7 @@ var eleventy = () => {
     });
 }
 
+exports.clean = clean;
 exports.sass = sass;
 exports.eleventy = eleventy;
-exports.default = gulp.series(sass, eleventy);
+exports.default = gulp.series(clean, sass, eleventy);

@@ -6,13 +6,6 @@ REPO_URL=git@github.com:$USERNAME/$REPO_NAME.git
 BUILD_DIR=_site
 DEPLOY_BRANCH=master
 
-# clear build_dir
-echo "Clearing build dir..."
-cd $BUILD_DIR
-rm -rf ./*
-cd ..
-echo "Clearing build dir... done!"
-
 # build
 echo "Building..."
 gulp
