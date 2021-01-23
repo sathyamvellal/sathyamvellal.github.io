@@ -37,7 +37,6 @@ module.exports = function(eleventyConfig) {
 
     return {
         pathPrefix: "/",
-        htmlTemplateEngine: "njk",
         dataTemplateEngine: "njk",
         markdownTemplateEngine: "njk",
         dir: {
