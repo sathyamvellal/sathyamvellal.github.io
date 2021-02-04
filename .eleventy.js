@@ -34,6 +34,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("oldblog", metatagsSet.collection("oldblog"));
     eleventyConfig.addCollection("blog", metatagsSet.collection("blog"));
     eleventyConfig.addCollection("blog_drafts", metatagsSet.collection("blog_drafts"));
+    eleventyConfig.addCollection("blog_previews", metatagsSet.collection("blog_previews"));
 
     return {
         pathPrefix: "/",
