@@ -1,14 +1,6 @@
 ---
-layout: default
+layout: post_base
+permalink: /{{permalink_space}}/{{permalink_space_suffix}}/{{ title | slug }}/
 ---
-
-<h1>{{ title }}</h1>
-{% if subtitle %}
-    <h2>{{ subtitle }}</h2>
-{% endif %}
-{% if date %}
-    <em>{{ date | verboseDate }}</em>
-{% endif %}
-</br>
 
 {{ content | safe }}
