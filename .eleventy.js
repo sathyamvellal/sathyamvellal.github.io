@@ -1,6 +1,7 @@
 var yaml = require('js-yaml');
 var pluginRss = require("@11ty/eleventy-plugin-rss");
 var moment = require('moment');
+var slugify = require('slugify');
 
 const KeySet = require('./addons/keysets');
 
@@ -36,6 +37,15 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addCollection("blog_drafts", metatagsSet.collection("blog_drafts"));
     eleventyConfig.addCollection("blog_previews", metatagsSet.collection("blog_previews"));
     eleventyConfig.addCollection("diary", metatagsSet.collection("diary"));
+
+    var slugifyConfig = {
+        remove: [],
+        lower: true,
+        strict: true,
+    };
+    eleventyConfig.addNunjucksFilter('slug', function(value) {
+        return slugify(value, slugifyConfig);
+    });
 
     return {
         pathPrefix: "/",
