@@ -1,17 +1,17 @@
-<html lang=en>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+---
+layout: core/base
+---
 
-    <title>{{title}}</title>
-    <link href="/css/bulma.css" rel="stylesheet" type="text/css">
-    <link href="/css/main.css" rel="stylesheet" type="text/css"> 
-</head>
-<body>
-    {% include "navbar.njk" %}
-    <section class="section">
-        {% include "content.njk" %}
-    </section>
-    {% include "footer.njk" %}
-</body>
-</html>
+<h1>{{ title }}</h1>
+{% if subtitle %}
+    <h2>{{ subtitle }}</h2>
+{% endif %}
+{% if date %}
+    <em>{{ date | verboseDate }}</em>
+{% endif %}
+<br/>
+<br/>
+
+<div>
+    {{ content | safe }}
+</div>
