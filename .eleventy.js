@@ -47,6 +47,8 @@ module.exports = function(eleventyConfig) {
         return slugify(value, slugifyConfig);
     });
 
+    eleventyConfig.addLayoutAlias('blogpost', 'blogpost/index.njk');
+
     return {
         pathPrefix: "/",
         dataTemplateEngine: "njk",
