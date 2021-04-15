@@ -1,8 +1,2 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="refresh" content="0; URL={{ redirectUrl }}">
-</head>
-<body>
-    <p>If you are not redirected, <a href="{{ redirectUrl }}">click here!</a></p>
-</body>
+{% from "redirect.njk" import redirect %}
+{{ redirect(redirectUrl) }}
