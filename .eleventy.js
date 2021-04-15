@@ -32,12 +32,19 @@ module.exports = function(eleventyConfig) {
     });
 
     var metatagsSet = new KeySet("metatags");
-    eleventyConfig.addCollection("post", metatagsSet.collection("post"));
-    eleventyConfig.addCollection("oldblog", metatagsSet.collection("oldblog"));
-    eleventyConfig.addCollection("blogpost", metatagsSet.collection("blogpost"));
-    eleventyConfig.addCollection("blog_draft", metatagsSet.collection("blog_drafts"));
-    eleventyConfig.addCollection("blog_preview", metatagsSet.collection("blog_previews"));
-    eleventyConfig.addCollection("diary", metatagsSet.collection("diary"));
+    var metatags = [
+        "post",
+        "diary",
+        "oldblog",
+        "blog",
+        "blog_draft",
+        "blog_preview",
+        "music_archive"
+    ];
+
+    for (var i in metatags) {
+        eleventyConfig.addCollection(metatags[i], metatagsSet.collection(metatags[i]));
+    }
 
     var slugifyConfig = {
         remove: [],
