@@ -1,4 +1,4 @@
 {
-    "layout": "blogpost",
-    "metatags": ["post", "blogpost"]
+    "layout": "blog",
+    "metatags": ["post", "blog"]
 }
