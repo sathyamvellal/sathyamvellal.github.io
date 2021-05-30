@@ -9,75 +9,35 @@
 </head>
 <body>
     <div class="container">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="thenavbar">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </a>
-        </div>
-
-        <div id="thenavbar" class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item" href="/">
-                Home
-                </a>
-
-                <a class="navbar-item" href="/blog">
-                Blog
-                </a>
-
-                <a class="navbar-item" href="/music">
-                Music
-                </a>
-            </div>
-        </div>
+    <nav class="navbar level is-mobile" role="navigation" aria-label="main navigation">
+        <p class="level-item has-text-centered">
+            <a class="navbar-item" href="/">Home</a>
+        </p>
+        <p class="level-item has-text-centered">
+            <a class="navbar-item" href="/blog">Blog</a>
+        </p>
+        <p class="level-item has-text-centered">
+            <a class="navbar-item" href="/music">Music</a>
+        </p>
     </nav>
 </div>
-
-<script type="text/javascript">
-document.addEventListener('DOMContentLoaded', () => {
-
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-
-  // Check if there are any navbar burgers
-  if ($navbarBurgers.length > 0) {
-
-    // Add a click event on each of them
-    $navbarBurgers.forEach( el => {
-      el.addEventListener('click', () => {
-
-        // Get the target from the "data-target" attribute
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-
-        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-        el.classList.toggle('is-active');
-        $target.classList.toggle('is-active');
-
-      });
-    });
-  }
-
-});
-</script>
-    <section class="section">
-        <div class="container">
-    <div class="content is-medium">
-        
-<h1>Music Archives</h1>
-<ul><li><a href="/music/september-2016-music-archive/">September 2016 Music Archive</a></li><li><a href="/music/october-2016-music-archive/">October 2016 Music Archive</a></li><li><a href="/music/november-2016-music-archive/">November 2016 Music Archive</a></li><li><a href="/music/december-2016-music-archive/">December 2016 Music Archive</a></li><li><a href="/music/january-2017-music-archive/">January 2017 Music Archive</a></li><li><a href="/music/february-2017-music-archive/">February 2017 Music Archive</a></li><li><a href="/music/march-2017-music-archive/">March 2017 Music Archive</a></li><li><a href="/music/april-2017-music-archive/">April 2017 Music Archive</a></li><li><a href="/music/may-2017-music-archive/">May 2017 Music Archive</a></li><li><a href="/music/june-2017-music-archive/">June 2017 Music Archive</a></li><li><a href="/music/july-2017-music-archive/">July 2017 Music Archive</a></li><li><a href="/music/august-2017-music-archive/">August 2017 Music Archive</a></li><li><a href="/music/september-2017-music-archive/">September 2017 Music Archive</a></li><li><a href="/music/october-2017-music-archive/">October 2017 Music Archive</a></li></ul>
-    </div>
-</div>
-    </section>
+    <section class="section main-section">
     <div class="container">
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p>copyright 2020</p>
+        <div class="content is-medium">
+            
+<section class="section">
+    <h1>Music Archives</h1>
+<ul><li><a href="/music/september-2016-music-archive/">September 2016 Music Archive</a></li><li><a href="/music/october-2016-music-archive/">October 2016 Music Archive</a></li><li><a href="/music/november-2016-music-archive/">November 2016 Music Archive</a></li><li><a href="/music/december-2016-music-archive/">December 2016 Music Archive</a></li><li><a href="/music/january-2017-music-archive/">January 2017 Music Archive</a></li><li><a href="/music/february-2017-music-archive/">February 2017 Music Archive</a></li><li><a href="/music/march-2017-music-archive/">March 2017 Music Archive</a></li><li><a href="/music/april-2017-music-archive/">April 2017 Music Archive</a></li><li><a href="/music/may-2017-music-archive/">May 2017 Music Archive</a></li><li><a href="/music/june-2017-music-archive/">June 2017 Music Archive</a></li><li><a href="/music/july-2017-music-archive/">July 2017 Music Archive</a></li><li><a href="/music/august-2017-music-archive/">August 2017 Music Archive</a></li><li><a href="/music/september-2017-music-archive/">September 2017 Music Archive</a></li><li><a href="/music/october-2017-music-archive/">October 2017 Music Archive</a></li></ul>
+</section>
         </div>
-    </footer>
-</div>
+    </div>
+</section>
+     <footer class="footer">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p>© 2013 - 2021 Sathyam Vellal</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
