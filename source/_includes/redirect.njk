@@ -1,21 +1,29 @@
-{% macro redirect(url) %}
+{# No indentation for macros because it gets parsed as markdown and gets rendered as code blocks #}
+{% macro redirect(url, title, description) %}
 <!DOCTYPE html>
-<html>
+<html lang=en>
 <head>
-    <meta http-equiv="refresh" content="0; URL={{ url }}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta http-equiv="refresh" content="0; URL={{ url }}">
+{% if description %}
+<meta name"description" content="{{ description }}">
+{% endif %}
+{% if title %}
+<title>{{ title }}</title>
+{% endif %}
 </head>
 <body>
     <p>If you are not redirected, <a href="{{ url }}">click here!</a></p>
 </body>
+</html>
 {% endmacro %}
 
-{% macro redirectWithHost(url, host) %}
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="refresh" content="0; URL={{ host }}/{{ url }}">
-</head>
-<body>
-    <p>If you are not redirected, <a href="{{ host }}/{{ url }}">click here!</a></p>
-</body>
+{% macro redirectWithUrl(url) %}
+{{ redirect(url) }}
+{% endmacro %}
+
+{% macro redirectWithHostSlugTitle(host, slug, title) %}
+{% set url = [host, slug] %}
+{{ redirect(url | join, title) }}
 {% endmacro %}

@@ -2,16 +2,16 @@
 layout: core/base
 ---
 
-<h1>{{ title }}</h1>
-{% if subtitle %}
-    <h2>{{ subtitle }}</h2>
-{% endif %}
-{% if date %}
-    <em>{{ date | verboseDate }}</em>
-{% endif %}
-<br/>
-<br/>
+<section class="section">
+    <h1>{{ title }}</h1>
+    {% if subtitle %}
+        <h2>{{ subtitle }}</h2>
+    {% endif %}
+    {% if date %}
+        <em>{{ date | verboseDate }}</em>
+    {% endif %}
+</section>
 
-<div>
+<section class="section">
     {{ content | safe }}
-</div>
+</section>
