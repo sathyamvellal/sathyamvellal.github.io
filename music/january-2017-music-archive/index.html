@@ -1,4 +1,4 @@
-<html lang=en>
+<html lang=en class="theme_dark">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -8,6 +8,20 @@
     <link href="/css/main.css" rel="stylesheet" type="text/css">
 
     
+
+    <script>
+    const controlDarkMode = (activate) => {
+        if (activate) {
+            $("html").addClass("theme_dark");
+        } else {
+            $("html").removeClass("theme_dark");
+        }
+    };    
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    prefersDarkScheme.addEventListener("change", event => controlDarkMode(event.matches));
+    controlDarkMode(prefersDarkScheme.matches);
+    controlDarkMode(true);
+    </script>
 </head>
 <body>
     <div class="container">
