@@ -4,3 +4,40 @@
     font-size: 0.8em;
     color: #555;
 };
+
+body {
+    font-size: 1rem;
+    line-height: 1.75rem;;
+}
+
+.theme_light {
+    body {
+        &, * {
+            background-color: #ffffff;
+            color: rgba(74,74,74, 1);
+        }
+
+        h1,h2,h3,h4,h5,h6 {
+            color: rgba(54,54,54, 1);
+        }
+
+        a {
+            color: rgba(0, 106, 163, 1);
+        }
+    }
+
+}
+
+.theme_dark {
+    body {
+        &, * {
+            background-color: #1f1f1f;
+            color: rgba(240,240,240,0.87);
+        }
+
+        a {
+            color: rgba(244,156,24, 1);
+        }
+    }
+
+}
