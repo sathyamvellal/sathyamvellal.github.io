@@ -2,6 +2,7 @@ var gulp = require("gulp");
 var exec = require('child_process').exec;
 var _sass = require("gulp-sass");
 var _del = require('del');
+var watch = require('gulp-watch');
 
 var clean = () => {
     return _del(["_site/**"]);
@@ -27,7 +28,19 @@ var eleventy = () => {
     });
 }
 
+var watch = () => {
+    var glob = [
+        'sass/*.scss',
+        'source/**/*.md'
+    ];
+
+    return watch(glob, () => {
+        
+    });
+}
+
 exports.clean = clean;
 exports.sass = sass;
 exports.eleventy = eleventy;
+exports.watch = watch;
 exports.default = gulp.series(clean, sass, eleventy);
