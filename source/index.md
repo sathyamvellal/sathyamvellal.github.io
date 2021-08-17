@@ -3,6 +3,12 @@ layout: page
 title: Sathyam Vellal
 ---
 
+<style>
+body {
+    line-height: 2rem;
+}
+</style>
+
 ### Hello!
 
 ::: .block
