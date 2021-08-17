@@ -1,15 +1,44 @@
-<html lang=en>
+<html lang=en id="html">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <title>{{title}}</title>
     <link href="/css/bulma.css" rel="stylesheet" type="text/css">
-    <link href="/css/main.css" rel="stylesheet" type="text/css"> 
+    <link href="/css/main.css" rel="stylesheet" type="text/css">
+
+    {#
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-42225587-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <!-- End Google Analytics -->
+    #}
+    <script>
+    const controlDarkMode = (activate) => {
+        if (activate) {
+            document.documentElement.classList.remove("theme_light");
+            document.documentElement.classList.add("theme_dark");
+        } else {
+            document.documentElement.classList.remove("theme_dark");
+            document.documentElement.classList.add("theme_light");
+        }
+    };    
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    prefersDarkScheme.addEventListener("change", event => controlDarkMode(event.matches));
+    controlDarkMode(prefersDarkScheme.matches);
+    </script>
 </head>
 <body>
-    {% include "navbar.njk" %}
-    {% include "content.njk" %}
-    {% include "footer.njk" %}
+    <div class="container">
+        {% include "navbar.njk" %}
+        {% include "content.njk" %}
+        {% include "footer.njk" %}
 </body>
 </html>
