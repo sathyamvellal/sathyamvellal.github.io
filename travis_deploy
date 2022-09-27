@@ -43,7 +43,7 @@ echo "Building... done!"
 echo "Deploying..."
 cd $BUILD_DIR
 git add .
-git commit -m "Site update"
+git commit -m "Site update `date +'%F %T'`"
 git push "$REPO_URL" $DEPLOY_BRANCH --force
 cd ..
 echo "Deploying... done!"

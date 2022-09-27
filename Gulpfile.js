@@ -1,6 +1,6 @@
 var gulp = require("gulp");
 var exec = require('child_process').exec;
-var _sass = require("gulp-sass");
+var _sass = require("gulp-sass")(require('node-sass'));
 var _del = require('del');
 var watch = require('gulp-watch');
 
@@ -18,8 +18,9 @@ var sass = () => {
 };
 
 var eleventy = () => {
-    return exec('eleventy', (err, stdout, stderr) => {
+    return exec('npx eleventy', (err, stdout, stderr) => {
         if (err) {
+            console.error(err);
             throw err;
         }
 
